@@ -1,0 +1,35 @@
+{
+    "window.titleBarStyle": "custom",
+    "workbench.colorCustomizations": {
+        // BARRA SUPERIOR
+        "titleBar.activeBackground": "#a00000",
+        "titleBar.activeForeground": "#ffffff",
+        "titleBar.inactiveBackground": "#700000",
+        "titleBar.inactiveForeground": "#ffcccc",
+        // BARRA INFERIOR
+        "statusBar.background": "#cc0000",
+        "statusBar.foreground": "#ffffff",
+        // BORDES DE LA VENTANA
+        "window.activeBorder": "#ff1a1a",
+        "window.inactiveBorder": "#b30000",
+        // ACTIVITY BAR
+        "activityBar.background": "#8b0000",
+        "activityBar.foreground": "#ffffff",
+        "activityBar.inactiveForeground": "#ffb3b3",
+        "activityBar.activeBorder": "#ff3333",
+        // PANEL Y EDITOR
+        "editor.background": "#1a0000",
+        "editor.foreground": "#ffffff",
+        "editorCursor.foreground": "#ff3333",
+        "editorLineNumber.foreground": "#ff6666",
+        "editorLineNumber.activeForeground": "#ffffff",
+        "editor.selectionBackground": "#6d0e0e",
+        "editor.selectionHighlightBackground": "#ff1a1a33",
+        // TERMINAL
+        "terminal.background": "#1a0000",
+        "terminal.foreground": "#ffcccc",
+        "terminalCursor.foreground": "#ff3333",
+        "terminal.ansiRed": "#ff3333",
+        "terminal.ansiBrightRed": "#ff6666"
+    }
+}

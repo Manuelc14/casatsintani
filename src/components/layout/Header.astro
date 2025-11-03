@@ -1,0 +1,68 @@
+---
+const path = Astro.url.pathname;
+const links = [
+  { href: "/nosotros", label: "Nosotros" },
+  { href: "/programas", label: "Programas" },
+  { href: "/equipo", label: "Equipo" },
+  { href: "/instalaciones", label: "Instalaciones" },
+  { href: "/familia", label: "Familia" },
+  { href: "/testimonios", label: "Testimonios" },
+  { href: "/educacion", label: "Educación" },
+  { href: "/contacto", label: "Contacto" },
+];
+const isActive = (href: string) =>
+  path === href || (href !== "/" && path.startsWith(href + "/"));
+---
+
+<header class="sticky top-0 z-40 border-b bg-white/80 backdrop-blur">
+  <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+    <a href="/" class="text-xl font-semibold">Casa Tsíntani</a>
+
+    <nav class="hidden md:block">
+      <ul class="flex gap-5 text-sm">
+        {
+          links.map(({ href, label }) => {
+            const active = isActive(href);
+            return (
+              <li>
+                <a
+                  href={href}
+                  aria-current={active ? "page" : undefined}
+                  class={`hover:underline ${
+                    active ? "text-zinc-900 font-semibold" : "text-zinc-700"
+                  }`}
+                >
+                  {label}
+                </a>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </nav>
+
+    <!-- Menú móvil simple -->
+    <details class="md:hidden">
+      <summary class="cursor-pointer rounded-lg border px-3 py-1.5 text-sm"
+        >Menú</summary
+      >
+      <ul class="mt-2 bg-white border rounded-xl p-3 text-sm">
+        {
+          links.map(({ href, label }) => {
+            const active = isActive(href);
+            return (
+              <li class="py-1">
+                <a
+                  href={href}
+                  class={`${active ? "text-zinc-900 font-semibold" : "text-zinc-700"}`}
+                >
+                  {label}
+                </a>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </details>
+  </div>
+</header>

@@ -1,0 +1,123 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Contacto – Casa Tsíntani"
+  description="Atención confidencial, humana y profesional. Estamos disponibles para orientarte."
+>
+  <h1 class="text-3xl md:text-4xl font-bold tracking-tight">Contacto</h1>
+
+  <p class="mt-3 text-zinc-600 max-w-2xl">
+    Si tú o un ser querido necesitan orientación, estamos aquí para ayudar.
+    Nuestro equipo ofrece
+    <strong>atención inmediata, confidencial y sin juicios</strong>. Completa el
+    formulario y te contactaremos a la brevedad para brindarte información o
+    coordinar una valoración inicial.
+  </p>
+
+  <form
+    id="contacto"
+    class="mt-8 grid gap-4 max-w-xl bg-white p-6 rounded-2xl shadow border border-zinc-200"
+  >
+    <div>
+      <label for="nombre" class="block text-sm font-medium text-zinc-800"
+        >Nombre completo</label
+      >
+      <input
+        required
+        id="nombre"
+        name="nombre"
+        placeholder="Ej. Ana López"
+        class="mt-1 w-full rounded-lg border border-zinc-300 p-2 focus:ring-2 focus:ring-amber-600 focus:border-amber-600 outline-none"
+      />
+    </div>
+
+    <div>
+      <label for="email" class="block text-sm font-medium text-zinc-800"
+        >Correo electrónico</label
+      >
+      <input
+        required
+        type="email"
+        id="email"
+        name="email"
+        placeholder="nombre@correo.com"
+        class="mt-1 w-full rounded-lg border border-zinc-300 p-2 focus:ring-2 focus:ring-amber-600 focus:border-amber-600 outline-none"
+      />
+    </div>
+
+    <div>
+      <label for="telefono" class="block text-sm font-medium text-zinc-800"
+        >Teléfono o WhatsApp</label
+      >
+      <input
+        id="telefono"
+        name="telefono"
+        pattern="^[0-9+\s()-]{6,}$"
+        placeholder="+52 443 000 0000"
+        class="mt-1 w-full rounded-lg border border-zinc-300 p-2 focus:ring-2 focus:ring-amber-600 focus:border-amber-600 outline-none"
+      />
+    </div>
+
+    <div>
+      <label for="mensaje" class="block text-sm font-medium text-zinc-800"
+        >Mensaje o consulta</label
+      >
+      <textarea
+        required
+        id="mensaje"
+        name="mensaje"
+        rows="4"
+        placeholder="Cuéntanos brevemente cómo podemos ayudarte..."
+        class="mt-1 w-full rounded-lg border border-zinc-300 p-2 focus:ring-2 focus:ring-amber-600 focus:border-amber-600 outline-none"
+      ></textarea>
+    </div>
+
+    <button
+      type="submit"
+      class="mt-2 rounded-xl px-6 py-3 bg-amber-600 text-white font-medium hover:bg-amber-700 transition-colors"
+    >
+      Enviar mensaje
+    </button>
+
+    <p
+      id="ok"
+      class="hidden text-green-700 text-sm bg-green-50 border border-green-200 p-2 rounded-lg mt-2"
+    >
+      ¡Gracias! Hemos recibido tu mensaje. Te contactaremos pronto.
+    </p>
+  </form>
+
+  <section class="mt-10 text-sm text-zinc-600 space-y-1">
+    <p>
+      <strong>Correo:</strong>
+      <a
+        href="mailto:contacto@casatsintani.com"
+        class="text-amber-700 hover:underline"
+      >
+        contacto@casatsintani.com
+      </a>
+    </p>
+    <p>
+      <strong>WhatsApp:</strong>
+      <a
+        href="https://wa.me/520000000000"
+        target="_blank"
+        class="text-amber-700 hover:underline"
+      >
+        +52 000 000 0000
+      </a>
+    </p>
+    <p><strong>Atención:</strong> 24/7 – confidencial y profesional</p>
+  </section>
+
+  <script>
+    document.getElementById("contacto")?.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const ok = document.getElementById("ok");
+      if (ok) ok.classList.remove("hidden");
+      e.target.reset();
+    });
+  </script>
+</BaseLayout>
