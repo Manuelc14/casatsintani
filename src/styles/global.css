@@ -1,1 +1,66 @@
 @import "tailwindcss";
+
+/* === Design Tokens (Tailwind v4) === */
+@theme {
+  /* Tipografías */
+  --font-display: "Poppins", sans-serif;
+  --font-sans: "Manrope", sans-serif;
+
+  /* Colores de marca (ajústalos si quieres otro acento) */
+  --color-brand-50: #f0fdf4;
+  --color-brand-100: #dcfce7;
+  --color-brand-200: #bbf7d0;
+  --color-brand-300: #86efac;
+  --color-brand-400: #4ade80;
+  --color-brand-500: #22c55e;
+  --color-brand-600: #16a34a; /* principal */
+  --color-brand-700: #15803d;
+  --color-brand-800: #166534;
+  --color-brand-900: #14532d;
+
+  /* Radio y sombras */
+  --radius-xl: 1rem;
+  --radius-2xl: 1.25rem;
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.06);
+
+  /* Timing / easing de motion */
+  --ease-out-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-sm: 180ms;
+  --dur-md: 280ms;
+}
+
+/* === Utilities personalizadas === */
+@utility shadow-soft {
+  box-shadow: var(--shadow-soft);
+}
+@utility rounded-2xl {
+  border-radius: var(--radius-2xl);
+}
+
+/* === Base Styles (opcional, look consistente) === */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-zinc-50 text-zinc-800 antialiased font-sans;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply font-display tracking-tight text-zinc-900;
+  }
+  a {
+    @apply underline-offset-2 decoration-zinc-300 hover:decoration-brand-400 transition-colors duration-[--dur-sm] ease-[--ease-out-smooth];
+  }
+  .btn-primary {
+    @apply inline-flex items-center gap-2 rounded-xl bg-brand-600 px-5 py-3 text-white shadow-soft
+           transition-transform duration-[--dur-sm] ease-[--ease-out-smooth];
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+  }
+  .btn-primary:active {
+    transform: translateY(0);
+  }
+}

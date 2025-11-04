@@ -1,0 +1,18 @@
+---
+import TestimonialCarousel from "../islands/TestimonialCarousel.tsx";
+import AnimateOnView from "../islands/AnimateOnView";
+---
+
+<section class="py-20 bg-zinc-50/60">
+  <div class="max-w-3xl mx-auto px-6 text-center">
+    <h2
+      class="text-3xl md:text-4xl font-display font-semibold text-zinc-900 mb-8"
+    >
+      Testimonios reales
+    </h2>
+
+    <AnimateOnView client:visible>
+      <TestimonialCarousel client:visible />
+    </AnimateOnView>
+  </div>
+</section>

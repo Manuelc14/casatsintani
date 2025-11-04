@@ -1,0 +1,36 @@
+---
+import MicroButton from "../islands/MicroButton";
+
+const titulo = "¿Hablamos ahora?";
+const texto =
+  "Recibe orientación confidencial y sin juicios. Nuestro equipo está disponible para resolver tus dudas y guiarte en los primeros pasos.";
+const href = "/contacto";
+// Si quieres WhatsApp directo, cambia a: const href = "https://wa.me/521234567890";
+---
+
+<section class="py-14">
+  <div class="max-w-6xl mx-auto px-6">
+    <div
+      class="rounded-2xl border bg-gradient-to-br from-white via-zinc-50 to-white p-8 md:p-10 shadow-soft"
+    >
+      <div class="grid md:grid-cols-3 items-center gap-6">
+        <div class="md:col-span-2">
+          <h3
+            class="text-2xl md:text-3xl font-display font-semibold text-zinc-900"
+          >
+            {titulo}
+          </h3>
+          <p class="mt-2 text-zinc-600">{texto}</p>
+        </div>
+        <div class="text-left md:text-right">
+          <MicroButton client:visible onClick={() => (location.href = href)}>
+            Habla con nosotros
+          </MicroButton>
+          <p class="mt-2 text-xs text-zinc-500">
+            Respuesta en menos de 24 horas.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

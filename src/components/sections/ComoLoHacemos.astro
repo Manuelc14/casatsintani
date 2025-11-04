@@ -1,0 +1,47 @@
+---
+import Stagger from "../islands/Stagger";
+
+const pasos = [
+  {
+    num: "01",
+    title: "Evaluamos tu caso",
+    desc: "Comenzamos con una valoración integral física, psicológica y familiar para entender tus necesidades reales.",
+  },
+  {
+    num: "02",
+    title: "Diseñamos tu plan",
+    desc: "Creamos un programa de tratamiento personalizado, equilibrando evidencia científica y acompañamiento humano.",
+  },
+  {
+    num: "03",
+    title: "Acompañamos tu proceso",
+    desc: "Nuestro equipo interdisciplinario te acompaña durante la rehabilitación y seguimiento posterior de 12 meses.",
+  },
+];
+---
+
+<section class="py-20 bg-white">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h2
+      class="text-3xl md:text-4xl font-display font-semibold text-zinc-900 mb-12"
+    >
+      Cómo lo hacemos
+    </h2>
+
+    <Stagger client:visible class="grid md:grid-cols-3 gap-10 text-left">
+      {
+        pasos.map((p) => (
+          <article class="relative rounded-2xl border border-zinc-200 bg-zinc-50/60 p-8 shadow-soft backdrop-blur-sm hover:shadow-lg transition-all duration-[--dur-md] ease-[--ease-out-smooth]">
+            <span class="absolute -top-6 left-6 text-6xl font-display font-bold text-brand-200 select-none">
+              {p.num}
+            </span>
+            <h3 class="mt-8 mb-3 text-xl font-semibold text-zinc-800">
+              {p.title}
+            </h3>
+            <p class="text-zinc-600 leading-relaxed">{p.desc}</p>
+          </article>
+        ))
+      }
+    </Stagger>
+  </div>
+</section>
