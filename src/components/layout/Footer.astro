@@ -1,42 +1,121 @@
 ---
+// src/components/layout/Footer.astro
+import {
+  Mail,
+  MessageCircle,
+  MapPin,
+  BookOpen,
+  HeartHandshake,
+} from "lucide-react";
 const year = new Date().getFullYear();
 ---
 
-<footer class="border-t bg-white">
-  <div class="max-w-6xl mx-auto px-4 py-10 grid gap-6 md:grid-cols-3 text-sm">
+<footer
+  class="border-t border-zinc-200 dark:border-zinc-700 bg-white/80 dark:bg-zinc-900/70 backdrop-blur-sm"
+>
+  <div class="max-w-6xl mx-auto px-4 py-12 grid gap-10 md:grid-cols-4 text-sm">
+    <!-- Logo / misión -->
     <div>
-      <h3 class="font-semibold">Casa Tsíntani</h3>
-      <p class="mt-2 text-zinc-600">
-        Tratamiento integral, humano y basado en evidencia.
+      <a href="/" class="inline-flex items-center gap-2">
+        <img
+          src="/logo-tsintani.svg"
+          alt="Logo Casa Tsíntani"
+          width="36"
+          height="36"
+          class="h-9 w-9 rounded-md bg-brand-100 dark:bg-brand-900/40 p-1.5"
+        />
+        <span
+          class="font-display text-lg font-semibold text-zinc-900 dark:text-white"
+        >
+          Casa Tsíntani
+        </span>
+      </a>
+      <p class="mt-3 text-zinc-600 dark:text-zinc-300 leading-relaxed">
+        Centro especializado en rehabilitación integral de adicciones y
+        trastornos duales. Tratamiento humano, ético y basado en evidencia.
       </p>
+      <div
+        class="mt-4 flex items-center gap-2 text-xs text-zinc-500 dark:text-zinc-400"
+      >
+        <HeartHandshake class="w-4 h-4 text-amber-500" />
+        <span>Esperanza activa para transformar vidas</span>
+      </div>
     </div>
+
+    <!-- Contacto -->
     <div>
-      <h3 class="font-semibold">Contacto</h3>
-      <ul class="mt-2 space-y-1 text-zinc-600">
-        <li>
-          <a class="hover:underline" href="mailto:contacto@casatsintani.com"
-            >contacto@casatsintani.com</a>
+      <h3 class="font-semibold text-zinc-900 dark:text-zinc-100 mb-2">
+        Contacto
+      </h3>
+      <ul class="space-y-2 text-zinc-700 dark:text-zinc-300">
+        <li class="flex items-center gap-2">
+          <Mail class="w-4 h-4 text-amber-600 dark:text-amber-400" />
+          <a href="mailto:contacto@casatsintani.com" class="hover:underline">
+            contacto@casatsintani.com
+          </a>
         </li>
-        <li>
+        <li class="flex items-center gap-2">
+          <MessageCircle class="w-4 h-4 text-amber-600 dark:text-amber-400" />
           <a
-            class="hover:underline"
             href="https://wa.me/520000000000"
-            target="_blank">WhatsApp: +52 000 000 0000</a>
+            target="_blank"
+            class="hover:underline"
+          >
+            WhatsApp: +52 000 000 0000
+          </a>
         </li>
-        <li>Pátzcuaro, Michoacán</li>
+        <li class="flex items-center gap-2">
+          <MapPin class="w-4 h-4 text-amber-600 dark:text-amber-400" />
+          <span>Pátzcuaro, Michoacán, México</span>
+        </li>
       </ul>
     </div>
+
+    <!-- Blog y recursos -->
     <div>
-      <h3 class="font-semibold">Legal</h3>
-      <ul class="mt-2 space-y-1 text-zinc-600">
-        <li>Privacidad y confidencialidad</li>
-        <li>Atención 24/7 – confidencial</li>
+      <h3 class="font-semibold text-zinc-900 dark:text-zinc-100 mb-2">
+        Blog y recursos
+      </h3>
+      <p class="text-zinc-600 dark:text-zinc-300 leading-relaxed">
+        Próximamente en nuestro <strong class="text-zinc-800 dark:text-zinc-100"
+          >blog educativo</strong
+        > encontrarás artículos, guías y material audiovisual sobre salud mental,
+        bienestar familiar y prevención de recaídas.
+      </p>
+      <a
+        href="/educacion"
+        class="mt-3 inline-flex items-center gap-1 text-brand-700 dark:text-brand-300 text-sm hover:underline"
+      >
+        <BookOpen class="w-4 h-4" /> Ir al blog
+      </a>
+    </div>
+
+    <!-- Legal -->
+    <div>
+      <h3 class="font-semibold text-zinc-900 dark:text-zinc-100 mb-2">Legal</h3>
+      <ul class="space-y-2 text-zinc-700 dark:text-zinc-300">
+        <li>
+          <a href="/privacidad" class="hover:underline">
+            Aviso de privacidad y confidencialidad
+          </a>
+        </li>
+        <li>Atención profesional 24/7 – confidencial</li>
+        <li>© {year} Casa Tsíntani</li>
       </ul>
     </div>
   </div>
-  <div class="border-t">
-    <div class="max-w-6xl mx-auto px-4 py-6 text-xs text-zinc-500">
-      &copy; {year} Casa Tsíntani
+
+  <div class="border-t border-zinc-200 dark:border-zinc-700">
+    <div
+      class="max-w-6xl mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between text-xs text-zinc-500 dark:text-zinc-400 gap-2"
+    >
+      <p>&copy; {year} Casa Tsíntani. Todos los derechos reservados.</p>
+      <p>
+        Desarrollado con ❤️ por el equipo de{" "}
+        <a href="/" class="hover:underline text-amber-600 dark:text-amber-400">
+          Casa Tsíntani
+        </a>
+      </p>
     </div>
   </div>
 </footer>

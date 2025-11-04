@@ -6,25 +6,99 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   title="Instalaciones – Casa Tsíntani"
   description="Entorno, espacios y servicios de Casa Tsíntani en Pátzcuaro, Michoacán."
 >
-  <h1 class="text-3xl md:text-4xl font-bold tracking-tight">Instalaciones</h1>
+  <h1
+    class="text-3xl md:text-4xl font-bold tracking-tight text-zinc-900 dark:text-white"
+  >
+    Instalaciones
+  </h1>
 
-  <section class="py-8 space-y-6">
+  <section class="py-8 space-y-6 text-zinc-700 dark:text-zinc-300">
     <p>
-      Nuestra clínica está ubicada en <strong>Pátzcuaro, Michoacán</strong>, un
-      Pueblo Mágico lleno de historia, espiritualidad y cultura. Este entorno
-      único ofrece un escenario ideal para la introspección, la calma y la
-      recuperación emocional.
+      Nuestra clínica está ubicada en <strong
+        class="text-zinc-900 dark:text-zinc-100">Pátzcuaro, Michoacán</strong
+      >, un Pueblo Mágico lleno de historia, espiritualidad y cultura. Este
+      entorno único ofrece un escenario ideal para la introspección, la calma y
+      la recuperación emocional.
     </p>
 
-    <p>
-      El edificio principal, que en el pasado funcionaba como hotel, ha sido
-      adaptado para ofrecer
-      <strong>comodidad, privacidad y seguridad</strong>. Combina
-      infraestructura profesional con un ambiente cálido, humano y restaurativo,
-      diseñado para fomentar la reflexión, el descanso y la integración grupal.
-    </p>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div
+        class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800"
+      >
+        <img
+          src="/imgs/instalaciones-exterior.jpg"
+          alt="Exterior"
+          loading="lazy"
+          class="h-full w-full object-cover"
+          width="1200"
+          height="900"
+        />
+      </div>
+      <div
+        class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800"
+      >
+        <img
+          src="/imgs/instalaciones-habitacion.jpg"
+          alt="Habitaciones"
+          loading="lazy"
+          class="h-full w-full object-cover"
+          width="1200"
+          height="900"
+        />
+      </div>
+      <div
+        class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800"
+      >
+        <img
+          src="/imgs/instalaciones-terapia.jpg"
+          alt="Terapia"
+          loading="lazy"
+          class="h-full w-full object-cover"
+          width="1200"
+          height="900"
+        />
+      </div>
+      <div
+        class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800"
+      >
+        <img
+          src="/imgs/instalaciones-arte.jpg"
+          alt="Arteterapia"
+          loading="lazy"
+          class="h-full w-full object-cover"
+          width="1200"
+          height="900"
+        />
+      </div>
+      <div
+        class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800"
+      >
+        <img
+          src="/imgs/instalaciones-gimnasio.jpg"
+          alt="Gimnasio"
+          loading="lazy"
+          class="h-full w-full object-cover"
+          width="1200"
+          height="900"
+        />
+      </div>
+      <div
+        class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800"
+      >
+        <img
+          src="/imgs/instalaciones-comedor.jpg"
+          alt="Comedor"
+          loading="lazy"
+          class="h-full w-full object-cover"
+          width="1200"
+          height="900"
+        />
+      </div>
+    </div>
 
-    <h2 class="text-2xl font-semibold tracking-tight mt-8 mb-2">
+    <h2
+      class="text-2xl font-semibold tracking-tight mt-8 mb-2 text-zinc-900 dark:text-zinc-100"
+    >
       Espacios y servicios
     </h2>
     <ul class="list-disc list-inside space-y-1">
@@ -36,27 +110,32 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       <li>Comedor con alimentación balanceada</li>
       <li>Enfermería y supervisión médica 24/7</li>
       <li>Seguridad permanente</li>
-      <li>WiFi controlado para mantener el enfoque terapéutico</li>
+      <li>WiFi controlado</li>
     </ul>
 
-    <h2 class="text-2xl font-semibold tracking-tight mt-8 mb-2">
+    <h2
+      class="text-2xl font-semibold tracking-tight mt-8 mb-2 text-zinc-900 dark:text-zinc-100"
+    >
       Proyectos futuros
     </h2>
     <ul class="list-disc list-inside space-y-1">
-      <li>Integración de un <strong>temazcal terapéutico</strong></li>
-      <li>Ampliación de <strong>áreas verdes y canchas deportivas</strong></li>
       <li>
-        Incorporación de <strong
-          >prácticas curativas tradicionales purépechas</strong>
+        Integración de un <strong class="text-zinc-900 dark:text-zinc-100"
+          >temazcal terapéutico</strong>
       </li>
+      <li>
+        Ampliación de <strong class="text-zinc-900 dark:text-zinc-100"
+          >áreas verdes y canchas deportivas</strong>
+      </li>
+      <li>Prácticas curativas tradicionales purépechas</li>
     </ul>
 
     <p>
-      En Casa Tsíntani, cada elemento —la arquitectura, la ubicación, las
-      actividades y el ambiente— está pensado para acompañar un proceso profundo
-      de recuperación. Aquí los pacientes no solo reciben tratamiento: <strong
+      En Casa Tsíntani, cada elemento está pensado para acompañar un proceso
+      profundo de recuperación. Aquí los pacientes no solo reciben tratamiento: <strong
+        class="text-zinc-900 dark:text-zinc-100"
         >reconectan con su sentido de vida</strong
-      >, con la naturaleza y con la esperanza.
+      >.
     </p>
   </section>
 </BaseLayout>

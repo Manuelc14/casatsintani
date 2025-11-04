@@ -3,75 +3,175 @@ import { Image } from "astro:assets";
 import AnimateOnView from "../../components/islands/AnimateOnView";
 import MicroButton from "../../components/islands/MicroButton";
 
-// Props
+// Props opcionales para reusar el componente
 const {
-  heading = "Casa Tsíntani",
-  sub = "Clínica especializada en rehabilitación integral de adicciones y trastornos duales.",
+  heading = "Tratamiento integral, humano y basado en evidencia",
+  sub = "Modelo clínico sin castigos con equipo interdisciplinario y seguimiento post-egreso de 12 meses.",
   ctaText = "Habla con nosotros",
   ctaHref = "/contacto",
+  ctaSecondaryText = "Escríbenos por WhatsApp",
+  ctaSecondaryHref = "https://wa.me/521234567890?text=Hola%20Casa%20Ts%C3%ADntani%2C%20quisiera%20informaci%C3%B3n",
 } = Astro.props;
 
-import hero from "../../assets/hero.jpg";
+import hero from "../../assets/icono_logo_claro.svg";
+const currentYear = new Date().getFullYear();
+const years = currentYear - 2010;
 ---
 
 <section
-  class="relative overflow-hidden rounded-3xl border bg-gradient-to-br from-zinc-50 via-white to-zinc-100"
+  class="relative overflow-hidden rounded-3xl border border-zinc-200 dark:border-zinc-800 bg-gradient-to-b from-white to-zinc-50 dark:from-zinc-950 dark:to-zinc-900"
+  aria-label="Casa Tsíntani - Hero"
 >
-  <!-- Glow sutil -->
+  {/* Glow brand en esquinas */}
   <div
-    class="pointer-events-none absolute inset-0 opacity-15 bg-[radial-gradient(1200px_600px_at_-10%_-10%,theme(colors.brand.300)/40%,transparent_60%)]"
+    class="pointer-events-none absolute -top-24 -left-24 h-[32rem] w-[32rem] rounded-full bg-brand-500/20 blur-3xl dark:bg-brand-400/10"
+  >
+  </div>
+  <div
+    class="pointer-events-none absolute -bottom-32 -right-32 h-[28rem] w-[28rem] rounded-full bg-amber-400/20 blur-3xl dark:bg-amber-300/10"
+  >
+  </div>
+
+  {/* Textura sutil */}
+  <div
+    class="absolute inset-0 opacity-[0.08] [background:radial-gradient(80rem_40rem_at_10%_-10%,theme(colors.zinc.400),transparent_60%)] dark:opacity-[0.12]"
   >
   </div>
 
   <div
     class="relative max-w-6xl mx-auto px-6 py-16 md:py-20 grid md:grid-cols-2 gap-10 items-center"
   >
-    <!-- Columna texto -->
+    {/* Columna de texto */}
     <AnimateOnView client:visible class="space-y-6">
+      <span
+        class="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white/70 px-3 py-1 text-xs font-medium text-zinc-700 backdrop-blur-md dark:border-zinc-700 dark:bg-zinc-800/60 dark:text-zinc-200"
+      >
+        Transformando vidas
+        <span aria-hidden="true" class="mx-1">•</span>
+        {years}+ años de servicio
+      </span>
+
       <h1
-        class="text-4xl md:text-5xl font-bold tracking-tight font-display text-zinc-900"
+        class="text-4xl md:text-5xl font-bold tracking-tight font-display text-zinc-900 dark:text-white"
       >
         {heading}
       </h1>
 
-      <p class="text-lg text-zinc-700">
+      <p class="text-lg text-zinc-700 dark:text-zinc-300">
         {sub}
       </p>
 
-      <div class="pt-2">
+      <div class="flex flex-col sm:flex-row gap-3 pt-2">
         <MicroButton client:visible onClick={() => (location.href = ctaHref)}>
           {ctaText}
         </MicroButton>
+
+        <button
+          class="inline-flex items-center justify-center rounded-xl border border-zinc-300 bg-white px-4 py-2.5 text-sm font-medium text-zinc-800 shadow-sm transition hover:bg-zinc-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700"
+          onClick={() => (location.href = ctaSecondaryHref)}
+        >
+          <svg class="mr-2 h-4 w-4" viewBox="0 0 32 32" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M19.1 17.5c-.3-.1-.5-.1-.7.2l-.8.9c-.3.3-.8.4-1.2.3-1.1-.4-3.6-2.6-4.2-3.9-.2-.4-.2-.9.1-1.2l.7-.8c.2-.2.3-.6.1-.9l-1.5-3.5c-.2-.5-.7-.7-1.1-.6-2.8.9-3.7 3-3.1 5.4.9 3.6 4.7 7.4 8.3 8.4 2.4.7 4.5-.2 5.4-3.1.1-.4-.1-.9-.6-1.1l-3.4-1.2Z"
+            ></path>
+          </svg>
+          {ctaSecondaryText}
+        </button>
       </div>
 
-      <!-- Confianza rápida -->
-      <ul class="mt-3 flex flex-wrap gap-4 text-sm text-zinc-600">
-        <li class="inline-flex items-center gap-2">
-          <span>✓</span> Atención 24/7
-        </li>
-        <li class="inline-flex items-center gap-2">
-          <span>✓</span> Modelo sin castigos
-        </li>
-        <li class="inline-flex items-center gap-2">
-          <span>✓</span> Seguimiento 12 meses
-        </li>
+      {/* Bullets de valor */}
+      <ul
+        class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-zinc-700 dark:text-zinc-300"
+      >
+        {
+          [
+            "Enfoque sin castigos",
+            "Equipo interdisciplinario",
+            "Acompañamiento familiar",
+            "Seguimiento 12 meses",
+          ].map((item) => (
+            <li class="inline-flex items-center gap-2" role="listitem">
+              <span class="inline-grid h-5 w-5 place-content-center rounded-md bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300">
+                <svg viewBox="0 0 24 24" class="h-3.5 w-3.5" aria-hidden="true">
+                  <path
+                    d="M20 7l-9 9-4-4"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+              {item}
+            </li>
+          ))
+        }
       </ul>
+
+      {/* Franja de confianza */}
+      <div
+        class="mt-6 flex flex-wrap items-center gap-4 text-xs text-zinc-600 dark:text-zinc-400"
+      >
+        <div class="inline-flex items-center gap-2">
+          <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
+          Atención 24/7
+        </div>
+        <div class="inline-flex items-center gap-2">
+          <span class="h-1.5 w-1.5 rounded-full bg-sky-500"></span>
+          Pátzcuaro, Michoacán
+        </div>
+        <div class="inline-flex items-center gap-2">
+          <span class="h-1.5 w-1.5 rounded-full bg-amber-500"></span>
+          Modelo Minnesota + terapias de 3ª/4ª generación
+        </div>
+      </div>
     </AnimateOnView>
 
-    <!-- Columna imagen -->
+    {/* Columna visual */}
     <AnimateOnView client:visible class="relative">
       <div
-        class="relative aspect-[4/3] md:aspect-[5/4] rounded-2xl border overflow-hidden shadow-soft bg-white"
+        class="relative aspect-[4/3] md:aspect-[5/4] rounded-2xl border border-zinc-200 dark:border-zinc-800 overflow-hidden shadow-2xl bg-white dark:bg-zinc-900/60"
       >
         <Image
           src={hero}
-          alt="Instalaciones y entorno de Casa Tsíntani"
-          format={["webp"]}
-          widths={[640, 1024, 1440, 1920]}
-          sizes="(min-width: 1024px) 50vw, 100vw" loading="eager" decoding="async"
-          class="h-full w-full object-cover" />
-        </Image>
+          alt="Instalaciones y entorno terapéutico de Casa Tsíntani"
+          format={["avif", "webp"]}
+          widths={[640, 960, 1280, 1600, 1920]}
+          sizes="(min-width: 1024px) 50vw, 100vw"
+          loading="eager"
+          decoding="async"
+          fetchpriority="high"
+          class="h-full w-full object-cover"
+        />
+        {/* Filtro sutil para legibilidad */}
+        <div
+          class="pointer-events-none absolute inset-0 bg-gradient-to-tr from-white/0 via-white/0 to-white/0 dark:from-zinc-950/0 dark:via-zinc-950/0 dark:to-zinc-950/10"
+        >
+        </div>
+
+        {/* Tarjeta flotante con social proof */}
+        <div
+          class="absolute bottom-3 left-3 right-3 md:left-4 md:bottom-4 md:right-auto w-auto md:w-64 rounded-xl border border-zinc-200 bg-white/85 p-3 text-xs shadow-lg backdrop-blur-md dark:border-zinc-700 dark:bg-zinc-800/70"
+        >
+          <p class="font-medium text-zinc-900 dark:text-zinc-100">
+            Modelo clínico integral
+          </p>
+          <p class="mt-1 text-zinc-600 dark:text-zinc-300">
+            Mente, cuerpo, familia y sentido de vida.
+          </p>
+        </div>
       </div>
     </AnimateOnView>
   </div>
+
+  {/* Respeto a preferencias de movimiento */}
+  <style>
+    @media (prefers-reduced-motion: reduce) {
+      .shadow-2xl {
+        transition: none !important;
+      }
+    }
+  </style>
 </section>
