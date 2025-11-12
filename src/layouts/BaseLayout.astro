@@ -7,7 +7,7 @@ const {
 
 import "../styles/global.css";
 import Footer from "../components/layout/Footer.astro";
-import WhatsAppButton from "../components/islands/WhatsAppButton.tsx";
+// import WhatsAppButton from "../components/islands/WhatsAppButton.tsx";
 import ThemeToggle from "../components/islands/ThemeToggle.tsx";
 import SiteHeader from "../components/islands/SiteHeader.tsx";
 ---
@@ -16,7 +16,7 @@ import SiteHeader from "../components/islands/SiteHeader.tsx";
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#16a34a" />
+    <meta name="theme-color" content="#3F4E4F" />
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -31,7 +31,7 @@ import SiteHeader from "../components/islands/SiteHeader.tsx";
   </head>
 
   <body
-    class="min-h-dvh bg-zinc-50 text-zinc-800 antialiased dark:bg-zinc-900 dark:text-zinc-100"
+    class="min-h-dvh bg-surface-50 text-brand-900 antialiased dark:bg-brand-900 dark:text-surface-50"
   >
     <SiteHeader client:load>
       <ThemeToggle />
@@ -45,10 +45,15 @@ import SiteHeader from "../components/islands/SiteHeader.tsx";
 
     <Footer />
 
-    <WhatsAppButton
+    <!-- <WhatsAppButton
       client:load
       phone="+52XXXXXXXXXX"
       text="Hola, me gustaría recibir información sobre los programas de tratamiento."
-    />
+    /> -->
+    <elevenlabs-convai agent-id="agent_6401k79w49etfzyr89pvvex9d7az"
+    ></elevenlabs-convai><script
+      src="https://unpkg.com/@elevenlabs/convai-widget-embed"
+      async
+      type="text/javascript"></script>
   </body>
 </html>

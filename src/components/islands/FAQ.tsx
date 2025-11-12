@@ -68,8 +68,8 @@ export default function FAQ({
                             className={[
                                 "w-full px-4 md:px-5 py-4 md:py-5",
                                 "flex items-start gap-3 text-left",
-                                "text-zinc-900 dark:text-zinc-100",
-                                "focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 rounded-2xl",
+                                "text-brand-800 dark:text-brand-200",
+                                "focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded-2xl",
                             ].join(" ")}
                         >
                             <span
@@ -114,7 +114,7 @@ export default function FAQ({
                             ].join(" ")}
                         >
                             <div className="overflow-hidden">
-                                <div className="pb-4 md:pb-5 text-sm md:text-[15px] leading-relaxed text-zinc-700 dark:text-zinc-300">
+                                <div className="pb-4 md:pb-5 text-sm md:text-[15px] leading-relaxed text-brand-600 dark:text-brand-300">
                                     {it.a}
                                 </div>
                             </div>

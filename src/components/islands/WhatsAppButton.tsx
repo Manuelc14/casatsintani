@@ -5,7 +5,7 @@ export default function WhatsAppButton({ phone = "+520000000000", text = "Hola, 
             href={href}
             target="_blank"
             rel="noopener"
-            className="fixed bottom-5 right-5 rounded-full px-5 py-3 shadow-lg bg-green-500 text-white font-medium"
+            className="fixed bottom-5 left-5 rounded-full px-5 py-3 shadow-lg bg-green-500 text-white font-medium"
             aria-label="WhatsApp"
         >
             WhatsApp

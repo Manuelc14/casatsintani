@@ -6,17 +6,25 @@
 @theme {
   --font-display: "Poppins", sans-serif;
   --font-sans: "Manrope", sans-serif;
+  --color-brand-950: #0a1314;
+  --color-brand-900: #151e1f;
+  --color-brand-800: #243032;
+  --color-brand-700: #323f41;
+  --color-brand-600: #0068ad; /* principal */
+  --color-brand-500: #4b6062;
+  --color-brand-400: #5a7678;
+  --color-brand-300: #789a9c;
+  --color-brand-200: #a3c0c2;
+  --color-brand-100: #d7e6e7;
+  --color-brand-50: #f2f7f7;
 
-  --color-brand-50: #f0fdf4;
-  --color-brand-100: #dcfce7;
-  --color-brand-200: #bbf7d0;
-  --color-brand-300: #86efac;
-  --color-brand-400: #4ade80;
-  --color-brand-500: #22c55e;
-  --color-brand-600: #16a34a;
-  --color-brand-700: #15803d;
-  --color-brand-800: #166534;
-  --color-brand-900: #14532d;
+  --color-accent-600: #8f644a;
+  --color-accent-500: #c75f0a; /* secundario */
+  --color-accent-300: #c2997d;
+
+  --color-surface-50: #ffffff;
+  --color-surface-100: #f7f6f2;
+  --color-surface-200: #dcd7c9;
 
   --radius-xl: 1rem;
   --radius-2xl: 1.25rem;
@@ -30,6 +38,7 @@
 @utility shadow-soft {
   box-shadow: var(--shadow-soft);
 }
+
 @utility rounded-2xl {
   border-radius: var(--radius-2xl);
 }
@@ -38,28 +47,48 @@
   html {
     scroll-behavior: smooth;
   }
+
   body {
-    @apply bg-zinc-50 text-zinc-800 antialiased font-sans dark:bg-zinc-900 dark:text-zinc-100;
+    @apply bg-surface-50 text-brand-900 antialiased font-sans dark:bg-brand-900 dark:text-surface-50;
   }
+
   h1,
   h2,
   h3 {
-    @apply font-display tracking-tight text-zinc-900 dark:text-zinc-100;
+    @apply font-display tracking-tight text-brand-900 dark:text-surface-50;
   }
-  a {
-    @apply underline-offset-2 decoration-zinc-300 hover:decoration-brand-400 transition-colors duration-[--dur-sm] ease-[--ease-out-smooth];
-  }
+
+  /* === Botones Unificados === */
   .btn-primary {
-    @apply inline-flex items-center gap-2 rounded-xl bg-brand-600 px-5 py-3 text-white shadow-soft transition-transform duration-[--dur-sm] ease-[--ease-out-smooth];
+    @apply inline-flex items-center justify-center gap-2 rounded-xl
+           bg-accent-500 text-white font-medium tracking-tight
+           px-6 py-3 shadow-soft transition-all duration-[--dur-sm]
+           ease-[--ease-out-smooth] hover:brightness-110 hover:-translate-y-0.5
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-500/40 active:translate-y-0;
   }
-  .btn-primary:hover {
-    transform: translateY(-2px);
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl
+           bg-brand-600 text-white font-medium tracking-tight
+           px-6 py-3 shadow-soft transition-all duration-[--dur-sm]
+           ease-[--ease-out-smooth] hover:brightness-110 hover:-translate-y-0.5
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-600/40 active:translate-y-0;
   }
-  .btn-primary:active {
-    transform: translateY(0);
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl
+           border border-brand-300 text-brand-700 bg-transparent
+           px-6 py-3 transition-all duration-[--dur-sm]
+           hover:bg-brand-50 dark:hover:bg-brand-900/20
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500/40;
+  }
+
+  button:disabled,
+  .btn-disabled {
+    @apply opacity-60 cursor-not-allowed transform-none hover:brightness-100;
   }
 }
-/* Reduce motion: respeta accesibilidad */
+
 @media (prefers-reduced-motion: reduce) {
   * {
     animation: none !important;
@@ -68,8 +97,8 @@
   }
 }
 
-/* Animaciones utilitarias (usadas en el sheet móvil) */
 @layer utilities {
+  /* Animaciones base */
   .animate-in {
     animation: var(--dur-sm) var(--ease-out-smooth) both;
   }
@@ -88,6 +117,7 @@
       opacity: 1;
     }
   }
+
   @keyframes slide-in-from-top {
     from {
       transform: translateY(-6px);
@@ -95,5 +125,36 @@
     to {
       transform: translateY(0);
     }
+  }
+
+  /* === 🔹 Carrusel (Testimonios) === */
+  @keyframes slide-left {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slide-right {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .animate-slide-left {
+    animation: slide-left 0.5s ease-out both;
+  }
+
+  .animate-slide-right {
+    animation: slide-right 0.5s ease-out both;
   }
 }

@@ -68,7 +68,7 @@ export default function SiteHeader({
             {/* Barra de progreso de scroll */}
             <div
                 aria-hidden
-                className="fixed inset-x-0 top-0 z-[60] h-0.5 origin-left bg-brand-500 transition-transform duration-200"
+                className="fixed inset-x-0 top-0 z-[60] h-0.5 origin-left bg-brand-600 transition-transform duration-200"
                 style={{ transform: `scaleX(${progress})` }}
             />
 
@@ -90,7 +90,7 @@ export default function SiteHeader({
                         {/* Brand con logo */}
                         <a
                             href="/"
-                            className="group inline-flex items-center gap-3 rounded-xl px-1.5 py-1 text-[15px] font-semibold tracking-tight text-zinc-900 outline-none transition dark:text-white focus-visible:ring-2 focus-visible:ring-brand-500/60"
+                            className="group inline-flex items-center gap-3 rounded-xl px-1.5 py-1 text-[15px] font-semibold tracking-tight text-brand-800 outline-none transition dark:text-brand-100 focus-visible:ring-2 focus-visible:ring-brand-500/60"
                             aria-label={brand}
                         >
                             <span
@@ -109,12 +109,12 @@ export default function SiteHeader({
                                     loading="eager"
                                     decoding="async"
                                 />
-                                <span className="pointer-events-none absolute -inset-1 -z-10 rounded-2xl bg-brand-500/0 blur-xl transition group-hover:bg-brand-500/10" />
+                                <span className="pointer-events-none absolute -inset-1 -z-10 rounded-2xl bg-brand-600/0 blur-xl transition group-hover:bg-brand-600/10" />
                             </span>
 
                             <span className="relative">
                                 {brand}
-                                <span className="absolute -right-2 -top-1 block h-2 w-2 rounded-full bg-brand-500 opacity-80 animate-pulse" />
+                                <span className="absolute -right-2 -top-1 block h-2 w-2 rounded-full bg-brand-600 opacity-80 animate-pulse" />
                             </span>
                         </a>
 
@@ -132,8 +132,8 @@ export default function SiteHeader({
                                                 className={[
                                                     "group relative block rounded-xl px-3 py-2 text-sm transition-colors",
                                                     active
-                                                        ? "text-zinc-900 dark:text-white"
-                                                        : "text-zinc-600 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white",
+                                                        ? "text-brand-600 dark:text-brand-100"
+                                                        : "text-brand-900 hover:text-brand-900 dark:text-brand-300 dark:hover:text-brand-100",
                                                     "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500/60",
                                                 ].join(" ")}
                                             >
@@ -163,7 +163,7 @@ export default function SiteHeader({
                             <ThemeToggle />
                             <a
                                 href="/contacto"
-                                className="btn-primary shadow-soft hover:translate-y-[-2px] active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500/60"
+                                className="btn-primary shadow-soft hover:translate-y-[-2px] active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500/80"
                             >
                                 Agendar
                             </a>
@@ -243,7 +243,7 @@ export default function SiteHeader({
                                         className={[
                                             "flex items-center gap-3 rounded-xl border border-zinc-200 dark:border-zinc-700",
                                             "bg-white/60 dark:bg-zinc-900/60 px-3 py-3 backdrop-blur",
-                                            active ? "text-zinc-900 dark:text-white" : "text-zinc-700 dark:text-zinc-300",
+                                            active ? "text-brand-900 dark:text-brand-200" : "text-brand-700 dark:text-brand-300",
                                         ].join(" ")}
                                     >
                                         <span className="inline-grid place-content-center h-6 w-6 rounded-lg bg-brand-100 text-brand-700 text-xs">
