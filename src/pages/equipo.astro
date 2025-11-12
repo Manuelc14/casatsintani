@@ -6,26 +6,69 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   title="Equipo – Casa Tsíntani"
   description="Conoce al equipo multidisciplinario de Casa Tsíntani y nuestra forma de trabajo clínica y ética."
 >
-  <h1 class="text-3xl md:text-4xl font-bold tracking-tight">Equipo</h1>
+  <h1
+    class="text-3xl md:text-4xl font-bold tracking-tight text-zinc-900 dark:text-white"
+  >
+    Equipo
+  </h1>
 
-  <section class="py-8 space-y-10">
-    <!-- Presentación -->
+  <section class="py-8 space-y-10 text-zinc-700 dark:text-zinc-300">
     <div>
-      <h2 class="text-2xl font-semibold tracking-tight mb-2">
+      <h2
+        class="text-2xl font-semibold tracking-tight mb-2 text-zinc-900 dark:text-zinc-100"
+      >
         Un equipo, una misma misión
       </h2>
       <p>
         Nuestro equipo integra profesionales de la salud y especialistas en
         adicciones que trabajan de forma coordinada, con enfoque humano y
-        estándares clínicos altos. Compartimos una misma misión: acompañar
-        procesos de recuperación sostenibles, con dignidad y evidencia
-        científica.
+        estándares clínicos altos.
       </p>
     </div>
 
-    <!-- Disciplinas -->
+    <div class="grid md:grid-cols-3 gap-4">
+      <div
+        class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-800/50"
+      >
+        <img
+          src="/imgs/equipo-1.jpg"
+          alt="Dirección clínica"
+          loading="lazy"
+          class="h-full w-full object-cover"
+          width="1200"
+          height="900"
+        />
+      </div>
+      <div
+        class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-800/50"
+      >
+        <img
+          src="/imgs/equipo-2.jpg"
+          alt="Psicología clínica"
+          loading="lazy"
+          class="h-full w-full object-cover"
+          width="1200"
+          height="900"
+        />
+      </div>
+      <div
+        class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-800/50"
+      >
+        <img
+          src="/imgs/equipo-3.jpg"
+          alt="Terapias complementarias"
+          loading="lazy"
+          class="h-full w-full object-cover"
+          width="1200"
+          height="900"
+        />
+      </div>
+    </div>
+
     <div>
-      <h2 class="text-2xl font-semibold tracking-tight mb-2">
+      <h2
+        class="text-2xl font-semibold tracking-tight mb-2 text-zinc-900 dark:text-zinc-100"
+      >
         Disciplinas y especialidades
       </h2>
       <div class="grid md:grid-cols-2 gap-6">
@@ -44,49 +87,58 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           <li>Trabajo social</li>
         </ul>
       </div>
-      <p class="mt-3 text-sm text-zinc-600">
+      <p class="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
         Según cada plan individual, se integran otros consultores y aliados
         externos.
       </p>
     </div>
 
-    <!-- Principios de trabajo -->
     <div>
-      <h2 class="text-2xl font-semibold tracking-tight mb-2">
+      <h2
+        class="text-2xl font-semibold tracking-tight mb-2 text-zinc-900 dark:text-zinc-100"
+      >
         Principios de trabajo clínico
       </h2>
       <ul class="list-disc pl-5 space-y-1">
         <li>
-          <strong>Trato digno y sin castigos:</strong> vínculo terapéutico basado
-          en respeto y límites claros.
+          <strong class="text-zinc-900 dark:text-zinc-100"
+            >Trato digno y sin castigos:</strong
+          > vínculo terapéutico basado en respeto y límites claros.
         </li>
         <li>
-          <strong>Basado en evidencia:</strong> ACT, DBT, mindfulness, logoterapia
-          y prevención de recaídas.
+          <strong class="text-zinc-900 dark:text-zinc-100"
+            >Basado en evidencia:</strong
+          > ACT, DBT, mindfulness, logoterapia y prevención de recaídas.
         </li>
         <li>
-          <strong>Visión biopsicosocial-espiritual:</strong> abordaje integral, centrado
-          en la persona.
+          <strong class="text-zinc-900 dark:text-zinc-100"
+            >Visión biopsicosocial-espiritual:</strong
+          > abordaje integral, centrado en la persona.
         </li>
         <li>
-          <strong>Corresponsabilidad familiar:</strong> psicoeducación y talleres
-          para fortalecer redes de apoyo.
+          <strong class="text-zinc-900 dark:text-zinc-100"
+            >Corresponsabilidad familiar:</strong
+          > psicoeducación y talleres para fortalecer redes de apoyo.
         </li>
         <li>
-          <strong>Medición y mejora continua:</strong> objetivos clínicos, revisión
-          interdisciplinaria y seguimiento.
+          <strong class="text-zinc-900 dark:text-zinc-100"
+            >Medición y mejora continua:</strong
+          > objetivos clínicos, revisión interdisciplinaria y seguimiento.
         </li>
       </ul>
     </div>
 
-    <!-- Coordinación y seguridad del paciente -->
     <div>
-      <h2 class="text-2xl font-semibold tracking-tight mb-2">
+      <h2
+        class="text-2xl font-semibold tracking-tight mb-2 text-zinc-900 dark:text-zinc-100"
+      >
         Coordinación clínica y seguridad del paciente
       </h2>
       <div class="grid md:grid-cols-2 gap-6">
         <div>
-          <h3 class="font-semibold mb-1">Revisión interdisciplinaria</h3>
+          <h3 class="font-semibold mb-1 text-zinc-900 dark:text-zinc-100">
+            Revisión interdisciplinaria
+          </h3>
           <ul class="list-disc pl-5">
             <li>Valoraciones médicas y psiquiátricas programadas</li>
             <li>Reuniones clínicas y ajustes de plan</li>
@@ -94,7 +146,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           </ul>
         </div>
         <div>
-          <h3 class="font-semibold mb-1">Protocolos de seguridad</h3>
+          <h3 class="font-semibold mb-1 text-zinc-900 dark:text-zinc-100">
+            Protocolos de seguridad
+          </h3>
           <ul class="list-disc pl-5">
             <li>Ingreso y estabilización con criterios definidos</li>
             <li>Farmacovigilancia y monitoreo de signos</li>
@@ -104,9 +158,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       </div>
     </div>
 
-    <!-- Formación y ética -->
     <div>
-      <h2 class="text-2xl font-semibold tracking-tight mb-2">
+      <h2
+        class="text-2xl font-semibold tracking-tight mb-2 text-zinc-900 dark:text-zinc-100"
+      >
         Formación continua y ética profesional
       </h2>
       <p>
@@ -117,50 +172,75 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       </p>
     </div>
 
-    <!-- (Opcional) Tarjetas de roles -->
     <div>
-      <h2 class="text-2xl font-semibold tracking-tight mb-4">
+      <h2
+        class="text-2xl font-semibold tracking-tight mb-4 text-zinc-900 dark:text-zinc-100"
+      >
         Roles dentro del equipo
       </h2>
       <div class="grid md:grid-cols-3 gap-4">
-        <div class="border rounded-xl p-4 bg-white/60">
-          <h3 class="font-semibold">Dirección clínica</h3>
-          <p class="text-sm text-zinc-700">
+        <div
+          class="border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 bg-white/60 dark:bg-zinc-900/60"
+        >
+          <h3 class="font-semibold text-zinc-900 dark:text-zinc-100">
+            Dirección clínica
+          </h3>
+          <p class="text-sm text-zinc-700 dark:text-zinc-300">
             Define lineamientos terapéuticos, coordina al equipo y asegura la
             calidad asistencial.
           </p>
         </div>
-        <div class="border rounded-xl p-4 bg-white/60">
-          <h3 class="font-semibold">Medicina y psiquiatría</h3>
-          <p class="text-sm text-zinc-700">
+        <div
+          class="border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 bg-white/60 dark:bg-zinc-900/60"
+        >
+          <h3 class="font-semibold text-zinc-900 dark:text-zinc-100">
+            Medicina y psiquiatría
+          </h3>
+          <p class="text-sm text-zinc-700 dark:text-zinc-300">
             Evaluación diagnóstica, estabilización, tratamiento farmacológico y
             seguimiento.
           </p>
         </div>
-        <div class="border rounded-xl p-4 bg-white/60">
-          <h3 class="font-semibold">Psicología y consejería</h3>
-          <p class="text-sm text-zinc-700">
+        <div
+          class="border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 bg-white/60 dark:bg-zinc-900/60"
+        >
+          <h3 class="font-semibold text-zinc-900 dark:text-zinc-100">
+            Psicología y consejería
+          </h3>
+          <p class="text-sm text-zinc-700 dark:text-zinc-300">
             Psicoterapia individual y grupal, prevención de recaídas,
             habilidades y soporte familiar.
           </p>
         </div>
-        <div class="border rounded-xl p-4 bg-white/60">
-          <h3 class="font-semibold">Enfermería</h3>
-          <p class="text-sm text-zinc-700">
+        <div
+          class="border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 bg-white/60 dark:bg-zinc-900/60"
+        >
+          <h3 class="font-semibold text-zinc-900 dark:text-zinc-100">
+            Enfermería
+          </h3>
+          <p class="text-sm text-zinc-700 dark:text-zinc-300">
             Cuidado continuo, administración segura de tratamientos y vigilancia
             clínica.
           </p>
         </div>
-        <div class="border rounded-xl p-4 bg-white/60">
-          <h3 class="font-semibold">Terapias complementarias</h3>
-          <p class="text-sm text-zinc-700">
+        <div
+          class="border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 bg-white/60 dark:bg-zinc-900/60"
+        >
+          <h3 class="font-semibold text-zinc-900 dark:text-zinc-100">
+            Terapias complementarias
+          </h3>
+          <p class="text-sm text-zinc-700 dark:text-zinc-300">
             Arteterapia, terapia ocupacional, actividad física terapéutica y
             mindfulness.
           </p>
         </div>
-        <div class="border rounded-xl p-4 bg-white/60">
-          <h3 class="font-semibold">Trabajo social</h3>
-          <p class="text-sm text-zinc-700">
+        <div
+          class="border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 bg-white/60 dark:bg-zinc-900/60"
+        >
+          <h3 class="font-semibold text-zinc-900 dark:text-zinc-100">
+            Trabajo social
+          </h3>
+          <p class="text-sm text-zinc-700 dark:text-zinc-300">
             Vínculo con familia y comunidad, apoyos y coordinación de recursos
             externos.
           </p>
@@ -168,13 +248,16 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       </div>
     </div>
 
-    <!-- CTA -->
-    <div class="border rounded-xl p-4 bg-white/60">
-      <p class="font-medium">
+    <div
+      class="border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 bg-white/60 dark:bg-zinc-900/60"
+    >
+      <p class="font-medium text-zinc-900 dark:text-zinc-100">
         ¿Deseas conocer a la persona responsable de tu caso? Agenda una
         valoración y te presentaremos a tu equipo clínico.
       </p>
-      <a href="/contacto" class="inline-block mt-3 underline"
+      <a
+        href="/contacto"
+        class="inline-block mt-3 underline text-amber-700 dark:text-amber-400"
         >Contactar al equipo</a
       >
     </div>

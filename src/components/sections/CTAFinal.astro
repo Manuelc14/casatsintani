@@ -1,0 +1,74 @@
+---
+import MicroButton from "../islands/MicroButton";
+
+const titulo = "¿Hablamos ahora?";
+const texto =
+  "Recibe orientación confidencial y sin juicios. Nuestro equipo está disponible para resolver tus dudas y guiarte en los primeros pasos.";
+const href = "/contacto";
+---
+
+<section class="py-14">
+  <div class="max-w-6xl mx-auto px-6">
+    <div
+      class="rounded-2xl from-white via-zinc-50 to-white dark:from-zinc-900 dark:via-zinc-950 dark:to-zinc-900 p-8 md:p-10 shadow-soft"
+    >
+      <div class="grid md:grid-cols-3 items-center gap-6">
+        <div class="md:col-span-2">
+          <h3
+            class="text-2xl md:text-3xl font-display font-semibold text-brand-900 dark:text-surface-50"
+          >
+            {titulo}
+          </h3>
+          <p class="mt-2 text-brand-600 dark:text-brand-200">{texto}</p>
+        </div>
+        <div class="text-left md:text-right">
+          <MicroButton client:visible onClick={() => (location.href = href)}>
+            Habla con nosotros
+          </MicroButton>
+          <p class="mt-2 text-xs text-zinc-500 dark:text-zinc-400">
+            Respuesta en menos de 24 horas.
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-6 grid sm:grid-cols-3 gap-4">
+        <div
+          class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-800/50"
+        >
+          <img
+            src="/src/assets/atencionClinica.avif"
+            alt="Atención clínica"
+            loading="lazy"
+            class="h-full w-full object-cover"
+            width="1200"
+            height="900"
+          />
+        </div>
+        <div
+          class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-800/50"
+        >
+          <img
+            src="/src/assets/espacioConsulta.webp"
+            alt="Espacios de consulta"
+            loading="lazy"
+            class="h-full w-full object-cover"
+            width="1200"
+            height="900"
+          />
+        </div>
+        <div
+          class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-800/50"
+        >
+          <img
+            src="/src/assets/habitaciones.png"
+            alt="Equipo humano"
+            loading="lazy"
+            class="h-full w-full object-cover"
+            width="1200"
+            height="900"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

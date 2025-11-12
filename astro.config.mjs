@@ -1,15 +1,11 @@
-// @ts-check
-import { defineConfig } from 'astro/config';
+// astro.config.mjs
+import { defineConfig } from "astro/config";
+import react from "@astrojs/react";
+import prefetch from "@astrojs/prefetch";
+import tailwind from "@tailwindcss/vite";
 
-import tailwindcss from '@tailwindcss/vite';
-
-import react from '@astrojs/react';
-
-// https://astro.build/config
 export default defineConfig({
-  vite: {
-    plugins: [tailwindcss()]
-  },
-
-  integrations: [react()]
+  output: "static",
+  vite: { plugins: [tailwind()] },
+  integrations: [react(), prefetch()],
 });

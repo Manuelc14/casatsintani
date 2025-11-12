@@ -1,0 +1,27 @@
+---
+import TestimonialCarousel from "../islands/TestimonialCarousel.tsx";
+import AnimateOnView from "../islands/AnimateOnView";
+---
+
+<section class="py-20">
+  <div class="max-w-3xl mx-auto px-6 text-center">
+    <h2
+      class="text-3xl md:text-4xl font-display font-semibold text-brand-900 dark:text-surface-50 mb-8"
+    >
+      Testimonios reales
+    </h2>
+
+    <div
+      class="mx-auto mb-8 inline-flex h-12 w-12 items-center justify-center rounded-full bg-brand-200 dark:bg-brand-700/90 text-brand-600 dark:text-brand-200"
+    >
+      <svg viewBox="0 0 24 24" class="h-6 w-6"
+        ><path d="M7 7h6v6H9l-2 4V7zm8 0h6v6h-4l-2 4V7z" fill="currentColor"
+        ></path></svg
+      >
+    </div>
+
+    <AnimateOnView client:visible>
+      <TestimonialCarousel client:visible />
+    </AnimateOnView>
+  </div>
+</section>

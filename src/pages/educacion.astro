@@ -6,17 +6,21 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   title="Educación – Casa Tsíntani"
   description="Recursos educativos y psicoeducativos sobre adicciones, salud mental y bienestar familiar."
 >
-  <h1 class="text-3xl md:text-4xl font-bold tracking-tight">
+  <h1
+    class="text-3xl md:text-4xl font-bold tracking-tight text-zinc-900 dark:text-white"
+  >
     Educación y recursos
   </h1>
 
-  <section class="py-8 space-y-6">
+  <section class="py-8 space-y-6 text-zinc-700 dark:text-zinc-300">
     <p>
-      En <strong>Casa Tsíntani</strong> creemos que la educación es una herramienta
-      esencial para la prevención y la recuperación. Nuestro compromiso no se limita
-      al tratamiento clínico: buscamos
-      <strong>informar, sensibilizar y acompañar</strong> a las personas y familias
-      a través de recursos accesibles, claros y basados en evidencia científica.
+      En <strong class="text-zinc-900 dark:text-zinc-100">Casa Tsíntani</strong>
+      creemos que la educación es una herramienta esencial para la prevención y la
+      recuperación. Nuestro compromiso no se limita al tratamiento clínico: buscamos
+      <strong class="text-zinc-900 dark:text-zinc-100"
+        >informar, sensibilizar y acompañar</strong
+      > a las personas y familias a través de recursos accesibles, claros y basados
+      en evidencia científica.
     </p>
 
     <p>
@@ -27,52 +31,93 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       conductas adictivas.
     </p>
 
-    <h2 class="text-2xl font-semibold tracking-tight mt-8 mb-2">
+    <div class="grid md:grid-cols-3 gap-4">
+      <div
+        class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-800/50"
+      >
+        <img
+          src="/imgs/educacion-1.jpg"
+          alt="Guías y manuales"
+          loading="lazy"
+          class="h-full w-full object-cover"
+          width="1200"
+          height="900"
+        />
+      </div>
+      <div
+        class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-800/50"
+      >
+        <img
+          src="/imgs/educacion-2.jpg"
+          alt="Artículos y blog"
+          loading="lazy"
+          class="h-full w-full object-cover"
+          width="1200"
+          height="900"
+        />
+      </div>
+      <div
+        class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-800/50"
+      >
+        <img
+          src="/imgs/educacion-3.jpg"
+          alt="Infografías"
+          loading="lazy"
+          class="h-full w-full object-cover"
+          width="1200"
+          height="900"
+        />
+      </div>
+    </div>
+
+    <h2
+      class="text-2xl font-semibold tracking-tight mt-8 mb-2 text-zinc-900 dark:text-zinc-100"
+    >
       Recursos disponibles
     </h2>
     <ul class="list-disc list-inside space-y-1">
       <li>
-        <strong>Guías y manuales digitales:</strong> material descargable que explica
-        los procesos de recuperación, estrategias de prevención de recaídas y habilidades
-        de comunicación familiar.
+        <strong class="text-zinc-900 dark:text-zinc-100"
+          >Guías y manuales digitales:</strong
+        > material descargable que explica procesos de recuperación y comunicación
+        familiar.
       </li>
       <li>
-        <strong>Artículos educativos y blog:</strong> publicaciones periódicas sobre
-        adicciones, salud mental, bienestar emocional y manejo familiar, redactadas
-        por nuestro equipo clínico.
+        <strong class="text-zinc-900 dark:text-zinc-100"
+          >Artículos educativos y blog:</strong
+        > publicaciones periódicas sobre adicciones, salud mental y bienestar emocional.
       </li>
       <li>
-        <strong>Videos e infografías:</strong> recursos visuales que facilitan la
-        comprensión de los temas más frecuentes en la rehabilitación y la salud emocional.
+        <strong class="text-zinc-900 dark:text-zinc-100"
+          >Videos e infografías:</strong
+        > recursos visuales que facilitan la comprensión de los temas frecuentes.
       </li>
       <li>
-        <strong>Señales de alerta y mitos comunes:</strong> información práctica
-        para identificar riesgos y desmontar creencias erróneas sobre las adicciones.
+        <strong class="text-zinc-900 dark:text-zinc-100"
+          >Señales de alerta y mitos:</strong
+        > información práctica para identificar riesgos y desmontar creencias erróneas.
       </li>
       <li>
-        <strong>Preguntas frecuentes:</strong> respuestas claras sobre el proceso
-        terapéutico, la estancia, los costos y el seguimiento.
+        <strong class="text-zinc-900 dark:text-zinc-100"
+          >Preguntas frecuentes:</strong
+        > respuestas claras sobre proceso terapéutico, estancia y seguimiento.
       </li>
     </ul>
 
-    <h2 class="text-2xl font-semibold tracking-tight mt-8 mb-2">
+    <h2
+      class="text-2xl font-semibold tracking-tight mt-8 mb-2 text-zinc-900 dark:text-zinc-100"
+    >
       Objetivo educativo
     </h2>
     <p>
       Nuestro objetivo es construir una <strong
+        class="text-zinc-900 dark:text-zinc-100"
         >comunidad informada y empática</strong
-      >, capaz de reconocer los signos tempranos de riesgo y de apoyar de manera
-      efectiva a quienes enfrentan un proceso de recuperación. La información
-      salva vidas, y en Casa Tsíntani la compartimos con compromiso y humanidad.
+      >, capaz de reconocer signos tempranos de riesgo y apoyar de manera
+      efectiva a quienes enfrentan un proceso de recuperación.
     </p>
 
-    <p>
-      Próximamente se habilitará un <strong>blog institucional</strong> con artículos,
-      recursos descargables y materiales audiovisuales desarrollados por nuestro
-      equipo clínico y colaboradores invitados.
-    </p>
-
-    <p class="italic text-zinc-600">
+    <p class="italic text-zinc-600 dark:text-zinc-400">
       “Educar es sanar: comprender el proceso es el primer paso para
       transformarlo.”
     </p>
