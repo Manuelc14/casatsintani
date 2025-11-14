@@ -1,0 +1,129 @@
+---
+import AnimateOnView from '../islands/AnimateOnView'
+---
+
+<AnimateOnView client:visible>
+  <section class="border-t border-zinc-100 px-6 py-20 md:px-12 dark:border-zinc-800">
+    <div
+      class="mx-auto grid max-w-6xl items-stretch gap-10 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]"
+    >
+      <div class="flex flex-col gap-8">
+        <div class="space-y-3">
+          <p
+            class="text-brand-600 dark:text-brand-300 text-xs font-semibold tracking-wide uppercase"
+          >
+            Ubicación
+          </p>
+          <h2 class="text-2xl font-bold tracking-tight text-zinc-900 sm:text-3xl dark:text-zinc-50">
+            Frente al lago de Pátzcuaro, Michoacán.
+          </h2>
+          <p class="max-w-xl text-sm leading-relaxed text-zinc-700 sm:text-base dark:text-zinc-300">
+            Casa Tsíntani está en un entorno silencioso, seguro y rodeado de naturaleza, ideal para
+            recuperarse lejos del ruido de la ciudad y mantener el foco en el tratamiento.
+          </p>
+        </div>
+
+        <div class="grid gap-3 text-xs text-zinc-700 sm:grid-cols-3 dark:text-zinc-300">
+          <div
+            class="bg-surface-50 flex items-start gap-3 rounded-2xl border border-zinc-200 p-3 dark:border-zinc-800 dark:bg-zinc-900/60"
+          >
+            <div
+              class="border-accent-500/20 bg-accent-500/15 text-accent-500 dark:text-accent-300 flex h-8 w-8 items-center justify-center rounded-xl border"
+            >
+              <svg viewBox="0 0 24 24" class="h-4.5 w-4.5 fill-current"
+                ><path d="M12 2 7 9h3v4H6l5 7 5-7h-4V9h3L12 2Z"></path></svg
+              >
+            </div>
+            <div>
+              <p class="font-medium text-zinc-900 dark:text-zinc-50">Naturaleza</p>
+              <p class="text-[11px] leading-snug text-zinc-600 dark:text-zinc-400">
+                Vista directa al lago y áreas verdes privadas.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="bg-surface-50 flex items-start gap-3 rounded-2xl border border-zinc-200 p-3 dark:border-zinc-800 dark:bg-zinc-900/60"
+          >
+            <div
+              class="border-accent-500/20 bg-accent-500/15 text-accent-500 dark:text-accent-300 flex h-8 w-8 items-center justify-center rounded-xl border"
+            >
+              <svg viewBox="0 0 24 24" class="h-4.5 w-4.5 fill-current"
+                ><path
+                  d="M12 2a5 5 0 0 0-5 5v2H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5Zm-3 7V7a3 3 0 0 1 6 0v2H9Z"
+                ></path></svg
+              >
+            </div>
+            <div>
+              <p class="font-medium text-zinc-900 dark:text-zinc-50">Privacidad</p>
+              <p class="text-[11px] leading-snug text-zinc-600 dark:text-zinc-400">
+                Espacio discreto y contenido para procesos sensibles.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="bg-surface-50 flex items-start gap-3 rounded-2xl border border-zinc-200 p-3 dark:border-zinc-800 dark:bg-zinc-900/60"
+          >
+            <div
+              class="border-accent-500/20 bg-accent-500/15 text-accent-500 dark:text-accent-300 flex h-8 w-8 items-center justify-center rounded-xl border"
+            >
+              <svg viewBox="0 0 24 24" class="h-4.5 w-4.5 fill-current"
+                ><path d="M12 4a8 8 0 1 0 8 8h-2a6 6 0 1 1-6-6V4Zm1 1h-2v7h6v-2h-4V5Z"></path></svg
+              >
+            </div>
+            <div>
+              <p class="font-medium text-zinc-900 dark:text-zinc-50">Servicios cerca</p>
+              <p class="text-[11px] leading-snug text-zinc-600 dark:text-zinc-400">
+                Acceso a apoyo médico, terapéutico y transporte local.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="mt-2 flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-dashed border-zinc-300 px-4 py-3 text-xs dark:border-zinc-700"
+        >
+          <div>
+            <p class="font-semibold text-zinc-900 dark:text-zinc-50">Ver en el mapa</p>
+            <p class="text-[11px] text-zinc-600 dark:text-zinc-400">
+              Alrededores tranquilos y acceso sencillo desde el pueblo de Pátzcuaro.
+            </p>
+          </div>
+          <a
+            href="https://www.google.com/maps/place/Lago+de+P%C3%A1tzcuaro"
+            target="_blank"
+            rel="noreferrer"
+            class="bg-brand-600 inline-flex items-center gap-1 rounded-full px-3 py-1.5 text-[11px] font-medium text-white shadow-sm transition hover:-translate-y-0.5 hover:brightness-110"
+          >
+            <span>Ampliar mapa</span>
+            <svg viewBox="0 0 24 24" class="h-3.5 w-3.5 fill-current"
+              ><path d="M5 19 9 9l6-2 4 10-6 2-8-3Zm10-4.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z"
+              ></path></svg
+            >
+          </a>
+        </div>
+      </div>
+
+      <div class="flex">
+        <div
+          class="shadow-soft relative h-full w-full overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-100 dark:border-zinc-800 dark:bg-zinc-900/60"
+        >
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30083.87158139815!2d-101.6248864915348!3d19.520825932758516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842d96a8b8d6ae39%3A0xe95695f886f1b1ca!2zUMOhdHpjdWFybywgTWljaC4sIE3DqXhpY28!5e0!3m2!1ses!2sco!4v1763104070668!5m2!1ses!2sco"
+            class="h-full w-full border-0"
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+          <div
+            class="pointer-events-none absolute top-4 left-4 inline-flex items-center gap-2 rounded-full bg-white/80 px-3 py-1 text-[10px] font-medium text-zinc-800 shadow-sm backdrop-blur-md dark:bg-zinc-900/80 dark:text-zinc-100"
+          >
+            <span class="bg-accent-500 inline-flex h-1.5 w-1.5 rounded-full"></span>
+            Frente al lago de Pátzcuaro
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</AnimateOnView>

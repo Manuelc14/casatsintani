@@ -1,27 +1,32 @@
 ---
-import TestimonialCarousel from "../islands/TestimonialCarousel.tsx";
-import AnimateOnView from "../islands/AnimateOnView";
+import TestimonialCarousel from '../islands/TestimonialCarousel.tsx'
+import AnimateOnView from '../islands/AnimateOnView'
+import { Sparkles } from 'lucide-astro'
 ---
 
-<section class="py-20">
-  <div class="max-w-3xl mx-auto px-6 text-center">
-    <h2
-      class="text-3xl md:text-4xl font-display font-semibold text-brand-900 dark:text-surface-50 mb-8"
+<section class="px-6 py-20">
+  <div class="mx-auto max-w-3xl text-center">
+    <span
+      class="bg-brand-50 dark:bg-brand-900/60 text-brand-700 dark:text-brand-200 inline-flex items-center gap-2 rounded-full px-3 py-1 text-[11px] font-semibold tracking-[0.16em] uppercase"
     >
-      Testimonios reales
+      <Sparkles class="h-3.5 w-3.5" />
+      Experiencias reales
+    </span>
+
+    <h2
+      class="font-display text-brand-900 dark:text-surface-50 mt-4 text-3xl font-bold tracking-tight md:text-4xl"
+    >
+      Testimonios que inspiran
     </h2>
 
-    <div
-      class="mx-auto mb-8 inline-flex h-12 w-12 items-center justify-center rounded-full bg-brand-200 dark:bg-brand-700/90 text-brand-600 dark:text-brand-200"
-    >
-      <svg viewBox="0 0 24 24" class="h-6 w-6"
-        ><path d="M7 7h6v6H9l-2 4V7zm8 0h6v6h-4l-2 4V7z" fill="currentColor"
-        ></path></svg
-      >
-    </div>
+    <p class="mx-auto mt-3 max-w-md text-sm text-zinc-600 dark:text-zinc-300">
+      Historias verdaderas de personas y familias que encontraron un nuevo comienzo.
+    </p>
 
     <AnimateOnView client:visible>
-      <TestimonialCarousel client:visible />
+      <div class="mt-10">
+        <TestimonialCarousel client:visible />
+      </div>
     </AnimateOnView>
   </div>
 </section>

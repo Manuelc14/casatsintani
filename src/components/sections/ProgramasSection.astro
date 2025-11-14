@@ -1,0 +1,139 @@
+---
+import AnimateOnView from '../islands/AnimateOnView'
+import { Home, Stethoscope, Users, ArrowRight, CalendarClock, Sparkles } from 'lucide-astro'
+
+const programs = [
+  {
+    id: 'residencial',
+    title: 'Residencial por fases',
+    description:
+      'Ingreso y desintoxicación, rehabilitación conductual y psicosocial, egreso acompañado.',
+    image: '/assets/programa1.jpg',
+    href: '/programas',
+    tag: 'Programa residencial',
+    icon: Home,
+    meta: ['Estancia 24/7', 'Trabajo clínico intensivo'],
+  },
+  {
+    id: 'ambulatorio',
+    title: 'Ambulatorio / Consultas',
+    description:
+      'Seguimiento clínico y familiar, reforzamiento terapéutico y prevención de recaídas.',
+    image: '/assets/programa3.jpg',
+    href: '/programas',
+    tag: 'Consultas externas',
+    icon: Stethoscope,
+    meta: ['Sesiones programadas', 'Enfoque flexible'],
+  },
+  {
+    id: 'familias',
+    title: 'Familias',
+    description:
+      'Charlas, talleres y terapia familiar con participación activa en cada fase del proceso.',
+    image: '/assets/programa2.jpg',
+    href: '/familia',
+    tag: 'Apoyo a familias',
+    icon: Users,
+    meta: ['Espacio seguro', 'Acompañamiento continuo'],
+  },
+]
+---
+
+<AnimateOnView client:visible>
+  <section
+    class="from-surface-50 to-surface-100/70 dark:from-brand-900 dark:to-brand-900/40 mt-20 border-t border-zinc-100 bg-gradient-to-b px-6 py-16 dark:border-zinc-800/80"
+  >
+    <div class="mx-auto flex max-w-6xl flex-col gap-6 md:flex-row md:items-end md:justify-between">
+      <div class="space-y-3">
+        <span
+          class="border-brand-100 text-brand-700 dark:border-brand-800 dark:bg-brand-900/70 dark:text-brand-200 inline-flex items-center gap-2 rounded-full border bg-white/80 px-3 py-1 text-[11px] font-semibold tracking-[0.14em] uppercase shadow-sm backdrop-blur-md"
+        >
+          <Sparkles class="h-3.5 w-3.5" />
+          Nuestros programas
+        </span>
+        <h2
+          class="text-brand-900 dark:text-surface-50 text-3xl font-bold tracking-tight sm:text-4xl"
+        >
+          Acompañamiento diseñado para cada etapa
+        </h2>
+        <p class="max-w-xl text-sm text-zinc-700 sm:text-base dark:text-zinc-300">
+          Desde el primer contacto hasta el seguimiento, te acompañamos con programas clínicos
+          estructurados, pensados para la persona y su familia.
+        </p>
+      </div>
+      <div class="flex flex-wrap gap-2 text-[11px] text-zinc-500 dark:text-zinc-400">
+        <span
+          class="dark:bg-brand-900/70 inline-flex items-center gap-1 rounded-full bg-white/80 px-3 py-1"
+        >
+          <CalendarClock class="text-accent-500 h-3.5 w-3.5" />
+          Ingresos 24/7
+        </span>
+        <span
+          class="dark:bg-brand-900/70 inline-flex items-center gap-1 rounded-full bg-white/80 px-3 py-1"
+        >
+          <Stethoscope class="text-brand-600 dark:text-brand-300 h-3.5 w-3.5" />
+          Modelo Minnesota y terapias de nueva generación
+        </span>
+      </div>
+    </div>
+
+    <div class="mx-auto mt-10 grid max-w-6xl gap-6 md:grid-cols-3">
+      {
+        programs.map((program) => (
+          <article class="group card-3d card-appear shadow-soft hover:border-brand-200 dark:bg-brand-900/70 relative flex h-full flex-col overflow-hidden rounded-2xl border border-zinc-200 bg-white/90 backdrop-blur-sm transition dark:border-zinc-800">
+            <div class="relative aspect-[16/10] overflow-hidden">
+              <img
+                src={program.image}
+                alt={program.title}
+                loading="lazy"
+                width="1200"
+                height="675"
+                class="h-full w-full object-cover transition duration-[220ms] ease-[--ease-out-smooth] group-hover:scale-[1.04]"
+              />
+              <div class="from-brand-950/70 via-brand-950/10 dark:from-brand-950/80 pointer-events-none absolute inset-0 bg-gradient-to-t to-transparent" />
+              <div class="text-surface-50 absolute top-3 left-3 inline-flex items-center gap-2 rounded-full bg-black/45 px-2.5 py-1 text-[11px] font-medium backdrop-blur-sm dark:bg-black/50">
+                <program.icon class="text-accent-300 h-3.5 w-3.5" />
+                <span>{program.tag}</span>
+              </div>
+            </div>
+
+            <div class="flex flex-1 flex-col p-5 sm:p-6">
+              <div class="flex items-start justify-between gap-3">
+                <div>
+                  <h3 class="font-display text-brand-900 dark:text-surface-50 text-base font-semibold">
+                    {program.title}
+                  </h3>
+                  <p class="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-300">
+                    {program.description}
+                  </p>
+                </div>
+              </div>
+
+              <div class="mt-4 flex flex-wrap gap-2">
+                {program.meta.map((item) => (
+                  <span class="bg-brand-50 text-brand-700 dark:bg-brand-800/70 dark:text-brand-100 inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-[11px] font-medium">
+                    <span class="bg-accent-500 h-1.5 w-1.5 rounded-full" />
+                    {item}
+                  </span>
+                ))}
+              </div>
+
+              <div class="mt-5 flex items-center justify-between">
+                <a
+                  href={program.href}
+                  class="bg-brand-900 text-surface-50 group-hover:bg-brand-800 dark:bg-surface-50 dark:text-brand-900 dark:hover:bg-surface-100 inline-flex items-center gap-1.5 rounded-2xl px-3.5 py-2 text-xs font-semibold tracking-tight shadow-sm transition duration-[--dur-sm] ease-[--ease-out-smooth] group-hover:-translate-y-0.5"
+                >
+                  Ver programa
+                  <ArrowRight class="h-3.5 w-3.5" />
+                </a>
+                <span class="text-[11px] text-zinc-500 dark:text-zinc-400">
+                  Valoración inicial sin costo
+                </span>
+              </div>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+</AnimateOnView>

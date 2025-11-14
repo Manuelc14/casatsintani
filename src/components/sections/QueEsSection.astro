@@ -1,0 +1,152 @@
+---
+import AnimateOnView from '../islands/AnimateOnView'
+import StatsCounter from '../islands/StatsCounter.tsx'
+import { ShieldCheck, Clock3, Users, Stethoscope } from 'lucide-astro'
+
+const currentYear = new Date().getFullYear()
+const years = currentYear - 2010
+---
+
+<section class="relative mx-auto max-w-6xl px-6 py-20 md:px-8 lg:px-12">
+  <!-- Cards de confianza (arriba) -->
+  <AnimateOnView client:visible>
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <!-- CARD -->
+      <div
+        class="group flex items-center gap-3 rounded-xl border border-zinc-200 bg-white/70 p-4 shadow-sm backdrop-blur-md dark:border-zinc-700 dark:bg-zinc-800/40"
+      >
+        <div
+          class="bg-brand-600 flex h-10 w-10 items-center justify-center rounded-lg text-white shadow-sm"
+        >
+          <ShieldCheck class="h-5 w-5" />
+        </div>
+        <div class="text-left">
+          <p
+            class="text-brand-700 dark:text-brand-300 text-xs font-semibold tracking-wide uppercase"
+          >
+            Exclusividad
+          </p>
+          <p class="text-[11px] text-zinc-700 dark:text-zinc-300">
+            Instalaciones seguras y cupos limitados.
+          </p>
+        </div>
+      </div>
+
+      <!-- CARD -->
+      <div
+        class="group flex items-center gap-3 rounded-xl border border-sky-200 bg-sky-50/80 p-4 shadow-sm backdrop-blur-md dark:border-sky-900/50 dark:bg-sky-900/30"
+      >
+        <div
+          class="flex h-10 w-10 items-center justify-center rounded-lg bg-sky-600 text-white shadow-sm"
+        >
+          <Clock3 class="h-5 w-5" />
+        </div>
+        <div class="text-left">
+          <p class="text-xs font-semibold tracking-wide text-sky-900 uppercase dark:text-sky-50">
+            Experiencia
+          </p>
+          <p class="text-lg font-semibold text-sky-900 dark:text-sky-50">
+            <StatsCounter client:visible value={years} suffix="+" />
+          </p>
+          <p class="text-[11px] text-sky-900/80 dark:text-sky-200/70">
+            Años de servicio profesional.
+          </p>
+        </div>
+      </div>
+
+      <!-- CARD -->
+      <div
+        class="group flex items-center gap-3 rounded-xl border border-indigo-200 bg-indigo-50/80 p-4 shadow-sm backdrop-blur-md dark:border-indigo-900/50 dark:bg-indigo-900/30"
+      >
+        <div
+          class="flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600 text-white shadow-sm"
+        >
+          <Users class="h-5 w-5" />
+        </div>
+        <div class="text-left">
+          <p
+            class="text-xs font-semibold tracking-wide text-indigo-900 uppercase dark:text-indigo-50"
+          >
+            Pacientes y familias
+          </p>
+          <p class="text-lg font-semibold text-indigo-900 dark:text-indigo-50">
+            <StatsCounter client:visible value={15000} />
+          </p>
+          <p class="text-[11px] text-indigo-900/80 dark:text-indigo-200/70">
+            Procesos acompañados con dignidad.
+          </p>
+        </div>
+      </div>
+
+      <!-- CARD -->
+      <div
+        class="group flex items-center gap-3 rounded-xl border border-emerald-200 bg-emerald-50/80 p-4 shadow-sm backdrop-blur-md dark:border-emerald-900/50 dark:bg-emerald-900/30"
+      >
+        <div
+          class="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-600 text-white shadow-sm"
+        >
+          <Stethoscope class="h-5 w-5" />
+        </div>
+        <div class="text-left">
+          <p
+            class="text-xs font-semibold tracking-wide text-emerald-900 uppercase dark:text-emerald-50"
+          >
+            Equipo clínico
+          </p>
+          <p class="text-lg font-semibold text-emerald-900 dark:text-emerald-50">
+            <StatsCounter client:visible value={50} />
+            <span class="text-xs font-normal">profesionales</span>
+          </p>
+          <p class="text-[11px] text-emerald-900/80 dark:text-emerald-200/70">
+            Psiquiatría, medicina y psicología.
+          </p>
+        </div>
+      </div>
+    </div>
+  </AnimateOnView>
+
+  <!-- Texto intro + visual -->
+  <AnimateOnView client:visible>
+    <div class="mt-16 grid items-center gap-12 md:grid-cols-2">
+      <!-- Texto -->
+      <div class="space-y-4 text-left">
+        <h2 class="text-brand-900 text-3xl font-bold tracking-tight sm:text-4xl dark:text-white">
+          Recuperación real y acompañamiento integral
+        </h2>
+        <p class="max-w-md text-sm text-zinc-700 sm:text-base dark:text-zinc-300">
+          Nuestros programas están diseñados para abordar mente, cuerpo, familia y propósito de
+          vida, utilizando modelos terapéuticos comprobados y un equipo clínico dedicado.
+        </p>
+        <a href="/servicios" class="btn-secondary inline-flex text-sm">
+          Conoce nuestros programas
+        </a>
+      </div>
+
+      <!-- VIDEO con badge sutil, estilo premium -->
+      <div class="relative">
+        <div
+          class="relative aspect-video overflow-hidden rounded-2xl border border-zinc-200 shadow-xl dark:border-zinc-700"
+        >
+          <iframe
+            src="https://www.youtube.com/embed/VIDEO_ID?rel=0"
+            title="Testimonio Casa Tsíntani"
+            loading="lazy"
+            class="h-full w-full"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
+
+        <!-- Badge flotante -->
+        <div
+          class="pointer-events-none absolute top-full left-1/2 z-10 w-auto -translate-x-1/2 -translate-y-1/2 rounded-xl border border-zinc-200 bg-white/70 px-4 py-2 text-xs shadow-lg backdrop-blur-md dark:border-zinc-700 dark:bg-zinc-800/60"
+        >
+          <p class="font-medium text-zinc-900 dark:text-zinc-100">Testimonio real</p>
+          <p class="mt-0.5 text-[11px] text-zinc-600 dark:text-zinc-300">
+            Familia acompañada por nuestro equipo clínico
+          </p>
+        </div>
+      </div>
+    </div>
+  </AnimateOnView>
+</section>
