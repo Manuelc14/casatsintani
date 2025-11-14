@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json.schemastore.org/prettierrc",
+  "plugins": ["prettier-plugin-astro", "prettier-plugin-tailwindcss"],
+  "semi": false,
+  "singleQuote": true,
+  "trailingComma": "all",
+  "printWidth": 100,
+  "overrides": [
+    { "files": "*.astro", "options": { "parser": "astro" } },
+    { "files": ["*.css"], "options": { "singleQuote": false } }
+  ]
+}

@@ -1,155 +1,238 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import BaseLayout from '../layouts/BaseLayout.astro'
 ---
 
 <BaseLayout
   title="Equipo – Casa Tsíntani"
-  description="Conoce al equipo multidisciplinario de Casa Tsíntani y nuestra forma de trabajo clínica y ética."
+  description="Conoce al equipo multidisciplinario de Casa Tsíntani y nuestra forma de trabajo humana, profesional y ética."
 >
-  <h1
-    class="text-3xl md:text-4xl font-bold tracking-tight text-zinc-900 dark:text-white"
-  >
-    Equipo
-  </h1>
+  <header class="border-surface-200/80 mb-8 border-b pb-6">
+    <p class="text-accent-500 mb-2 text-xs font-semibold tracking-[0.18em] uppercase">
+      Equipo multidisciplinario
+    </p>
+    <h1 class="text-3xl font-bold tracking-tight md:text-4xl">Equipo</h1>
+    <p class="text-brand-700/80 dark:text-surface-200/80 mt-3 max-w-2xl text-sm">
+      Integramos un equipo clínico y humano que acompaña cada proceso con trato digno,
+      profesionalismo y coordinación permanente entre especialidades.
+    </p>
+  </header>
 
-  <section class="py-8 space-y-10 text-zinc-700 dark:text-zinc-300">
-    <div>
-      <h2
-        class="text-2xl font-semibold tracking-tight mb-2 text-zinc-900 dark:text-zinc-100"
-      >
-        Un equipo, una misma misión
-      </h2>
-      <p>
-        Nuestro equipo integra profesionales de la salud y especialistas en
-        adicciones que trabajan de forma coordinada, con enfoque humano y
-        estándares clínicos altos.
+  <section class="text-brand-700 dark:text-surface-200 space-y-12 py-8 text-sm">
+    <div class="space-y-4">
+      <h2 class="text-2xl font-semibold tracking-tight">Un equipo, una misma misión</h2>
+      <p class="max-w-2xl">
+        Nuestro equipo reúne profesionales de la salud, especialistas en adicciones y terapeutas que
+        trabajan de forma coordinada, con enfoque humano, ética clínica y estándares altos de
+        calidad.
       </p>
+      <div
+        class="border-brand-200/70 bg-surface-50/90 shadow-soft dark:border-brand-800 dark:bg-brand-900/80 grid gap-4 rounded-2xl border p-5 md:grid-cols-3"
+      >
+        <div class="space-y-1">
+          <p class="text-accent-500 text-xs font-semibold tracking-[0.16em] uppercase">
+            Acompañamiento humano
+          </p>
+          <p class="text-brand-900 dark:text-surface-50 text-sm font-medium">
+            Trato digno, cercano y sin juicios.
+          </p>
+          <p class="text-brand-700/80 dark:text-surface-200/80 text-xs">
+            Cada persona es recibida con empatía, respeto y límites claros que cuidan su proceso.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <p class="text-accent-500 text-xs font-semibold tracking-[0.16em] uppercase">
+            Trabajo en red
+          </p>
+          <p class="text-brand-900 dark:text-surface-50 text-sm font-medium">
+            Coordinación entre disciplinas.
+          </p>
+          <p class="text-brand-700/80 dark:text-surface-200/80 text-xs">
+            Medicina, psiquiatría, psicología y terapias complementarias se integran en un mismo
+            plan.
+          </p>
+        </div>
+        <div class="space-y-1">
+          <p class="text-accent-500 text-xs font-semibold tracking-[0.16em] uppercase">
+            Ética y confidencialidad
+          </p>
+          <p class="text-brand-900 dark:text-surface-50 text-sm font-medium">
+            Compromiso profesional permanente.
+          </p>
+          <p class="text-brand-700/80 dark:text-surface-200/80 text-xs">
+            Protocolos claros de confidencialidad, seguridad del paciente y actualización continua.
+          </p>
+        </div>
+      </div>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-4">
-      <div
-        class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-800/50"
-      >
-        <img
-          src="/imgs/equipo-1.jpg"
-          alt="Dirección clínica"
-          loading="lazy"
-          class="h-full w-full object-cover"
-          width="1200"
-          height="900"
-        />
-      </div>
-      <div
-        class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-800/50"
-      >
-        <img
-          src="/imgs/equipo-2.jpg"
-          alt="Psicología clínica"
-          loading="lazy"
-          class="h-full w-full object-cover"
-          width="1200"
-          height="900"
-        />
-      </div>
-      <div
-        class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-800/50"
-      >
-        <img
-          src="/imgs/equipo-3.jpg"
-          alt="Terapias complementarias"
-          loading="lazy"
-          class="h-full w-full object-cover"
-          width="1200"
-          height="900"
-        />
-      </div>
-    </div>
-
-    <div>
-      <h2
-        class="text-2xl font-semibold tracking-tight mb-2 text-zinc-900 dark:text-zinc-100"
-      >
-        Disciplinas y especialidades
-      </h2>
-      <div class="grid md:grid-cols-2 gap-6">
-        <ul class="list-disc pl-5">
-          <li>Medicina interna</li>
-          <li>Neurología</li>
-          <li>Psiquiatría</li>
-          <li>Enfermería 24/7</li>
-          <li>Odontología</li>
-        </ul>
-        <ul class="list-disc pl-5">
-          <li>Psicología clínica</li>
-          <li>Consejería en adicciones</li>
-          <li>Terapia ocupacional y de arte</li>
-          <li>Actividad física terapéutica</li>
-          <li>Trabajo social</li>
-        </ul>
-      </div>
-      <p class="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
-        Según cada plan individual, se integran otros consultores y aliados
-        externos.
+    <div class="space-y-4">
+      <h2 class="text-2xl font-semibold tracking-tight">Rostros y espacios de trabajo</h2>
+      <p class="max-w-2xl">
+        El acompañamiento ocurre en un entorno terapéutico diseñado para favorecer la contención, la
+        seguridad y la cercanía con el equipo clínico.
       </p>
+      <div class="grid gap-4 md:grid-cols-3">
+        <div
+          class="group border-brand-200/70 bg-surface-50/80 shadow-soft dark:border-brand-800 dark:bg-brand-900/70 relative aspect-[4/3] overflow-hidden rounded-2xl border"
+        >
+          <img
+            src="/imgs/equipo-1.jpg"
+            alt="Dirección clínica"
+            loading="lazy"
+            class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.04]"
+            width="1200"
+            height="900"
+          />
+          <div
+            class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"
+          >
+          </div>
+          <div
+            class="text-surface-50 absolute bottom-3 left-3 rounded-full bg-black/50 px-3 py-1 text-[11px] font-medium"
+          >
+            Dirección clínica
+          </div>
+        </div>
+        <div
+          class="group border-brand-200/70 bg-surface-50/80 shadow-soft dark:border-brand-800 dark:bg-brand-900/70 relative aspect-[4/3] overflow-hidden rounded-2xl border"
+        >
+          <img
+            src="/imgs/equipo-2.jpg"
+            alt="Psicología clínica"
+            loading="lazy"
+            class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.04]"
+            width="1200"
+            height="900"
+          />
+          <div
+            class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"
+          >
+          </div>
+          <div
+            class="text-surface-50 absolute bottom-3 left-3 rounded-full bg-black/50 px-3 py-1 text-[11px] font-medium"
+          >
+            Psicología clínica
+          </div>
+        </div>
+        <div
+          class="group border-brand-200/70 bg-surface-50/80 shadow-soft dark:border-brand-800 dark:bg-brand-900/70 relative aspect-[4/3] overflow-hidden rounded-2xl border"
+        >
+          <img
+            src="/imgs/equipo-3.jpg"
+            alt="Terapias complementarias"
+            loading="lazy"
+            class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.04]"
+            width="1200"
+            height="900"
+          />
+          <div
+            class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"
+          >
+          </div>
+          <div
+            class="text-surface-50 absolute bottom-3 left-3 rounded-full bg-black/50 px-3 py-1 text-[11px] font-medium"
+          >
+            Terapias complementarias
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div>
-      <h2
-        class="text-2xl font-semibold tracking-tight mb-2 text-zinc-900 dark:text-zinc-100"
+    <div class="space-y-4">
+      <h2 class="text-2xl font-semibold tracking-tight">Disciplinas y especialidades</h2>
+      <p class="max-w-2xl">
+        Cada caso se acompaña desde una mirada integral, articulando distintas áreas clínicas y
+        terapéuticas.
+      </p>
+      <div
+        class="border-brand-200/70 bg-surface-50/95 shadow-soft dark:border-brand-800 dark:bg-brand-900/85 grid gap-6 rounded-2xl border p-5 md:grid-cols-2"
       >
-        Principios de trabajo clínico
-      </h2>
-      <ul class="list-disc pl-5 space-y-1">
-        <li>
-          <strong class="text-zinc-900 dark:text-zinc-100"
-            >Trato digno y sin castigos:</strong
-          > vínculo terapéutico basado en respeto y límites claros.
-        </li>
-        <li>
-          <strong class="text-zinc-900 dark:text-zinc-100"
-            >Basado en evidencia:</strong
-          > ACT, DBT, mindfulness, logoterapia y prevención de recaídas.
-        </li>
-        <li>
-          <strong class="text-zinc-900 dark:text-zinc-100"
-            >Visión biopsicosocial-espiritual:</strong
-          > abordaje integral, centrado en la persona.
-        </li>
-        <li>
-          <strong class="text-zinc-900 dark:text-zinc-100"
-            >Corresponsabilidad familiar:</strong
-          > psicoeducación y talleres para fortalecer redes de apoyo.
-        </li>
-        <li>
-          <strong class="text-zinc-900 dark:text-zinc-100"
-            >Medición y mejora continua:</strong
-          > objetivos clínicos, revisión interdisciplinaria y seguimiento.
-        </li>
-      </ul>
-    </div>
-
-    <div>
-      <h2
-        class="text-2xl font-semibold tracking-tight mb-2 text-zinc-900 dark:text-zinc-100"
-      >
-        Coordinación clínica y seguridad del paciente
-      </h2>
-      <div class="grid md:grid-cols-2 gap-6">
         <div>
-          <h3 class="font-semibold mb-1 text-zinc-900 dark:text-zinc-100">
+          <h3 class="text-brand-900 dark:text-surface-50 mb-2 text-sm font-semibold">
+            Área médica
+          </h3>
+          <ul class="list-disc space-y-1 pl-5">
+            <li>Medicina interna</li>
+            <li>Neurología</li>
+            <li>Psiquiatría</li>
+            <li>Enfermería 24/7</li>
+            <li>Odontología</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-brand-900 dark:text-surface-50 mb-2 text-sm font-semibold">
+            Área psicológica y terapéutica
+          </h3>
+          <ul class="list-disc space-y-1 pl-5">
+            <li>Psicología clínica</li>
+            <li>Consejería en adicciones</li>
+            <li>Terapia ocupacional y de arte</li>
+            <li>Actividad física terapéutica</li>
+            <li>Trabajo social</li>
+          </ul>
+        </div>
+      </div>
+      <p class="text-brand-700/80 dark:text-surface-200/70 mt-3 text-xs">
+        Según cada plan individual, se integran otros consultores y aliados externos para reforzar
+        el proceso.
+      </p>
+    </div>
+
+    <div class="space-y-4">
+      <h2 class="text-2xl font-semibold tracking-tight">Principios de trabajo clínico</h2>
+      <div
+        class="border-brand-200/70 bg-surface-50/95 shadow-soft dark:border-brand-800 dark:bg-brand-900/85 rounded-2xl border p-5"
+      >
+        <ul class="list-disc space-y-1.5 pl-5">
+          <li>
+            <strong class="text-brand-900 dark:text-surface-50">Trato digno y respetuoso:</strong>
+            vínculo terapéutico basado en respeto, empatía y límites claros que cuidan a la persona.
+          </li>
+          <li>
+            <strong class="text-brand-900 dark:text-surface-50">Basado en evidencia:</strong>
+            ACT, DBT, mindfulness, logoterapia y prevención de recaídas.
+          </li>
+          <li>
+            <strong class="text-brand-900 dark:text-surface-50"
+              >Visión biopsicosocial-espiritual:</strong
+            >
+            abordaje integral, centrado en la persona.
+          </li>
+          <li>
+            <strong class="text-brand-900 dark:text-surface-50">Corresponsabilidad familiar:</strong
+            >
+            psicoeducación y talleres para fortalecer redes de apoyo.
+          </li>
+          <li>
+            <strong class="text-brand-900 dark:text-surface-50">Medición y mejora continua:</strong>
+            objetivos clínicos, revisión interdisciplinaria y seguimiento.
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="space-y-4">
+      <h2 class="text-2xl font-semibold tracking-tight">Coordinación clínica y seguridad</h2>
+      <div class="grid gap-6 md:grid-cols-2">
+        <div
+          class="border-brand-200/70 bg-surface-50/95 shadow-soft dark:border-brand-800 dark:bg-brand-900/85 space-y-2 rounded-2xl border p-5"
+        >
+          <h3 class="text-brand-900 dark:text-surface-50 text-sm font-semibold">
             Revisión interdisciplinaria
           </h3>
-          <ul class="list-disc pl-5">
+          <ul class="list-disc space-y-1 pl-5">
             <li>Valoraciones médicas y psiquiátricas programadas</li>
             <li>Reuniones clínicas y ajustes de plan</li>
             <li>Interconsultas y referencias cuando se requieren</li>
           </ul>
         </div>
-        <div>
-          <h3 class="font-semibold mb-1 text-zinc-900 dark:text-zinc-100">
-            Protocolos de seguridad
+        <div
+          class="border-brand-200/70 bg-surface-50/95 shadow-soft dark:border-brand-800 dark:bg-brand-900/85 space-y-2 rounded-2xl border p-5"
+        >
+          <h3 class="text-brand-900 dark:text-surface-50 text-sm font-semibold">
+            Protocolos de seguridad del paciente
           </h3>
-          <ul class="list-disc pl-5">
+          <ul class="list-disc space-y-1 pl-5">
             <li>Ingreso y estabilización con criterios definidos</li>
             <li>Farmacovigilancia y monitoreo de signos</li>
             <li>Gestión de riesgos y comunicación con familia</li>
@@ -158,108 +241,90 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       </div>
     </div>
 
-    <div>
-      <h2
-        class="text-2xl font-semibold tracking-tight mb-2 text-zinc-900 dark:text-zinc-100"
+    <div class="space-y-4">
+      <h2 class="text-2xl font-semibold tracking-tight">Formación continua y ética</h2>
+      <div
+        class="border-brand-200/70 bg-surface-50/95 shadow-soft dark:border-brand-800 dark:bg-brand-900/85 rounded-2xl border p-5"
       >
-        Formación continua y ética profesional
-      </h2>
-      <p>
-        Promovemos capacitación permanente, supervisión clínica y actualización
-        en guías de práctica. Todo el personal firma acuerdos de
-        confidencialidad y se adhiere a códigos de ética y a la normativa
-        sanitaria aplicable.
-      </p>
+        <p>
+          Promovemos capacitación permanente, supervisión clínica y actualización en guías de
+          práctica. Todo el personal firma acuerdos de confidencialidad y se adhiere a códigos de
+          ética y a la normativa sanitaria aplicable.
+        </p>
+      </div>
     </div>
 
-    <div>
-      <h2
-        class="text-2xl font-semibold tracking-tight mb-4 text-zinc-900 dark:text-zinc-100"
-      >
-        Roles dentro del equipo
-      </h2>
-      <div class="grid md:grid-cols-3 gap-4">
+    <div class="space-y-4">
+      <h2 class="text-2xl font-semibold tracking-tight">Roles dentro del equipo</h2>
+      <div class="grid gap-4 md:grid-cols-3">
         <div
-          class="border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 bg-white/60 dark:bg-zinc-900/60"
+          class="border-brand-200/70 bg-surface-50/95 shadow-soft dark:border-brand-800 dark:bg-brand-900/85 rounded-2xl border p-4"
         >
-          <h3 class="font-semibold text-zinc-900 dark:text-zinc-100">
+          <h3 class="text-brand-900 dark:text-surface-50 text-sm font-semibold">
             Dirección clínica
           </h3>
-          <p class="text-sm text-zinc-700 dark:text-zinc-300">
-            Define lineamientos terapéuticos, coordina al equipo y asegura la
-            calidad asistencial.
+          <p class="mt-1 text-sm">
+            Define lineamientos terapéuticos, coordina al equipo y asegura la calidad asistencial.
           </p>
         </div>
         <div
-          class="border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 bg-white/60 dark:bg-zinc-900/60"
+          class="border-brand-200/70 bg-surface-50/95 shadow-soft dark:border-brand-800 dark:bg-brand-900/85 rounded-2xl border p-4"
         >
-          <h3 class="font-semibold text-zinc-900 dark:text-zinc-100">
+          <h3 class="text-brand-900 dark:text-surface-50 text-sm font-semibold">
             Medicina y psiquiatría
           </h3>
-          <p class="text-sm text-zinc-700 dark:text-zinc-300">
-            Evaluación diagnóstica, estabilización, tratamiento farmacológico y
-            seguimiento.
+          <p class="mt-1 text-sm">
+            Evaluación diagnóstica, estabilización, tratamiento farmacológico y seguimiento.
           </p>
         </div>
         <div
-          class="border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 bg-white/60 dark:bg-zinc-900/60"
+          class="border-brand-200/70 bg-surface-50/95 shadow-soft dark:border-brand-800 dark:bg-brand-900/85 rounded-2xl border p-4"
         >
-          <h3 class="font-semibold text-zinc-900 dark:text-zinc-100">
+          <h3 class="text-brand-900 dark:text-surface-50 text-sm font-semibold">
             Psicología y consejería
           </h3>
-          <p class="text-sm text-zinc-700 dark:text-zinc-300">
-            Psicoterapia individual y grupal, prevención de recaídas,
-            habilidades y soporte familiar.
+          <p class="mt-1 text-sm">
+            Psicoterapia individual y grupal, prevención de recaídas, habilidades y soporte
+            familiar.
           </p>
         </div>
         <div
-          class="border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 bg-white/60 dark:bg-zinc-900/60"
+          class="border-brand-200/70 bg-surface-50/95 shadow-soft dark:border-brand-800 dark:bg-brand-900/85 rounded-2xl border p-4"
         >
-          <h3 class="font-semibold text-zinc-900 dark:text-zinc-100">
-            Enfermería
-          </h3>
-          <p class="text-sm text-zinc-700 dark:text-zinc-300">
-            Cuidado continuo, administración segura de tratamientos y vigilancia
-            clínica.
+          <h3 class="text-brand-900 dark:text-surface-50 text-sm font-semibold">Enfermería</h3>
+          <p class="mt-1 text-sm">
+            Cuidado continuo, administración segura de tratamientos y vigilancia clínica.
           </p>
         </div>
         <div
-          class="border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 bg-white/60 dark:bg-zinc-900/60"
+          class="border-brand-200/70 bg-surface-50/95 shadow-soft dark:border-brand-800 dark:bg-brand-900/85 rounded-2xl border p-4"
         >
-          <h3 class="font-semibold text-zinc-900 dark:text-zinc-100">
+          <h3 class="text-brand-900 dark:text-surface-50 text-sm font-semibold">
             Terapias complementarias
           </h3>
-          <p class="text-sm text-zinc-700 dark:text-zinc-300">
-            Arteterapia, terapia ocupacional, actividad física terapéutica y
-            mindfulness.
+          <p class="mt-1 text-sm">
+            Arteterapia, terapia ocupacional, actividad física terapéutica y mindfulness.
           </p>
         </div>
         <div
-          class="border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 bg-white/60 dark:bg-zinc-900/60"
+          class="border-brand-200/70 bg-surface-50/95 shadow-soft dark:border-brand-800 dark:bg-brand-900/85 rounded-2xl border p-4"
         >
-          <h3 class="font-semibold text-zinc-900 dark:text-zinc-100">
-            Trabajo social
-          </h3>
-          <p class="text-sm text-zinc-700 dark:text-zinc-300">
-            Vínculo con familia y comunidad, apoyos y coordinación de recursos
-            externos.
+          <h3 class="text-brand-900 dark:text-surface-50 text-sm font-semibold">Trabajo social</h3>
+          <p class="mt-1 text-sm">
+            Vínculo con familia y comunidad, apoyos y coordinación de recursos externos.
           </p>
         </div>
       </div>
     </div>
 
     <div
-      class="border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 bg-white/60 dark:bg-zinc-900/60"
+      class="border-brand-200/70 bg-surface-50/95 shadow-soft dark:border-brand-800 dark:bg-brand-900/85 flex flex-col gap-3 rounded-2xl border p-5 md:flex-row md:items-center md:justify-between"
     >
-      <p class="font-medium text-zinc-900 dark:text-zinc-100">
-        ¿Deseas conocer a la persona responsable de tu caso? Agenda una
-        valoración y te presentaremos a tu equipo clínico.
+      <p class="text-brand-900 dark:text-surface-50 max-w-2xl text-sm font-medium">
+        ¿Quieres conocer al equipo que acompañaría tu proceso? Agenda una valoración clínica y te
+        presentaremos a las personas responsables de tu caso.
       </p>
-      <a
-        href="/contacto"
-        class="inline-block mt-3 underline text-amber-700 dark:text-amber-400"
-        >Contactar al equipo</a
-      >
+      <a href="/contacto" class="btn-secondary text-sm"> Contactar al equipo clínico </a>
     </div>
   </section>
 </BaseLayout>

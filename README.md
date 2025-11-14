@@ -7,17 +7,18 @@ Construido con **Astro 5**, **Tailwind CSS 4** y **React 19 (Islands)** para ofr
 
 ## ⚙️ Stack técnico
 
-| Tecnología | Rol |
-|---|---|
-| **Astro 5** | Generación **estática** (`output: "static"`), enrutamiento por archivos y partial hydration. |
-| **@astrojs/react** | Integración de React para **islas interactivas** (client:load / client:visible). |
-| **Tailwind CSS 4** + **@tailwindcss/vite** | Design system con tokens en `@theme`, variante `dark` y utilidades modernas. |
-| **Framer Motion 12** | Animaciones fluidas y performantes en islas React. |
-| **Lucide React** | Iconografía ligera y escalable. |
-| **@astrojs/prefetch** | Prefetch de enlaces para transiciones de página más ágiles. |
-| **Vite** | Bundling y DX veloz durante desarrollo. |
+| Tecnología                                 | Rol                                                                                          |
+| ------------------------------------------ | -------------------------------------------------------------------------------------------- |
+| **Astro 5**                                | Generación **estática** (`output: "static"`), enrutamiento por archivos y partial hydration. |
+| **@astrojs/react**                         | Integración de React para **islas interactivas** (client:load / client:visible).             |
+| **Tailwind CSS 4** + **@tailwindcss/vite** | Design system con tokens en `@theme`, variante `dark` y utilidades modernas.                 |
+| **Framer Motion 12**                       | Animaciones fluidas y performantes en islas React.                                           |
+| **Lucide React**                           | Iconografía ligera y escalable.                                                              |
+| **@astrojs/prefetch**                      | Prefetch de enlaces para transiciones de página más ágiles.                                  |
+| **Vite**                                   | Bundling y DX veloz durante desarrollo.                                                      |
 
 **Dependencias clave** (ver `package.json`):
+
 - `astro`, `@astrojs/react`, `@astrojs/prefetch`
 - `tailwindcss` `^4` + `@tailwindcss/vite`
 - `react`, `react-dom` `^19`
@@ -28,20 +29,24 @@ Construido con **Astro 5**, **Tailwind CSS 4** y **React 19 (Islands)** para ofr
 ## 🏛️ Arquitectura y decisiones
 
 ### Renderizado
+
 - **SSG** (Static Site Generation). No hay endpoints de servidor ni SSR; el sitio se publica como archivos estáticos en `dist/`.
 - **Islas React** para interactividad puntual (acordeón FAQ, carrusel de testimonios, toggles, animaciones on-view). El resto es **Astro/HTML** para maximizar rendimiento.
 
 ### Estilos / Design System
+
 - Tailwind v4 con `@import "tailwindcss";` y tokens en `@theme` definidos en `src/styles/global.css` (colores `--color-brand-*`, tipografías `--font-*`, radii, sombras, etc.).
 - **Dark mode** mediante la variante personalizada `@custom-variant dark (&:where(.dark, .dark *));` y persistencia en `localStorage` (`ThemeToggle`).
 - Conjunto de utilidades extendidas (sombras suaves, animaciones `fade-in`, `slide-in`, etc.).
 
 ### Interactividad
+
 - **Framer Motion** para animaciones (e.g. `AnimateOnView`, `MotionReveal`, `Stagger`).
 - **Islas** con hydration selectivo (`client:visible`, `client:load`) reducen JS enviado al cliente.
 - Botón **WhatsApp** con teléfono/texto configurables. También está embebido un **widget de ElevenLabs Convai** en el layout base.
 
 ### Accesibilidad y SEO
+
 - Enlaces con estados activo/foco y estructura semántica por secciones.
 - Prefetch de enlaces con `@astrojs/prefetch` para UX instantánea.
 - Metaetiquetas por página desde `BaseLayout` (título/description via `Astro.props`).
@@ -88,7 +93,7 @@ casatsintani/
 │       └── 404.astro
 └── public/                    # (si aplica) estáticos adicionales
 
-````
+```
 
 > **Nota:** el proyecto exporta a `dist/` con `astro build`. No hay adaptador SSR; cualquier hosting estático (Vercel/Netlify/CF Pages/FTP) funciona.
 
@@ -97,21 +102,22 @@ casatsintani/
 ## 🔌 Integraciones y configuración
 
 ### `astro.config.mjs`
+
 ```js
-import { defineConfig } from "astro/config";
-import react from "@astrojs/react";
-import prefetch from "@astrojs/prefetch";
-import tailwind from "@tailwindcss/vite";
+import { defineConfig } from 'astro/config'
+import react from '@astrojs/react'
+import prefetch from '@astrojs/prefetch'
+import tailwind from '@tailwindcss/vite'
 
 export default defineConfig({
-  output: "static",
+  output: 'static',
   vite: { plugins: [tailwind()] },
   integrations: [react(), prefetch()],
-});
-````
+})
+```
 
-* **Tailwind v4** se habilita con el plugin oficial de Vite.
-* **output: "static"** asegura SSG.
+- **Tailwind v4** se habilita con el plugin oficial de Vite.
+- **output: "static"** asegura SSG.
 
 ### Variables de entorno (`.env`)
 
@@ -146,22 +152,21 @@ pnpm preview
 
 ## 🧠 Páginas y composición
 
-* Todas las páginas usan `BaseLayout.astro` para configurar `<head>`, `<body>`, el **header**, **footer**, el **ThemeToggle**, el **WhatsAppButton** y el **widget de asistencia** (ElevenLabs Convai).
-* La home (`index.astro`) compone:
-
-  * `Hero` (sección UI)
-  * `AnimateOnView` / `MotionReveal` (islas para animaciones)
-  * `Testimonios` (sección estática) + `TestimonialCarousel` (isla)
-  * `FAQ` (isla React con acordeón accesible)
-  * `CTAFinal`
+- Todas las páginas usan `BaseLayout.astro` para configurar `<head>`, `<body>`, el **header**, **footer**, el **ThemeToggle**, el **WhatsAppButton** y el **widget de asistencia** (ElevenLabs Convai).
+- La home (`index.astro`) compone:
+  - `Hero` (sección UI)
+  - `AnimateOnView` / `MotionReveal` (islas para animaciones)
+  - `Testimonios` (sección estática) + `TestimonialCarousel` (isla)
+  - `FAQ` (isla React con acordeón accesible)
+  - `CTAFinal`
 
 ---
 
 ## 🧱 Patrones de componentes
 
-* **Islas React**: cada isla se encapsula en `src/components/islands/*` y se hidrata solo donde se usa.
-* **Secciones Astro**: bloques de contenido reusables (`sections/*`) sin JS por defecto.
-* **UI mínima**: componentes atómicos en `ui/` y layout en `layout/`.
+- **Islas React**: cada isla se encapsula en `src/components/islands/*` y se hidrata solo donde se usa.
+- **Secciones Astro**: bloques de contenido reusables (`sections/*`) sin JS por defecto.
+- **UI mínima**: componentes atómicos en `ui/` y layout en `layout/`.
 
 **Ejemplo**: `AnimateOnView.tsx` con Framer Motion para revelar contenido en viewport:
 
@@ -178,24 +183,24 @@ pnpm preview
 
 ## 🔒 Seguridad y privacidad
 
-* Sin backend ni cookies propias; el sitio es **estático**.
-* Widgets de terceros (WhatsApp, ElevenLabs) cargan desde sus CDNs. Verifica sus políticas si recopilas datos.
-* Página dedicada de **Privacidad** en `src/pages/privacidad.astro`.
+- Sin backend ni cookies propias; el sitio es **estático**.
+- Widgets de terceros (WhatsApp, ElevenLabs) cargan desde sus CDNs. Verifica sus políticas si recopilas datos.
+- Página dedicada de **Privacidad** en `src/pages/privacidad.astro`.
 
 ---
 
 ## 📈 Rendimiento
 
-* **Astro** minimiza el JS por defecto; solo hidrata las islas necesarias.
-* **@astrojs/prefetch** mejora la navegabilidad percibida.
-* **Imágenes**: colócalas en `src/assets/` y usa formatos comprimidos (WebP/AVIF) cuando sea posible.
-* **Tailwind v4**: no requiere purge manual; genera solo las clases usadas.
+- **Astro** minimiza el JS por defecto; solo hidrata las islas necesarias.
+- **@astrojs/prefetch** mejora la navegabilidad percibida.
+- **Imágenes**: colócalas en `src/assets/` y usa formatos comprimidos (WebP/AVIF) cuando sea posible.
+- **Tailwind v4**: no requiere purge manual; genera solo las clases usadas.
 
 **Recomendaciones**:
 
-* Reutiliza islas y evita hidratar componentes innecesarios.
-* Prefiere secciones `.astro` para contenido estático/estilizado.
-* Revisa pesos de framer-motion si una página tuviera muchas animaciones.
+- Reutiliza islas y evita hidratar componentes innecesarios.
+- Prefiere secciones `.astro` para contenido estático/estilizado.
+- Revisa pesos de framer-motion si una página tuviera muchas animaciones.
 
 ---
 
@@ -220,10 +225,9 @@ pnpm build
 
 Cualquier proveedor de estáticos sirve:
 
-* **Vercel**, **Netlify**, **Cloudflare Pages**, **Render** o **FTP/SSH** tradicional.
+- **Vercel**, **Netlify**, **Cloudflare Pages**, **Render** o **FTP/SSH** tradicional.
 
 > Si usas Vercel/Netlify, selecciona framework **Astro**, comando `pnpm build` y output `dist/`.
-
 
 ---
 

@@ -1,125 +1,199 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import BaseLayout from '../layouts/BaseLayout.astro'
 ---
 
 <BaseLayout
   title="Educación – Casa Tsíntani"
   description="Recursos educativos y psicoeducativos sobre adicciones, salud mental y bienestar familiar."
 >
-  <h1
-    class="text-3xl md:text-4xl font-bold tracking-tight text-zinc-900 dark:text-white"
-  >
-    Educación y recursos
-  </h1>
-
-  <section class="py-8 space-y-6 text-zinc-700 dark:text-zinc-300">
-    <p>
-      En <strong class="text-zinc-900 dark:text-zinc-100">Casa Tsíntani</strong>
-      creemos que la educación es una herramienta esencial para la prevención y la
-      recuperación. Nuestro compromiso no se limita al tratamiento clínico: buscamos
-      <strong class="text-zinc-900 dark:text-zinc-100"
-        >informar, sensibilizar y acompañar</strong
-      > a las personas y familias a través de recursos accesibles, claros y basados
-      en evidencia científica.
+  <header class="border-surface-200/80 mb-8 border-b pb-6">
+    <p class="text-accent-500 mb-2 text-xs font-semibold tracking-[0.18em] uppercase">
+      Educación y psicoeducación
     </p>
-
-    <p>
-      Esta sección reúne materiales educativos diseñados para comprender mejor
-      las adicciones, los procesos emocionales y las dinámicas familiares que
-      influyen en la recuperación. Cada recurso busca fortalecer la conciencia,
-      la empatía y la capacidad de acción frente a los desafíos que implican las
-      conductas adictivas.
+    <h1 class="text-3xl font-bold tracking-tight md:text-4xl">Educación y recursos</h1>
+    <p class="text-brand-700/80 dark:text-surface-200/80 mt-3 max-w-2xl text-sm">
+      Información clara, basada en evidencia, para comprender las adicciones, la salud mental y el
+      papel de la familia en la recuperación.
     </p>
+  </header>
 
-    <div class="grid md:grid-cols-3 gap-4">
+  <section class="text-brand-700 dark:text-surface-200 space-y-12 py-8 text-sm">
+    <div class="space-y-4">
       <div
-        class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-800/50"
+        class="border-brand-200/70 bg-surface-50/95 shadow-soft dark:border-brand-800 dark:bg-brand-900/85 rounded-2xl border p-5"
       >
-        <img
-          src="/imgs/educacion-1.jpg"
-          alt="Guías y manuales"
-          loading="lazy"
-          class="h-full w-full object-cover"
-          width="1200"
-          height="900"
-        />
+        <p class="mb-3">
+          En
+          <strong class="text-brand-900 dark:text-surface-50">Casa Tsíntani</strong>
+          creemos que la educación es una herramienta esencial para la prevención y la recuperación.
+          Nuestro compromiso no se limita al tratamiento clínico: buscamos
+          <strong class="text-brand-900 dark:text-surface-50">
+            informar, sensibilizar y acompañar</strong
+          >
+          a las personas y familias a través de recursos accesibles, claros y basados en evidencia científica.
+        </p>
+        <p>
+          Esta sección reúne materiales educativos diseñados para comprender mejor las adicciones,
+          los procesos emocionales y las dinámicas familiares que influyen en la recuperación. Cada
+          recurso busca fortalecer la conciencia, la empatía y la capacidad de acción frente a los
+          desafíos que implican las conductas adictivas.
+        </p>
       </div>
-      <div
-        class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-800/50"
-      >
-        <img
-          src="/imgs/educacion-2.jpg"
-          alt="Artículos y blog"
-          loading="lazy"
-          class="h-full w-full object-cover"
-          width="1200"
-          height="900"
-        />
-      </div>
-      <div
-        class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-800/50"
-      >
-        <img
-          src="/imgs/educacion-3.jpg"
-          alt="Infografías"
-          loading="lazy"
-          class="h-full w-full object-cover"
-          width="1200"
-          height="900"
-        />
+
+      <div class="grid gap-4 md:grid-cols-3">
+        <div
+          class="group border-brand-200/70 bg-surface-50/80 shadow-soft dark:border-brand-800 dark:bg-brand-900/70 relative aspect-[4/3] overflow-hidden rounded-2xl border"
+        >
+          <img
+            src="/imgs/educacion-1.jpg"
+            alt="Guías y manuales"
+            loading="lazy"
+            class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.04]"
+            width="1200"
+            height="900"
+          />
+          <div
+            class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"
+          >
+          </div>
+          <div
+            class="text-surface-50 absolute bottom-3 left-3 rounded-full bg-black/55 px-3 py-1 text-[11px] font-medium"
+          >
+            Guías y manuales
+          </div>
+        </div>
+        <div
+          class="group border-brand-200/70 bg-surface-50/80 shadow-soft dark:border-brand-800 dark:bg-brand-900/70 relative aspect-[4/3] overflow-hidden rounded-2xl border"
+        >
+          <img
+            src="/imgs/educacion-2.jpg"
+            alt="Artículos y blog"
+            loading="lazy"
+            class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.04]"
+            width="1200"
+            height="900"
+          />
+          <div
+            class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"
+          >
+          </div>
+          <div
+            class="text-surface-50 absolute bottom-3 left-3 rounded-full bg-black/55 px-3 py-1 text-[11px] font-medium"
+          >
+            Artículos y blog
+          </div>
+        </div>
+        <div
+          class="group border-brand-200/70 bg-surface-50/80 shadow-soft dark:border-brand-800 dark:bg-brand-900/70 relative aspect-[4/3] overflow-hidden rounded-2xl border"
+        >
+          <img
+            src="/imgs/educacion-3.jpg"
+            alt="Infografías"
+            loading="lazy"
+            class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.04]"
+            width="1200"
+            height="900"
+          />
+          <div
+            class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"
+          >
+          </div>
+          <div
+            class="text-surface-50 absolute bottom-3 left-3 rounded-full bg-black/55 px-3 py-1 text-[11px] font-medium"
+          >
+            Infografías y video
+          </div>
+        </div>
       </div>
     </div>
 
-    <h2
-      class="text-2xl font-semibold tracking-tight mt-8 mb-2 text-zinc-900 dark:text-zinc-100"
-    >
-      Recursos disponibles
-    </h2>
-    <ul class="list-disc list-inside space-y-1">
-      <li>
-        <strong class="text-zinc-900 dark:text-zinc-100"
-          >Guías y manuales digitales:</strong
-        > material descargable que explica procesos de recuperación y comunicación
-        familiar.
-      </li>
-      <li>
-        <strong class="text-zinc-900 dark:text-zinc-100"
-          >Artículos educativos y blog:</strong
-        > publicaciones periódicas sobre adicciones, salud mental y bienestar emocional.
-      </li>
-      <li>
-        <strong class="text-zinc-900 dark:text-zinc-100"
-          >Videos e infografías:</strong
-        > recursos visuales que facilitan la comprensión de los temas frecuentes.
-      </li>
-      <li>
-        <strong class="text-zinc-900 dark:text-zinc-100"
-          >Señales de alerta y mitos:</strong
-        > información práctica para identificar riesgos y desmontar creencias erróneas.
-      </li>
-      <li>
-        <strong class="text-zinc-900 dark:text-zinc-100"
-          >Preguntas frecuentes:</strong
-        > respuestas claras sobre proceso terapéutico, estancia y seguimiento.
-      </li>
-    </ul>
+    <div class="space-y-4">
+      <h2 class="text-2xl font-semibold tracking-tight">Recursos disponibles</h2>
+      <div
+        class="border-brand-200/70 bg-surface-50/95 shadow-soft dark:border-brand-800 dark:bg-brand-900/85 grid gap-4 rounded-2xl border p-5 md:grid-cols-2"
+      >
+        <ul class="list-disc space-y-1 pl-5">
+          <li>
+            <strong class="text-brand-900 dark:text-surface-50">Guías y manuales digitales:</strong>
+            material descargable que explica procesos de recuperación y comunicación familiar.
+          </li>
+          <li>
+            <strong class="text-brand-900 dark:text-surface-50">Artículos educativos y blog:</strong
+            >
+            publicaciones periódicas sobre adicciones, salud mental y bienestar emocional.
+          </li>
+          <li>
+            <strong class="text-brand-900 dark:text-surface-50">Videos e infografías:</strong>
+            recursos visuales que facilitan la comprensión de los temas frecuentes.
+          </li>
+        </ul>
+        <ul class="list-disc space-y-1 pl-5">
+          <li>
+            <strong class="text-brand-900 dark:text-surface-50">Señales de alerta y mitos:</strong>
+            información práctica para identificar riesgos y desmontar creencias erróneas.
+          </li>
+          <li>
+            <strong class="text-brand-900 dark:text-surface-50">Preguntas frecuentes:</strong>
+            respuestas claras sobre proceso terapéutico, estancia y seguimiento.
+          </li>
+          <li>
+            Recursos diseñados tanto para personas en tratamiento como para familias, escuelas y
+            redes de apoyo.
+          </li>
+        </ul>
+      </div>
+    </div>
 
-    <h2
-      class="text-2xl font-semibold tracking-tight mt-8 mb-2 text-zinc-900 dark:text-zinc-100"
-    >
-      Objetivo educativo
-    </h2>
-    <p>
-      Nuestro objetivo es construir una <strong
-        class="text-zinc-900 dark:text-zinc-100"
-        >comunidad informada y empática</strong
-      >, capaz de reconocer signos tempranos de riesgo y apoyar de manera
-      efectiva a quienes enfrentan un proceso de recuperación.
-    </p>
+    <div class="space-y-4">
+      <h2 class="text-2xl font-semibold tracking-tight">Objetivo educativo</h2>
+      <div
+        class="border-brand-200/70 bg-surface-50/95 shadow-soft dark:border-brand-800 dark:bg-brand-900/85 space-y-3 rounded-2xl border p-5"
+      >
+        <p>
+          Nuestro objetivo es construir una
+          <strong class="text-brand-900 dark:text-surface-50">
+            comunidad informada y empática
+          </strong>
+          , capaz de reconocer signos tempranos de riesgo y apoyar de manera efectiva a quienes enfrentan
+          un proceso de recuperación.
+        </p>
+        <p class="dark:text-surface-200/80 text-zinc-600 italic">
+          “Educar es sanar: comprender el proceso es el primer paso para transformarlo.”
+        </p>
+      </div>
+    </div>
 
-    <p class="italic text-zinc-600 dark:text-zinc-400">
-      “Educar es sanar: comprender el proceso es el primer paso para
-      transformarlo.”
-    </p>
+    <div class="space-y-4">
+      <h2 class="text-2xl font-semibold tracking-tight">Cómo aprovechar estos recursos</h2>
+      <div
+        class="border-brand-200/70 bg-surface-50/95 shadow-soft dark:border-brand-800 dark:bg-brand-900/85 grid gap-6 rounded-2xl border p-5 md:grid-cols-3"
+      >
+        <ul class="list-disc space-y-1 pl-5">
+          <li>Leer en familia los materiales clave y abrir espacios de conversación.</li>
+          <li>Identificar señales de alerta y pedir ayuda a tiempo.</li>
+          <li>Usar las guías como apoyo entre sesiones terapéuticas.</li>
+        </ul>
+        <ul class="list-disc space-y-1 pl-5">
+          <li>Compartir recursos con escuelas, grupos y redes comunitarias.</li>
+          <li>Desmontar mitos y creencias que generan culpa o estigma.</li>
+          <li>Registrar dudas para abordarlas con el equipo clínico.</li>
+        </ul>
+        <ul class="list-disc space-y-1 pl-5">
+          <li>Revisar periódicamente nuevos contenidos y actualizaciones.</li>
+          <li>Integrar lo aprendido en el plan de recuperación.</li>
+          <li>Convertir la información en acciones concretas de apoyo.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div
+      class="border-brand-200/70 bg-surface-50/95 shadow-soft dark:border-brand-800 dark:bg-brand-900/85 flex flex-col gap-3 rounded-2xl border p-5 md:flex-row md:items-center md:justify-between"
+    >
+      <p class="text-brand-900 dark:text-surface-50 max-w-2xl text-sm font-medium">
+        ¿Te gustaría recibir materiales educativos o acompañamiento para trabajar estos temas en
+        familia, escuela o comunidad?
+      </p>
+      <a href="/contacto" class="btn-secondary text-sm"> Solicitar materiales y orientación </a>
+    </div>
   </section>
 </BaseLayout>

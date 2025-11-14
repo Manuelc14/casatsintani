@@ -1,73 +1,123 @@
 ---
-import MicroButton from "../islands/MicroButton";
+import MicroButton from '../islands/MicroButton'
 
-const titulo = "¿Hablamos ahora?";
+const titulo = '¿Hablamos ahora?'
 const texto =
-  "Recibe orientación confidencial y sin juicios. Nuestro equipo está disponible para resolver tus dudas y guiarte en los primeros pasos.";
-const href = "/contacto";
+  'Recibe orientación confidencial y sin juicios. Nuestro equipo está disponible para resolver tus dudas y guiarte en los primeros pasos.'
+const href = '/contacto'
 ---
 
-<section class="py-14">
-  <div class="max-w-6xl mx-auto px-6">
+<section class="px-6 py-20">
+  <div class="mx-auto max-w-6xl">
     <div
-      class="rounded-2xl from-white via-zinc-50 to-white dark:from-zinc-900 dark:via-zinc-950 dark:to-zinc-900 p-8 md:p-10 shadow-soft"
+      class="border-brand-200/70 bg-surface-50/95 shadow-soft dark:border-brand-800 dark:bg-brand-900/90 relative overflow-hidden rounded-2xl border p-8 backdrop-blur-md md:p-10"
     >
-      <div class="grid md:grid-cols-3 items-center gap-6">
-        <div class="md:col-span-2">
+      <!-- línea/acento superior -->
+      <div
+        class="from-accent-500 via-brand-600 to-accent-300 absolute inset-x-0 top-0 h-1 bg-gradient-to-r"
+      >
+      </div>
+
+      <div class="grid items-center gap-8 md:grid-cols-3">
+        <div class="space-y-3 md:col-span-2">
+          <p class="text-accent-500 text-xs font-semibold tracking-[0.18em] uppercase">
+            Orientación confidencial
+          </p>
+
           <h3
-            class="text-2xl md:text-3xl font-display font-semibold text-brand-900 dark:text-surface-50"
+            class="font-display text-brand-900 dark:text-surface-50 text-2xl font-bold tracking-tight md:text-3xl"
           >
             {titulo}
           </h3>
-          <p class="mt-2 text-brand-600 dark:text-brand-200">{texto}</p>
+
+          <p class="text-brand-600 dark:text-surface-200/80 max-w-xl text-sm leading-relaxed">
+            {texto}
+          </p>
         </div>
+
         <div class="text-left md:text-right">
           <MicroButton client:visible onClick={() => (location.href = href)}>
             Habla con nosotros
           </MicroButton>
-          <p class="mt-2 text-xs text-zinc-500 dark:text-zinc-400">
-            Respuesta en menos de 24 horas.
+          <p class="text-brand-500 dark:text-surface-300/80 mt-2 text-xs">
+            Respondemos en menos de 24 horas.
           </p>
         </div>
       </div>
 
-      <div class="mt-6 grid sm:grid-cols-3 gap-4">
-        <div
-          class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-800/50"
+      <!-- Galería / contexto visual -->
+      <div class="mt-10 grid gap-5 sm:grid-cols-3">
+        <!-- Card 1 -->
+        <figure
+          class="group border-brand-200/70 bg-surface-100/80 shadow-soft dark:border-brand-800 dark:bg-brand-900/80 relative aspect-[4/3] overflow-hidden rounded-2xl border"
         >
           <img
-            src="/src/assets/atencionClinica.avif"
+            src="/assets/atencionClinica.avif"
             alt="Atención clínica"
             loading="lazy"
-            class="h-full w-full object-cover"
-            width="1200"
-            height="900"
+            class="h-full w-full object-cover transition duration-500 ease-[--ease-out-smooth] group-hover:scale-[1.04]"
           />
-        </div>
-        <div
-          class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-800/50"
+          <div
+            class="from-brand-900/60 via-brand-900/10 pointer-events-none absolute inset-0 bg-gradient-to-t to-transparent"
+          >
+          </div>
+          <figcaption
+            class="text-surface-50 absolute inset-x-0 bottom-0 flex flex-col gap-1 px-4 pt-6 pb-3 text-xs"
+          >
+            <span class="text-[13px] font-semibold">Atención clínica cercana</span>
+            <span class="text-surface-200/80 text-[11px]">
+              Evaluación médica y psiquiátrica en un entorno seguro.
+            </span>
+          </figcaption>
+        </figure>
+
+        <!-- Card 2 -->
+        <figure
+          class="group border-brand-200/70 bg-surface-100/80 shadow-soft dark:border-brand-800 dark:bg-brand-900/80 relative aspect-[4/3] overflow-hidden rounded-2xl border"
         >
           <img
-            src="/src/assets/espacioConsulta.webp"
+            src="/assets/espacioConsulta.webp"
             alt="Espacios de consulta"
             loading="lazy"
-            class="h-full w-full object-cover"
-            width="1200"
-            height="900"
+            class="h-full w-full object-cover transition duration-500 ease-[--ease-out-smooth] group-hover:scale-[1.04]"
           />
-        </div>
-        <div
-          class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-800/50"
+          <div
+            class="from-brand-900/60 via-brand-900/10 pointer-events-none absolute inset-0 bg-gradient-to-t to-transparent"
+          >
+          </div>
+          <figcaption
+            class="text-surface-50 absolute inset-x-0 bottom-0 flex flex-col gap-1 px-4 pt-6 pb-3 text-xs"
+          >
+            <span class="text-[13px] font-semibold">Espacios terapéuticos</span>
+            <span class="text-surface-200/80 text-[11px]">
+              Consultorios diseñados para el trabajo emocional profundo.
+            </span>
+          </figcaption>
+        </figure>
+
+        <!-- Card 3 -->
+        <figure
+          class="group border-brand-200/70 bg-surface-100/80 shadow-soft dark:border-brand-800 dark:bg-brand-900/80 relative aspect-[4/3] overflow-hidden rounded-2xl border"
         >
           <img
-            src="/src/assets/habitaciones.png"
-            alt="Equipo humano"
+            src="/assets/habitaciones.png"
+            alt="Habitaciones y espacios de descanso"
             loading="lazy"
-            class="h-full w-full object-cover"
-            width="1200"
-            height="900"
+            class="h-full w-full object-cover transition duration-500 ease-[--ease-out-smooth] group-hover:scale-[1.04]"
           />
-        </div>
+          <div
+            class="from-brand-900/60 via-brand-900/10 pointer-events-none absolute inset-0 bg-gradient-to-t to-transparent"
+          >
+          </div>
+          <figcaption
+            class="text-surface-50 absolute inset-x-0 bottom-0 flex flex-col gap-1 px-4 pt-6 pb-3 text-xs"
+          >
+            <span class="text-[13px] font-semibold">Habitaciones y descanso</span>
+            <span class="text-surface-200/80 text-[11px]">
+              Espacios tranquilos para acompañar el proceso de recuperación.
+            </span>
+          </figcaption>
+        </figure>
       </div>
     </div>
   </div>

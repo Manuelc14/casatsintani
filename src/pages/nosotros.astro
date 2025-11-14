@@ -1,30 +1,38 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import ComoLoHacemos from "../components/sections/ComoLoHacemos.astro";
+import BaseLayout from '../layouts/BaseLayout.astro'
+import ComoLoHacemos from '../components/sections/ComoLoHacemos'
 ---
 
 <BaseLayout
   title="Nosotros – Casa Tsíntani"
-  description="Historia, misión, visión, valores y modelo clínico de Casa Tsíntani."
+  description="Historia, misión, visión, valores y forma de trabajo de Casa Tsíntani."
 >
-  <h1
-    class="text-3xl md:text-4xl font-bold tracking-tight text-zinc-900 dark:text-white"
-  >
-    Nosotros
-  </h1>
+  <header class="border-surface-200/80 mb-8 border-b">
+    <p class="text-accent-500 mb-2 text-xs font-semibold tracking-[0.18em] uppercase">
+      Quiénes somos
+    </p>
+    <h1 class="text-3xl font-bold tracking-tight md:text-4xl">Nosotros</h1>
+    <p class="text-brand-700/80 dark:text-surface-200/80 mt-3 max-w-2xl text-sm">
+      Casa Tsíntani nace de una experiencia personal de recuperación y de la convicción de que la
+      rehabilitación requiere un modelo humano, ético y clínicamente sólido.
+    </p>
+  </header>
 
-  <section class="py-8 space-y-6 text-zinc-700 dark:text-zinc-300">
-    <div class="grid lg:grid-cols-2 gap-6">
-      <p>
-        Casa Tsíntani nace en 2010 a partir de una experiencia personal de
-        recuperación que evidenció la necesidad de un modelo humano y basado en
-        evidencia. Desde entonces, fuimos construyendo un espacio que supera la
-        mera contención o el castigo para comprender a la persona, su familia y
-        su historia, y acompañarla en la creación de un proyecto de vida con
-        sentido.
-      </p>
+  <section class="text-brand-700 dark:text-surface-200 space-y-12 py-8 text-sm">
+    <!-- Historia -->
+    <div class="grid gap-6 lg:grid-cols-2">
+      <div class="space-y-3">
+        <h2 class="text-2xl font-semibold tracking-tight">Nuestra historia</h2>
+        <p>
+          Casa Tsíntani nace en 2010 a partir de una experiencia personal de recuperación que
+          evidenció la necesidad de un modelo humano y basado en evidencia. Desde entonces, fuimos
+          construyendo un espacio que va más allá de la mera contención para comprender a la
+          persona, su familia y su historia, y acompañarla en la creación de un proyecto de vida con
+          sentido.
+        </p>
+      </div>
       <div
-        class="aspect-[16/9] rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800"
+        class="border-brand-200/70 bg-surface-50/90 shadow-soft dark:border-brand-800 dark:bg-brand-900/85 overflow-hidden rounded-2xl border"
       >
         <img
           src="/imgs/nosotros-1.jpg"
@@ -37,63 +45,66 @@ import ComoLoHacemos from "../components/sections/ComoLoHacemos.astro";
       </div>
     </div>
 
-    <div>
-      <h2
-        class="text-2xl font-semibold tracking-tight mb-2 text-zinc-900 dark:text-zinc-100"
+    <!-- Misión, visión y valores -->
+    <div class="space-y-4">
+      <h2 class="text-2xl font-semibold tracking-tight">Misión, visión y valores</h2>
+      <div
+        class="border-brand-200/70 bg-surface-50/95 shadow-soft dark:border-brand-800 dark:bg-brand-900/85 grid gap-6 rounded-2xl border p-5 md:grid-cols-2"
       >
-        Misión, visión y valores
-      </h2>
-      <p>
-        <strong class="text-zinc-900 dark:text-zinc-100">Misión:</strong> ofrecer
-        un tratamiento integral y humanizado, basado en evidencia, que promueva bienestar
-        emocional, autonomía y reintegración social en un ambiente estructurado,
-        respetuoso y libre de juicios.
-      </p>
-      <p>
-        <strong class="text-zinc-900 dark:text-zinc-100">Visión:</strong> ser referente
-        en rehabilitación de adicciones por enfoque ético, rigor clínico e impacto
-        en proyectos de vida libres de adicción.
-      </p>
-      <ul class="list-disc pl-5">
-        <li>
-          <strong class="text-zinc-900 dark:text-zinc-100"
-            >Respeto, empatía, rigor clínico</strong
-          > y mejora continua.
-        </li>
-        <li>
-          <strong class="text-zinc-900 dark:text-zinc-100"
-            >Corresponsabilidad</strong
-          > con paciente, familia y sociedad.
-        </li>
-        <li>
-          <strong class="text-zinc-900 dark:text-zinc-100">Disciplina</strong> y
-          <strong class="text-zinc-900 dark:text-zinc-100"
-            >esperanza activa</strong
-          >.
-        </li>
-      </ul>
+        <div class="space-y-3">
+          <p>
+            <strong class="text-brand-900 dark:text-surface-50">Misión:</strong>{' '}
+            ofrecer un tratamiento integral y humanizado, basado en evidencia, que promueva bienestar
+            emocional, autonomía y reintegración social en un ambiente estructurado, respetuoso y libre
+            de juicios.
+          </p>
+          <p>
+            <strong class="text-brand-900 dark:text-surface-50">Visión:</strong>{' '}
+            ser referente en rehabilitación de adicciones por su enfoque ético, rigor clínico e impacto
+            en proyectos de vida libres de adicción.
+          </p>
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-brand-900 dark:text-surface-50 text-sm font-semibold">
+            Valores que sostienen nuestro trabajo
+          </h3>
+          <ul class="list-disc space-y-1.5 pl-5">
+            <li>
+              <strong class="text-brand-900 dark:text-surface-50">
+                Respeto, empatía, rigor clínico
+              </strong>{' '}
+              y mejora continua.
+            </li>
+            <li>
+              <strong class="text-brand-900 dark:text-surface-50">Corresponsabilidad</strong> con paciente,
+              familia y sociedad.
+            </li>
+            <li>
+              <strong class="text-brand-900 dark:text-surface-50">Disciplina</strong> y{' '}
+              <strong class="text-brand-900 dark:text-surface-50">esperanza activa</strong>.
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
 
-    <div>
-      <h2
-        class="text-2xl font-semibold tracking-tight mb-2 text-zinc-900 dark:text-zinc-100"
-      >
-        Nuestro modelo clínico
-      </h2>
-      <p>
-        Combinamos el <strong class="text-zinc-900 dark:text-zinc-100"
-          >modelo Minnesota</strong
-        > con <strong class="text-zinc-900 dark:text-zinc-100">ACT</strong>, <strong
-          class="text-zinc-900 dark:text-zinc-100">DBT</strong
-        >, <strong class="text-zinc-900 dark:text-zinc-100">mindfulness</strong>
-        y <strong class="text-zinc-900 dark:text-zinc-100">logoterapia</strong>,
-        integrando dimensiones biológica, psicológica, social y espiritual
-        mediante un equipo multidisciplinario.
+    <!-- Modelo clínico -->
+    <div class="space-y-4">
+      <h2 class="text-2xl font-semibold tracking-tight">Nuestro modelo clínico</h2>
+      <p class="max-w-3xl">
+        Combinamos el{' '}
+        <strong class="text-brand-900 dark:text-surface-50">modelo Minnesota</strong> con{' '}
+        <strong class="text-brand-900 dark:text-surface-50">ACT</strong>,{' '}
+        <strong class="text-brand-900 dark:text-surface-50">DBT</strong>,{' '}
+        <strong class="text-brand-900 dark:text-surface-50">mindfulness</strong> y{' '}
+        <strong class="text-brand-900 dark:text-surface-50">logoterapia</strong>, integrando
+        dimensiones biológica, psicológica, social y espiritual mediante un equipo
+        multidisciplinario.
       </p>
-      <div class="mt-4 grid sm:grid-cols-3 gap-4">
-        <div
-          class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800"
-        >
+      <div
+        class="border-brand-200/70 bg-surface-50/95 shadow-soft dark:border-brand-800 dark:bg-brand-900/85 grid gap-4 rounded-2xl border p-4 sm:grid-cols-3"
+      >
+        <div class="overflow-hidden rounded-2xl">
           <img
             src="/imgs/modelo-1.jpg"
             alt="Intervenciones basadas en evidencia"
@@ -103,9 +114,7 @@ import ComoLoHacemos from "../components/sections/ComoLoHacemos.astro";
             height="900"
           />
         </div>
-        <div
-          class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800"
-        >
+        <div class="overflow-hidden rounded-2xl">
           <img
             src="/imgs/modelo-2.jpg"
             alt="Trabajo interdisciplinario"
@@ -115,9 +124,7 @@ import ComoLoHacemos from "../components/sections/ComoLoHacemos.astro";
             height="900"
           />
         </div>
-        <div
-          class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800"
-        >
+        <div class="overflow-hidden rounded-2xl">
           <img
             src="/imgs/modelo-3.jpg"
             alt="Entorno humano"
@@ -130,77 +137,75 @@ import ComoLoHacemos from "../components/sections/ComoLoHacemos.astro";
       </div>
     </div>
 
-    <div>
-      <h2
-        class="text-2xl font-semibold tracking-tight mb-2 text-zinc-900 dark:text-zinc-100"
+    <!-- Enfoques e intervenciones -->
+    <div class="space-y-3">
+      <h2 class="text-2xl font-semibold tracking-tight">Enfoques e intervenciones</h2>
+      <div
+        class="border-brand-200/70 bg-surface-50/95 shadow-soft dark:border-brand-800 dark:bg-brand-900/85 space-y-2 rounded-2xl border p-5"
       >
-        Enfoques e intervenciones
-      </h2>
-      <p>
-        Priorizamos terapias de 3ª y 4ª generación con enfoques complementarios
-        psicodinámico, sistémico y humanista. Formatos individuales y grupales
-        con revisión interdisciplinaria continua y coordinación
-        médico-psicológica.
-      </p>
+        <p>
+          Priorizamos terapias de 3ª y 4ª generación con enfoques complementarios psicodinámico,
+          sistémico y humanista. Trabajamos en formatos individuales y grupales, con revisión
+          interdisciplinaria continua y coordinación médico-psicológica.
+        </p>
+      </div>
     </div>
 
-    <div>
-      <h2
-        class="text-2xl font-semibold tracking-tight mb-2 text-zinc-900 dark:text-zinc-100"
+    <!-- Entorno con sentido -->
+    <div class="space-y-3">
+      <h2 class="text-2xl font-semibold tracking-tight">Entorno con sentido</h2>
+      <div
+        class="border-brand-200/70 bg-surface-50/95 shadow-soft dark:border-brand-800 dark:bg-brand-900/85 space-y-2 rounded-2xl border p-5"
       >
-        Entorno con sentido
-      </h2>
-      <p>
-        En <strong class="text-zinc-900 dark:text-zinc-100"
-          >Pátzcuaro, Michoacán</strong
-        > el entorno cultural y espiritual favorece la introspección y el renacimiento
-        personal.
-      </p>
+        <p>
+          En <strong class="text-brand-900 dark:text-surface-50">Pátzcuaro, Michoacán</strong> el entorno
+          cultural y espiritual favorece la introspección, la conexión con el entorno y el renacimiento
+          personal. Creemos que el lugar también es parte del tratamiento.
+        </p>
+      </div>
     </div>
 
-    <div>
-      <h2
-        class="text-2xl font-semibold tracking-tight mb-2 text-zinc-900 dark:text-zinc-100"
+    <!-- Ética y calidad -->
+    <div class="space-y-3">
+      <h2 class="text-2xl font-semibold tracking-tight">Ética y calidad</h2>
+      <div
+        class="border-brand-200/70 bg-surface-50/95 shadow-soft dark:border-brand-800 dark:bg-brand-900/85 space-y-2 rounded-2xl border p-5"
       >
-        Ética y calidad
-      </h2>
-      <p>
-        Operamos conforme a la <strong class="text-zinc-900 dark:text-zinc-100"
-          >NOM-028-SSA2-2009</strong
-        > y la <strong class="text-zinc-900 dark:text-zinc-100"
-          >NOM-004-SSA3-2012</strong
-        >, con evaluación y mejora continua, capacitación permanente y alianzas
-        especializadas.
-      </p>
+        <p>
+          Operamos conforme a la{' '}
+          <strong class="text-brand-900 dark:text-surface-50">NOM-028-SSA2-2009</strong> y la{' '}
+          <strong class="text-brand-900 dark:text-surface-50">NOM-004-SSA3-2012</strong>, con
+          evaluación y mejora continua, capacitación permanente y alianzas especializadas.
+        </p>
+      </div>
     </div>
 
-    <div>
-      <h2
-        class="text-2xl font-semibold tracking-tight mb-2 text-zinc-900 dark:text-zinc-100"
+    <!-- Compromiso social -->
+    <div class="space-y-3">
+      <h2 class="text-2xl font-semibold tracking-tight">Compromiso social y continuidad</h2>
+      <div
+        class="border-brand-200/70 bg-surface-50/95 shadow-soft dark:border-brand-800 dark:bg-brand-900/85 space-y-2 rounded-2xl border p-5"
       >
-        Compromiso social y continuidad
-      </h2>
-      <p>
-        Programa de apoyo social y seguimiento de <strong
-          class="text-zinc-900 dark:text-zinc-100">12 meses</strong
-        > para prevenir recaídas y consolidar cambios.
-      </p>
+        <p>
+          Contamos con un programa de apoyo social y seguimiento de{' '}
+          <strong class="text-brand-900 dark:text-surface-50">12 meses</strong> para prevenir recaídas,
+          consolidar cambios y acompañar la reintegración familiar, escolar y laboral.
+        </p>
+      </div>
     </div>
 
-    <ComoLoHacemos />
+    <!-- Cómo lo hacemos (sección ya existente) -->
+    <ComoLoHacemos client:visible>
 
+    <!-- CTA final -->
     <div
-      class="border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 bg-white/60 dark:bg-zinc-900/60"
+      class="border-brand-200/70 bg-surface-50/95 shadow-soft dark:border-brand-800 dark:bg-brand-900/85 flex flex-col gap-3 rounded-2xl border p-5 md:flex-row md:items-center md:justify-between"
     >
-      <p class="font-medium text-zinc-900 dark:text-zinc-100">
-        Si tú o un familiar necesitan acompañamiento, agenda una evaluación y
-        conoce un modelo de tratamiento integral.
+      <p class="text-brand-900 dark:text-surface-50 max-w-2xl text-sm font-medium">
+        Si tú o un familiar necesitan acompañamiento, agenda una evaluación y conoce un modelo de
+        tratamiento integral, ético y humano.
       </p>
-      <a
-        href="/contacto"
-        class="inline-block mt-3 underline text-amber-700 dark:text-amber-400"
-        >Contactar al equipo</a
-      >
+      <a href="/contacto" class="btn-secondary text-sm"> Contactar al equipo </a>
     </div>
   </section>
 </BaseLayout>

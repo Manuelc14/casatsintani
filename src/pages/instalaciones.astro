@@ -1,141 +1,180 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import BaseLayout from '../layouts/BaseLayout.astro'
 ---
 
 <BaseLayout
   title="Instalaciones – Casa Tsíntani"
   description="Entorno, espacios y servicios de Casa Tsíntani en Pátzcuaro, Michoacán."
 >
-  <h1
-    class="text-3xl md:text-4xl font-bold tracking-tight text-zinc-900 dark:text-white"
-  >
-    Instalaciones
-  </h1>
-
-  <section class="py-8 space-y-6 text-zinc-700 dark:text-zinc-300">
-    <p>
-      Nuestra clínica está ubicada en <strong
-        class="text-zinc-900 dark:text-zinc-100">Pátzcuaro, Michoacán</strong
-      >, un Pueblo Mágico lleno de historia, espiritualidad y cultura. Este
-      entorno único ofrece un escenario ideal para la introspección, la calma y
-      la recuperación emocional.
+  <header class="border-surface-200/80 mb-8 border-b">
+    <p class="text-accent-500 mb-2 text-xs font-semibold tracking-[0.18em] uppercase">
+      Entorno terapéutico en Pátzcuaro
     </p>
+    <h1 class="text-3xl font-bold tracking-tight md:text-4xl">Instalaciones</h1>
+    <p class="text-brand-700/80 dark:text-surface-200/80 mt-3 max-w-2xl text-sm">
+      Un espacio diseñado para la calma, la introspección y la recuperación emocional, enmarcado en
+      la riqueza cultural y espiritual de Pátzcuaro, Michoacán.
+    </p>
+  </header>
 
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+  <section class="text-brand-700 dark:text-surface-200 space-y-12 py-8 text-sm">
+    <!-- Intro + contexto -->
+    <div class="space-y-4">
+      <p class="max-w-3xl">
+        Nuestra clínica está ubicada en{' '}
+        <strong class="text-brand-900 dark:text-surface-50">Pátzcuaro, Michoacán</strong>, un Pueblo
+        Mágico lleno de historia, espiritualidad y cultura. Este entorno único ofrece un escenario
+        ideal para la introspección, la calma y la recuperación emocional.
+      </p>
+    </div>
+
+    <!-- Galería de instalaciones -->
+    <div class="space-y-4">
+      <h2 class="text-2xl font-semibold tracking-tight">Un espacio pensado para la recuperación</h2>
       <div
-        class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800"
+        class="border-brand-200/70 bg-surface-50/95 shadow-soft dark:border-brand-800 dark:bg-brand-900/85 grid gap-4 rounded-2xl border p-4 sm:grid-cols-2 lg:grid-cols-3"
       >
-        <img
-          src="/imgs/instalaciones-exterior.jpg"
-          alt="Exterior"
-          loading="lazy"
-          class="h-full w-full object-cover"
-          width="1200"
-          height="900"
-        />
-      </div>
-      <div
-        class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800"
-      >
-        <img
-          src="/imgs/instalaciones-habitacion.jpg"
-          alt="Habitaciones"
-          loading="lazy"
-          class="h-full w-full object-cover"
-          width="1200"
-          height="900"
-        />
-      </div>
-      <div
-        class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800"
-      >
-        <img
-          src="/imgs/instalaciones-terapia.jpg"
-          alt="Terapia"
-          loading="lazy"
-          class="h-full w-full object-cover"
-          width="1200"
-          height="900"
-        />
-      </div>
-      <div
-        class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800"
-      >
-        <img
-          src="/imgs/instalaciones-arte.jpg"
-          alt="Arteterapia"
-          loading="lazy"
-          class="h-full w-full object-cover"
-          width="1200"
-          height="900"
-        />
-      </div>
-      <div
-        class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800"
-      >
-        <img
-          src="/imgs/instalaciones-gimnasio.jpg"
-          alt="Gimnasio"
-          loading="lazy"
-          class="h-full w-full object-cover"
-          width="1200"
-          height="900"
-        />
-      </div>
-      <div
-        class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800"
-      >
-        <img
-          src="/imgs/instalaciones-comedor.jpg"
-          alt="Comedor"
-          loading="lazy"
-          class="h-full w-full object-cover"
-          width="1200"
-          height="900"
-        />
+        <figure class="bg-surface-100/80 dark:bg-brand-900/80 overflow-hidden rounded-2xl">
+          <img
+            src="/imgs/instalaciones-exterior.jpg"
+            alt="Exterior de la clínica"
+            loading="lazy"
+            class="h-full w-full object-cover"
+            width="1200"
+            height="900"
+          />
+          <figcaption class="text-brand-600 dark:text-surface-200/80 px-3 py-2 text-[11px]">
+            Exterior de la clínica en Pátzcuaro.
+          </figcaption>
+        </figure>
+
+        <figure class="bg-surface-100/80 dark:bg-brand-900/80 overflow-hidden rounded-2xl">
+          <img
+            src="/imgs/instalaciones-habitacion.jpg"
+            alt="Habitaciones"
+            loading="lazy"
+            class="h-full w-full object-cover"
+            width="1200"
+            height="900"
+          />
+          <figcaption class="text-brand-600 dark:text-surface-200/80 px-3 py-2 text-[11px]">
+            Habitaciones privadas y compartidas, cómodas y funcionales.
+          </figcaption>
+        </figure>
+
+        <figure class="bg-surface-100/80 dark:bg-brand-900/80 overflow-hidden rounded-2xl">
+          <img
+            src="/imgs/instalaciones-terapia.jpg"
+            alt="Áreas de terapia"
+            loading="lazy"
+            class="h-full w-full object-cover"
+            width="1200"
+            height="900"
+          />
+          <figcaption class="text-brand-600 dark:text-surface-200/80 px-3 py-2 text-[11px]">
+            Espacios para terapia individual y grupal.
+          </figcaption>
+        </figure>
+
+        <figure class="bg-surface-100/80 dark:bg-brand-900/80 overflow-hidden rounded-2xl">
+          <img
+            src="/imgs/instalaciones-arte.jpg"
+            alt="Arteterapia"
+            loading="lazy"
+            class="h-full w-full object-cover"
+            width="1200"
+            height="900"
+          />
+          <figcaption class="text-brand-600 dark:text-surface-200/80 px-3 py-2 text-[11px]">
+            Salas para arteterapia, ludoterapia y mindfulness.
+          </figcaption>
+        </figure>
+
+        <figure class="bg-surface-100/80 dark:bg-brand-900/80 overflow-hidden rounded-2xl">
+          <img
+            src="/imgs/instalaciones-gimnasio.jpg"
+            alt="Gimnasio"
+            loading="lazy"
+            class="h-full w-full object-cover"
+            width="1200"
+            height="900"
+          />
+          <figcaption class="text-brand-600 dark:text-surface-200/80 px-3 py-2 text-[11px]">
+            Gimnasio y espacios deportivos para acompañar el proceso físico.
+          </figcaption>
+        </figure>
+
+        <figure class="bg-surface-100/80 dark:bg-brand-900/80 overflow-hidden rounded-2xl">
+          <img
+            src="/imgs/instalaciones-comedor.jpg"
+            alt="Comedor"
+            loading="lazy"
+            class="h-full w-full object-cover"
+            width="1200"
+            height="900"
+          />
+          <figcaption class="text-brand-600 dark:text-surface-200/80 px-3 py-2 text-[11px]">
+            Comedor con alimentación balanceada y supervisada.
+          </figcaption>
+        </figure>
       </div>
     </div>
 
-    <h2
-      class="text-2xl font-semibold tracking-tight mt-8 mb-2 text-zinc-900 dark:text-zinc-100"
-    >
-      Espacios y servicios
-    </h2>
-    <ul class="list-disc list-inside space-y-1">
-      <li>Habitaciones privadas o compartidas</li>
-      <li>Áreas de terapia individual y grupal</li>
-      <li>Salas de arte, ludoterapia y mindfulness</li>
-      <li>Gimnasio y espacios deportivos</li>
-      <li>Biblioteca y áreas de lectura</li>
-      <li>Comedor con alimentación balanceada</li>
-      <li>Enfermería y supervisión médica 24/7</li>
-      <li>Seguridad permanente</li>
-      <li>WiFi controlado</li>
-    </ul>
+    <!-- Espacios y servicios -->
+    <div class="space-y-4">
+      <h2 class="text-2xl font-semibold tracking-tight">Espacios y servicios</h2>
+      <div
+        class="border-brand-200/70 bg-surface-50/95 shadow-soft dark:border-brand-800 dark:bg-brand-900/85 rounded-2xl border p-5"
+      >
+        <ul class="list-inside list-disc space-y-1.5">
+          <li>Habitaciones privadas o compartidas.</li>
+          <li>Áreas de terapia individual y grupal.</li>
+          <li>Salas de arte, ludoterapia y mindfulness.</li>
+          <li>Gimnasio y espacios deportivos.</li>
+          <li>Biblioteca y áreas de lectura.</li>
+          <li>Comedor con alimentación balanceada.</li>
+          <li>Enfermería y supervisión médica 24/7.</li>
+          <li>Seguridad permanente.</li>
+          <li>WiFi controlado.</li>
+        </ul>
+      </div>
+    </div>
 
-    <h2
-      class="text-2xl font-semibold tracking-tight mt-8 mb-2 text-zinc-900 dark:text-zinc-100"
-    >
-      Proyectos futuros
-    </h2>
-    <ul class="list-disc list-inside space-y-1">
-      <li>
-        Integración de un <strong class="text-zinc-900 dark:text-zinc-100"
-          >temazcal terapéutico</strong>
-      </li>
-      <li>
-        Ampliación de <strong class="text-zinc-900 dark:text-zinc-100"
-          >áreas verdes y canchas deportivas</strong>
-      </li>
-      <li>Prácticas curativas tradicionales purépechas</li>
-    </ul>
+    <!-- Proyectos futuros -->
+    <div class="space-y-4">
+      <h2 class="text-2xl font-semibold tracking-tight">Proyectos futuros</h2>
+      <div
+        class="border-brand-200/70 bg-surface-50/95 shadow-soft dark:border-brand-800 dark:bg-brand-900/85 rounded-2xl border p-5"
+      >
+        <ul class="list-inside list-disc space-y-1.5">
+          <li>
+            Integración de un{' '}
+            <strong class="text-brand-900 dark:text-surface-50">temazcal terapéutico</strong>.
+          </li>
+          <li>
+            Ampliación de{' '}
+            <strong class="text-brand-900 dark:text-surface-50">
+              áreas verdes y canchas deportivas
+            </strong>
+            .
+          </li>
+          <li>Prácticas curativas tradicionales purépechas.</li>
+        </ul>
+      </div>
+    </div>
 
-    <p>
-      En Casa Tsíntani, cada elemento está pensado para acompañar un proceso
-      profundo de recuperación. Aquí los pacientes no solo reciben tratamiento: <strong
-        class="text-zinc-900 dark:text-zinc-100"
-        >reconectan con su sentido de vida</strong
-      >.
-    </p>
+    <!-- Cierre -->
+    <div
+      class="border-brand-200/70 bg-surface-50/95 shadow-soft dark:border-brand-800 dark:bg-brand-900/85 rounded-2xl border p-5"
+    >
+      <p class="text-brand-700 dark:text-surface-200 text-sm">
+        En Casa Tsíntani, cada elemento está pensado para acompañar un proceso profundo de
+        recuperación. Aquí las personas no solo reciben tratamiento:{' '}
+        <strong class="text-brand-900 dark:text-surface-50">
+          reconectan con su sentido de vida
+        </strong>
+        .
+      </p>
+    </div>
   </section>
 </BaseLayout>

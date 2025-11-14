@@ -1,0 +1,77 @@
+---
+import AnimateOnView from '../islands/AnimateOnView'
+import { Clock3, ShieldCheck, Users, MapPin } from 'lucide-astro'
+
+const stats = [
+  {
+    label: 'Seguimiento post egreso',
+    value: '12 meses',
+    badge: 'Acompañamiento continuo',
+    icon: Clock3,
+  },
+  {
+    label: 'Atención y respuesta',
+    value: '24/7',
+    badge: 'Siempre disponibles',
+    icon: ShieldCheck,
+  },
+  {
+    label: 'Equipo interdisciplinario',
+    value: 'Clínico',
+    badge: 'Trato digno y confidencial',
+    icon: Users,
+  },
+  {
+    label: 'Pátzcuaro, Michoacán',
+    value: 'Entorno',
+    badge: 'Espacio terapéutico',
+    icon: MapPin,
+  },
+]
+---
+
+<AnimateOnView client:visible>
+  <section class="mt-16 px-6">
+    <div
+      class="from-surface-50 via-surface-50 to-surface-100/80 shadow-soft dark:from-brand-900 dark:via-brand-900 dark:to-brand-900/60 mx-auto max-w-6xl rounded-3xl border border-zinc-200 bg-gradient-to-r p-6 backdrop-blur-sm dark:border-zinc-800"
+    >
+      <div class="mb-5 flex flex-col gap-2 text-left sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p
+            class="bg-brand-50 text-brand-700 dark:bg-brand-900/70 dark:text-brand-200 inline-flex items-center rounded-full px-3 py-1 text-[11px] font-semibold tracking-[0.16em] uppercase"
+          >
+            Confianza y cuidado
+          </p>
+          <h2
+            class="font-display text-brand-900 dark:text-surface-50 mt-2 text-xl font-semibold tracking-tight sm:text-2xl"
+          >
+            Acompañamiento más allá del ingreso
+          </h2>
+        </div>
+        <p class="max-w-sm text-xs text-zinc-600 sm:text-sm dark:text-zinc-300">
+          Combinamos seguimiento clínico, contención emocional y un entorno seguro para sostener el
+          proceso de recuperación.
+        </p>
+      </div>
+
+      <div class="grid gap-4 md:grid-cols-4">
+        {
+          stats.map((item) => (
+            <article class="card-appear hover:border-brand-200 hover:shadow-soft dark:bg-brand-900/80 flex flex-1 items-center gap-3 rounded-2xl border border-zinc-200 bg-white/90 px-4 py-3 text-left shadow-sm transition duration-[--dur-sm] ease-[--ease-out-smooth] hover:-translate-y-0.5 dark:border-zinc-800">
+              <div class="bg-brand-100 text-brand-600 dark:bg-brand-800/80 dark:text-brand-100 flex h-11 w-11 items-center justify-center rounded-2xl shadow-sm">
+                <item.icon class="h-5 w-5" />
+              </div>
+              <div class="flex-1">
+                <p class="font-display text-brand-900 dark:text-surface-50 text-lg leading-tight font-semibold">
+                  {item.value}
+                </p>
+                <p class="text-[13px] font-medium text-zinc-700 dark:text-zinc-200">{item.label}</p>
+                <p class="mt-0.5 text-[11px] text-zinc-500 dark:text-zinc-400">{item.badge}</p>
+              </div>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</AnimateOnView>

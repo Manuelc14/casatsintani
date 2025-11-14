@@ -1,235 +1,35 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import AnimateOnView from "../components/islands/AnimateOnView";
-import Hero from "../components/ui/Hero.astro";
-import Testimonios from "../components/sections/Testimonios.astro";
-import CTAFinal from "../components/sections/CTAFinal.astro";
-import FAQ from "../components/islands/FAQ";
-import ComoLoHacemos from "../components/sections/ComoLoHacemos.astro";
+import BaseLayout from '../layouts/BaseLayout.astro'
+import AnimateOnView from '../components/islands/AnimateOnView'
+import Hero from '../components/ui/Hero.astro'
+import Testimonios from '../components/sections/Testimonios.astro'
+import CTAFinal from '../components/sections/CTAFinal.astro'
+import QueEsSection from '../components/sections/QueEsSection.astro'
+import DiferencialesSection from '../components/sections/DiferencialesSection.astro'
+import QueTratamosSection from '../components/sections/QueTratamosSection.astro'
+import UbicacionSection from '../components/sections/UbicacionSection.astro'
+import IntakeSection from '../components/sections/IntakeSection.astro'
+import ProgramasSection from '../components/sections/ProgramasSection.astro'
+import StatsStripSection from '../components/sections/StatsStripSection.astro'
+import PreguntasFrecuentesSection from '../components/sections/PreguntasFrecuentesSection.astro'
 ---
 
 <BaseLayout
   title="Casa Tsíntani – Inicio"
-  description="Rehabilitación integral de adicciones y trastornos duales en Pátzcuaro, Michoacán. Atención 24/7, modelo sin castigos y seguimiento por 12 meses."
+  description="Rehabilitación integral de adicciones y trastornos duales en Pátzcuaro, Michoacán. Atención 24/7, equipo interdisciplinario y seguimiento cercano hasta por 12 meses."
 >
   <AnimateOnView client:visible>
     <Hero />
   </AnimateOnView>
 
-  <AnimateOnView client:visible>
-    <section class="mt-12 grid gap-6 md:grid-cols-3">
-      <div
-        class="group p-6 rounded-2xl shadow-soft bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800 transition-all hover:shadow-lg"
-      >
-        <div
-          class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 shadow-sm"
-        >
-          <svg viewBox="0 0 24 24" class="h-5 w-5" aria-hidden="true"
-            ><path
-              d="M12 2l3 7h7l-5.6 4.1L18.8 21 12 16.9 5.2 21l2.4-7.9L2 9h7z"
-              fill="currentColor"></path></svg
-          >
-        </div>
-        <h2 class="mt-4 text-lg font-semibold text-zinc-900 dark:text-zinc-100">
-          Modelo integral y actualizado
-        </h2>
-        <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-          Minnesota + terapias de 3ª y 4ª generación (ACT, DBT, mindfulness,
-          logoterapia).
-        </p>
-      </div>
-      <div
-        class="group p-6 rounded-2xl shadow-soft bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800 transition-all hover:shadow-lg"
-      >
-        <div
-          class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 shadow-sm"
-        >
-          <svg viewBox="0 0 24 24" class="h-5 w-5" aria-hidden="true"
-            ><path
-              d="M3 12h3l3 7 4-14 3 7h5"
-              stroke="currentColor"
-              stroke-width="2"
-              fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"></path></svg
-          >
-        </div>
-        <h2 class="mt-4 text-lg font-semibold text-zinc-900 dark:text-zinc-100">
-          Equipo interdisciplinario real
-        </h2>
-        <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-          Médico, psiquiatra, neurólogo, psicología, arte/ocupacional,
-          consejeros.
-        </p>
-      </div>
-      <div
-        class="group p-6 rounded-2xl shadow-soft bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800 transition-all hover:shadow-lg"
-      >
-        <div
-          class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 shadow-sm"
-        >
-          <svg viewBox="0 0 24 24" class="h-5 w-5" aria-hidden="true"
-            ><path d="M4 4h16v6H4zM4 14h10v6H4z" fill="currentColor"
-            ></path></svg
-          >
-        </div>
-        <h2 class="mt-4 text-lg font-semibold text-zinc-900 dark:text-zinc-100">
-          Seguimiento post egreso
-        </h2>
-        <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-          Acompañamiento 12 meses, AA, evaluación y psicoeducación familiar.
-        </p>
-      </div>
-    </section>
-  </AnimateOnView>
-
-  <AnimateOnView client:visible>
-    <section class="mt-16">
-      <h2
-        class="text-2xl font-bold tracking-tight text-zinc-900 dark:text-white"
-      >
-        Programas
-      </h2>
-      <div class="mt-6 grid gap-6 md:grid-cols-3">
-        <article
-          class="group overflow-hidden rounded-2xl bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800 hover:shadow-lg transition"
-        >
-          <div class="aspect-[16/9] overflow-hidden">
-            <img
-              src="/src/assets/programa1.jpg"
-              alt="Residencial por fases"
-              loading="lazy"
-              width="1200"
-              height="675"
-              class="h-full w-full object-cover group-hover:scale-[1.02] transition-transform duration-300"
-            />
-          </div>
-          <div class="p-6">
-            <h3 class="font-semibold text-zinc-900 dark:text-zinc-100">
-              Residencial por fases
-            </h3>
-            <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-              Ingreso y desintoxicación, rehabilitación conductual y
-              psicosocial, egreso.
-            </p>
-            <a
-              href="/programas"
-              class="mt-3 inline-block text-brand-700 dark:text-brand-300 text-sm hover:underline"
-              >Ver más →</a
-            >
-          </div>
-        </article>
-        <article
-          class="group overflow-hidden rounded-2xl bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800 hover:shadow-lg transition"
-        >
-          <div class="aspect-[16/9] overflow-hidden">
-            <img
-              src="/src/assets/programa3.jpg"
-              alt="Ambulatorio / Consultas"
-              loading="lazy"
-              width="1200"
-              height="675"
-              class="h-full w-full object-cover group-hover:scale-[1.02] transition-transform duration-300"
-            />
-          </div>
-          <div class="p-6">
-            <h3 class="font-semibold text-zinc-900 dark:text-zinc-100">
-              Ambulatorio / Consultas
-            </h3>
-            <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-              Seguimiento clínico y familiar, reforzamiento y prevención de
-              recaídas.
-            </p>
-            <a
-              href="/programas"
-              class="mt-3 inline-block text-brand-700 dark:text-brand-300 text-sm hover:underline"
-              >Ver más →</a
-            >
-          </div>
-        </article>
-        <article
-          class="group overflow-hidden rounded-2xl bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800 hover:shadow-lg transition"
-        >
-          <div class="aspect-[16/9] overflow-hidden">
-            <img
-              src="/src/assets/programa2.jpg"
-              alt="Familias"
-              loading="lazy"
-              width="1200"
-              height="675"
-              class="h-full w-full object-cover group-hover:scale-[1.02] transition-transform duration-300"
-            />
-          </div>
-          <div class="p-6">
-            <h3 class="font-semibold text-zinc-900 dark:text-zinc-100">
-              Familias
-            </h3>
-            <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-              Charlas, talleres, terapia familiar bajo solicitud, fases con
-              participación activa.
-            </p>
-            <a
-              href="/familia"
-              class="mt-3 inline-block text-brand-700 dark:text-brand-300 text-sm hover:underline"
-              >Ver más →</a
-            >
-          </div>
-        </article>
-      </div>
-    </section>
-  </AnimateOnView>
-
-  <AnimateOnView client:visible>
-    <section
-      class="mt-16 rounded-3xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/60 p-8 grid gap-6 md:grid-cols-4 text-center divide-y md:divide-y-0 md:divide-x divide-zinc-200 dark:divide-zinc-800"
-    >
-      <div class="py-2 md:py-0">
-        <p class="text-3xl font-extrabold text-zinc-900 dark:text-white">12m</p>
-        <p class="text-sm text-zinc-600 dark:text-zinc-400">
-          Seguimiento post egreso
-        </p>
-      </div>
-      <div class="py-2 md:py-0">
-        <p class="text-3xl font-extrabold text-zinc-900 dark:text-white">
-          24/7
-        </p>
-        <p class="text-sm text-zinc-600 dark:text-zinc-400">
-          Atención y respuesta
-        </p>
-      </div>
-      <div class="py-2 md:py-0">
-        <p class="text-3xl font-extrabold text-zinc-900 dark:text-white">
-          Interdisciplinario
-        </p>
-        <p class="text-sm text-zinc-600 dark:text-zinc-400">
-          Modelo sin castigos
-        </p>
-      </div>
-      <div class="py-2 md:py-0">
-        <p class="text-3xl font-extrabold text-zinc-900 dark:text-white">
-          Pátzcuaro
-        </p>
-        <p class="text-sm text-zinc-600 dark:text-zinc-400">
-          Entorno terapéutico
-        </p>
-      </div>
-    </section>
-  </AnimateOnView>
-
-  <ComoLoHacemos />
-
+  <QueEsSection />
+  <QueTratamosSection />
+  <UbicacionSection />
+  <IntakeSection />
+  <ProgramasSection />
+  <StatsStripSection />
   <Testimonios />
-
-  <AnimateOnView client:visible>
-    <section class="mt-16">
-      <h2
-        class="text-2xl font-bold tracking-tight text-zinc-900 dark:text-white"
-      >
-        Preguntas frecuentes
-      </h2>
-      <FAQ client:visible />
-    </section>
-  </AnimateOnView>
-
+  <DiferencialesSection />
+  <PreguntasFrecuentesSection />
   <CTAFinal />
 </BaseLayout>

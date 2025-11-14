@@ -1,267 +1,288 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import BaseLayout from '../layouts/BaseLayout.astro'
 ---
 
 <BaseLayout
   title="Programas – Casa Tsíntani"
   description="Tratamientos integrales para adicciones: residencial por fases, atención ambulatoria y seguimiento clínico."
 >
-  <h1
-    class="text-3xl md:text-4xl font-bold tracking-tight text-zinc-900 dark:text-white"
-  >
-    Programas
-  </h1>
+  <header class="border-surface-200/80 mb-8 border-b pb-6">
+    <p class="text-accent-500 mb-2 text-xs font-semibold tracking-[0.18em] uppercase">
+      Tratamientos integrales para adicciones
+    </p>
+    <h1 class="text-3xl font-bold tracking-tight md:text-4xl">Programas</h1>
+    <p class="text-brand-700/80 dark:text-surface-200/80 mt-3 max-w-2xl text-sm">
+      Diseñamos planes individualizados que combinan intervención clínica, acompañamiento familiar y
+      seguimiento post egreso, para construir una vida en sobriedad con dignidad y propósito.
+    </p>
+  </header>
 
-  <section class="py-8 space-y-10 text-zinc-700 dark:text-zinc-300">
-    <div>
-      <h2
-        class="text-2xl font-semibold tracking-tight mb-2 text-zinc-900 dark:text-zinc-100"
-      >
-        ¿Qué tratamos?
-      </h2>
-      <p class="mb-3">
-        Abordamos adicciones a sustancias y comportamentales, así como patología
-        dual.
+  <section class="text-brand-700 dark:text-surface-200 space-y-12 py-8 text-sm">
+    <!-- ¿Qué tratamos? -->
+    <div class="space-y-4">
+      <h2 class="text-2xl font-semibold tracking-tight">¿Qué tratamos?</h2>
+      <p class="max-w-2xl">
+        Abordamos adicciones a sustancias y comportamentales, así como trastornos duales, con un
+        enfoque integral que considera la historia, el contexto y la red de apoyo de cada persona.
       </p>
-      <div class="grid md:grid-cols-2 gap-6">
-        <ul class="list-disc pl-5">
-          <li>Alcohol, tabaco y cannabis</li>
-          <li>Estimulantes (cocaína, anfetaminas)</li>
-          <li>Opioides y analgésicos</li>
-          <li>Benzodiacepinas e hipnóticos</li>
-          <li>Inhalantes y “policonsumo”</li>
-        </ul>
-        <ul class="list-disc pl-5">
-          <li>Juego y apuestas</li>
-          <li>Videojuegos y redes</li>
-          <li>Compras compulsivas</li>
-          <li>Trastornos de la conducta alimentaria</li>
-          <li>Patología dual</li>
-        </ul>
+      <div
+        class="border-brand-200/70 bg-surface-50/90 shadow-soft dark:border-brand-800 dark:bg-brand-900/80 grid gap-6 rounded-2xl border p-5 md:grid-cols-2"
+      >
+        <div>
+          <h3 class="text-brand-900 dark:text-surface-50 mb-2 text-sm font-semibold">
+            Adicciones a sustancias
+          </h3>
+          <ul class="list-disc space-y-1 pl-5">
+            <li>Alcohol, tabaco y cannabis</li>
+            <li>Estimulantes (cocaína, anfetaminas)</li>
+            <li>Opioides y analgésicos</li>
+            <li>Benzodiacepinas e hipnóticos</li>
+            <li>Inhalantes y policonsumo</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-brand-900 dark:text-surface-50 mb-2 text-sm font-semibold">
+            Adicciones comportamentales y trastornos duales
+          </h3>
+          <ul class="list-disc space-y-1 pl-5">
+            <li>Juego y apuestas</li>
+            <li>Videojuegos y redes sociales</li>
+            <li>Compras compulsivas</li>
+            <li>Trastornos de la conducta alimentaria</li>
+            <li>Trastornos duales (adicción + trastorno mental)</li>
+          </ul>
+        </div>
       </div>
     </div>
 
-    <div>
-      <h2
-        class="text-2xl font-semibold tracking-tight mb-2 text-zinc-900 dark:text-zinc-100"
-      >
-        Modalidades de tratamiento
-      </h2>
+    <!-- Modalidades de tratamiento -->
+    <div class="space-y-6">
+      <h2 class="text-2xl font-semibold tracking-tight">Modalidades de tratamiento</h2>
 
+      <!-- Residencial -->
       <div
-        class="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white/60 dark:bg-zinc-900/60 p-5"
+        class="border-brand-200/70 bg-surface-50/95 shadow-soft dark:border-brand-800 dark:bg-brand-900/85 space-y-4 rounded-2xl border p-5"
       >
-        <h3 class="text-xl font-semibold mb-1 text-zinc-900 dark:text-zinc-100">
-          Residencial por fases (12 meses)
-        </h3>
-        <p class="text-sm text-zinc-600 dark:text-zinc-400 mb-4">
-          Programa estructurado que integra estabilización médica, cambio
-          conductual y rehabilitación psicosocial.
+        <div class="space-y-1">
+          <p class="text-accent-500 text-xs font-semibold tracking-[0.16em] uppercase">
+            Programa residencial
+          </p>
+          <h3 class="text-xl font-semibold">Residencial por fases (12 meses)</h3>
+        </div>
+
+        <p class="text-brand-700/90 dark:text-surface-200/80 text-sm">
+          Programa estructurado que integra estabilización médica, cambio de hábitos y
+          rehabilitación psicosocial para construir una vida en sobriedad. Se organiza en cuatro
+          fases que acompañan el proceso paso a paso.
         </p>
 
-        <div class="grid md:grid-cols-2 gap-6">
-          <div class="space-y-3">
-            <h4 class="font-semibold text-zinc-900 dark:text-zinc-100">
+        <div class="grid gap-6 md:grid-cols-2">
+          <div class="space-y-2">
+            <h4 class="text-brand-900 dark:text-surface-50 text-sm font-semibold">
               Fase 1 · Ingreso y estabilización
             </h4>
-            <ul class="list-disc pl-5 text-zinc-800 dark:text-zinc-200">
+            <ul class="list-disc space-y-1 pl-5">
               <li>Valoración médica/psiquiátrica y plan individual</li>
               <li>Desintoxicación y manejo de abstinencia</li>
               <li>Psicoeducación inicial y objetivos de cambio</li>
             </ul>
           </div>
-          <div class="space-y-3">
-            <h4 class="font-semibold text-zinc-900 dark:text-zinc-100">
+
+          <div class="space-y-2">
+            <h4 class="text-brand-900 dark:text-surface-50 text-sm font-semibold">
               Fase 2 · Rehabilitación y cambio conductual
             </h4>
-            <ul class="list-disc pl-5">
-              <li>
-                Psicoterapia individual y grupal (ACT/DBT, mindfulness,
-                logoterapia)
-              </li>
+            <ul class="list-disc space-y-1 pl-5">
+              <li>Psicoterapia individual y grupal (ACT/DBT, mindfulness, logoterapia)</li>
               <li>Prevención de recaídas y afrontamiento</li>
               <li>Rutina y actividad física terapéutica</li>
             </ul>
           </div>
-          <div class="space-y-3">
-            <h4 class="font-semibold text-zinc-900 dark:text-zinc-100">
+
+          <div class="space-y-2">
+            <h4 class="text-brand-900 dark:text-surface-50 text-sm font-semibold">
               Fase 3 · Rehabilitación psicosocial
             </h4>
-            <ul class="list-disc pl-5">
+            <ul class="list-disc space-y-1 pl-5">
               <li>Proyecto de vida, reintegración familiar y ocupacional</li>
               <li>Habilidades sociales y regulación emocional</li>
               <li>Grupos de apoyo supervisados</li>
             </ul>
           </div>
-          <div class="space-y-3">
-            <h4 class="font-semibold text-zinc-900 dark:text-zinc-100">
+
+          <div class="space-y-2">
+            <h4 class="text-brand-900 dark:text-surface-50 text-sm font-semibold">
               Fase 4 · Egreso y seguimiento
             </h4>
-            <ul class="list-disc pl-5">
+            <ul class="list-disc space-y-1 pl-5">
               <li>Plan de alta y red de soporte</li>
               <li>Vinculación ambulatoria y monitoreo clínico</li>
-              <li>Acompañamiento familiar</li>
+              <li>Acompañamiento familiar y prevención de recaídas</li>
             </ul>
           </div>
         </div>
       </div>
 
+      <!-- Ambulatorio -->
       <div
-        class="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white/60 dark:bg-zinc-900/60 p-5"
+        class="border-brand-200/70 bg-surface-50/95 shadow-soft dark:border-brand-800 dark:bg-brand-900/85 space-y-3 rounded-2xl border p-5"
       >
-        <h3 class="text-xl font-semibold mb-1 text-zinc-900 dark:text-zinc-100">
-          Atención ambulatoria y continuidad
-        </h3>
-        <p class="text-sm text-zinc-600 dark:text-zinc-400 mb-3">
-          Ideal tras el alta residencial o para casos que no requieren
-          internamiento.
+        <div class="space-y-1">
+          <p class="text-accent-500 text-xs font-semibold tracking-[0.16em] uppercase">
+            Atención ambulatoria
+          </p>
+          <h3 class="text-xl font-semibold">Atención ambulatoria y continuidad</h3>
+        </div>
+        <p class="text-brand-700/90 dark:text-surface-200/80 text-sm">
+          Ideal tras el alta residencial o para casos que no requieren internamiento, pero sí un
+          acompañamiento profesional y constante.
         </p>
-        <ul class="list-disc pl-5">
+        <ul class="list-disc space-y-1 pl-5">
           <li>Psicoterapia individual y familiar</li>
           <li>Grupos terapéuticos y psicoeducación</li>
           <li>Consulta médica/psiquiátrica</li>
-          <li>Prevención de recaídas y seguimiento</li>
+          <li>Prevención de recaídas y seguimiento clínico</li>
         </ul>
       </div>
     </div>
 
-    <div>
-      <h2
-        class="text-2xl font-semibold tracking-tight mb-2 text-zinc-900 dark:text-zinc-100"
+    <!-- Por qué elegirnos -->
+    <div class="space-y-4">
+      <h2 class="text-2xl font-semibold tracking-tight">¿Por qué elegirnos?</h2>
+      <div
+        class="border-brand-200/70 bg-surface-50/95 shadow-soft dark:border-brand-800 dark:bg-brand-900/85 rounded-2xl border p-5"
       >
-        ¿Por qué elegirnos?
-      </h2>
-      <ul class="list-disc pl-5 space-y-1">
-        <li>
-          Modelo integral basado en evidencia, sin castigos y con trato digno
-        </li>
-        <li>Equipo multidisciplinario y coordinación médico-psicológica</li>
-        <li>Trabajo con familias desde el inicio</li>
-        <li>Entorno terapéutico en Pátzcuaro</li>
-        <li>Seguimiento post egreso por 12 meses</li>
-      </ul>
+        <ul class="list-disc space-y-1.5 pl-5">
+          <li>Modelo integral basado en evidencia, con trato digno, humano y respetuoso.</li>
+          <li>Equipo multidisciplinario y coordinación médico-psicológica.</li>
+          <li>Trabajo con familias desde el inicio del proceso.</li>
+          <li>Entorno terapéutico en Pátzcuaro, Michoacán.</li>
+          <li>Seguimiento post egreso por hasta 12 meses.</li>
+        </ul>
+      </div>
     </div>
 
-    <div>
-      <h2
-        class="text-2xl font-semibold tracking-tight mb-2 text-zinc-900 dark:text-zinc-100"
-      >
-        ¿Cómo se vive el día a día?
-      </h2>
-      <p class="mb-3">
-        La estructura diaria equilibra intervenciones clínicas, hábitos y
-        descanso.
+    <!-- Día a día -->
+    <div class="space-y-4">
+      <h2 class="text-2xl font-semibold tracking-tight">¿Cómo se vive el día a día?</h2>
+      <p class="max-w-2xl">
+        La estructura diaria equilibra intervenciones clínicas, hábitos saludables y espacios de
+        descanso para que la persona pueda ir integrando los cambios a su ritmo.
       </p>
-      <div class="grid md:grid-cols-3 gap-6">
-        <ul class="list-disc pl-5">
+      <div
+        class="border-brand-200/70 bg-surface-50/95 shadow-soft dark:border-brand-800 dark:bg-brand-900/85 grid gap-6 rounded-2xl border p-5 md:grid-cols-3"
+      >
+        <ul class="list-disc space-y-1 pl-5">
           <li>Consulta médica/psiquiátrica</li>
-          <li>Psicoterapia individual / grupal</li>
-          <li>Mindfulness y regulación</li>
+          <li>Psicoterapia individual y grupal</li>
+          <li>Mindfulness y regulación emocional</li>
         </ul>
-        <ul class="list-disc pl-5">
+        <ul class="list-disc space-y-1 pl-5">
           <li>Arteterapia, lectura y escritura terapéutica</li>
           <li>Actividad física terapéutica</li>
           <li>Sesiones AA/NA</li>
         </ul>
-        <ul class="list-disc pl-5">
+        <ul class="list-disc space-y-1 pl-5">
           <li>Autocuidado y hábitos saludables</li>
           <li>Talleres psicosociales</li>
-          <li>Descanso y reflexión</li>
+          <li>Descanso y espacios de reflexión</li>
         </ul>
       </div>
     </div>
 
-    <div>
-      <h2
-        class="text-2xl font-semibold tracking-tight mb-2 text-zinc-900 dark:text-zinc-100"
-      >
-        Admisión y criterios
-      </h2>
-      <div class="grid md:grid-cols-2 gap-6">
-        <div>
-          <h3 class="font-semibold text-zinc-900 dark:text-zinc-100 mb-1">
+    <!-- Admisión -->
+    <div class="space-y-4">
+      <h2 class="text-2xl font-semibold tracking-tight">Admisión y criterios</h2>
+      <div class="grid gap-6 md:grid-cols-2">
+        <div
+          class="border-brand-200/70 bg-surface-50/95 shadow-soft dark:border-brand-800 dark:bg-brand-900/85 space-y-2 rounded-2xl border p-5"
+        >
+          <h3 class="text-brand-900 dark:text-surface-50 text-sm font-semibold">
             Evaluación inicial
           </h3>
-          <ul class="list-disc pl-5">
-            <li>Entrevista clínica con paciente y familia</li>
-            <li>Valoración médica/psiquiátrica y diagnóstico</li>
-            <li>Definición de modalidad</li>
+          <ul class="list-disc space-y-1 pl-5">
+            <li>Entrevista clínica con paciente y familia.</li>
+            <li>Valoración médica/psiquiátrica y diagnóstico.</li>
+            <li>Definición de modalidad y plan de ingreso.</li>
           </ul>
         </div>
-        <div>
-          <h3 class="font-semibold text-zinc-900 dark:text-zinc-100 mb-1">
+        <div
+          class="border-brand-200/70 bg-surface-50/95 shadow-soft dark:border-brand-800 dark:bg-brand-900/85 space-y-2 rounded-2xl border p-5"
+        >
+          <h3 class="text-brand-900 dark:text-surface-50 text-sm font-semibold">
             Criterios y contraindicaciones
           </h3>
-          <ul class="list-disc pl-5">
-            <li>Edad, severidad y riesgos asociados</li>
-            <li>Comorbilidades a coordinar</li>
-            <li>Contraindicaciones evaluadas caso a caso</li>
+          <ul class="list-disc space-y-1 pl-5">
+            <li>Edad, severidad y riesgos asociados.</li>
+            <li>Comorbilidades médicas o psiquiátricas a coordinar.</li>
+            <li>Contraindicaciones evaluadas caso a caso.</li>
           </ul>
         </div>
       </div>
-      <p class="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
-        Plan individual con objetivos medibles y revisiones periódicas.
+      <p class="text-brand-600 dark:text-surface-200/70 text-xs">
+        Cada proceso se apoya en un plan individual con objetivos claros y revisiones periódicas
+        para ajustar el tratamiento.
       </p>
     </div>
 
-    <div>
-      <h2
-        class="text-2xl font-semibold tracking-tight mb-2 text-zinc-900 dark:text-zinc-100"
-      >
-        Preguntas frecuentes
-      </h2>
-      <div class="space-y-2">
+    <!-- Preguntas frecuentes -->
+    <div class="space-y-4">
+      <h2 class="text-2xl font-semibold tracking-tight">Preguntas frecuentes</h2>
+      <div class="space-y-3">
         <details
-          class="rounded-lg border border-zinc-200 dark:border-zinc-800 p-4 bg-white/60 dark:bg-zinc-900/60"
+          class="details-transition border-brand-200/70 bg-surface-50/95 shadow-soft dark:border-brand-800 dark:bg-brand-900/85 rounded-2xl border p-4"
         >
           <summary
-            class="font-medium cursor-pointer text-zinc-900 dark:text-zinc-100"
-            >¿Debo internarme o puedo iniciar de forma ambulatoria?</summary
+            class="text-brand-900 dark:text-surface-50 cursor-pointer text-sm font-medium marker:hidden"
           >
-          <p class="mt-2 text-zinc-700 dark:text-zinc-300">
-            Depende de la severidad, riesgos y soporte familiar. Tras la
-            evaluación definimos la mejor modalidad.
-          </p>
+            ¿Debo internarme o puedo iniciar de forma ambulatoria?
+          </summary>
+          <div class="details-content text-brand-700 dark:text-surface-200 mt-2 text-sm">
+            Depende de la severidad, riesgos y soporte familiar. Tras la evaluación definimos la
+            mejor modalidad para tu caso y te explicamos claramente las razones.
+          </div>
         </details>
+
         <details
-          class="rounded-lg border border-zinc-200 dark:border-zinc-800 p-4 bg-white/60 dark:bg-zinc-900/60"
+          class="details-transition border-brand-200/70 bg-surface-50/95 shadow-soft dark:border-brand-800 dark:bg-brand-900/85 rounded-2xl border p-4"
         >
           <summary
-            class="font-medium cursor-pointer text-zinc-900 dark:text-zinc-100"
-            >¿Qué papel tiene la familia?</summary
+            class="text-brand-900 dark:text-surface-50 cursor-pointer text-sm font-medium marker:hidden"
           >
-          <p class="mt-2 text-zinc-700 dark:text-zinc-300">
-            Participa en psicoeducación, talleres y sesiones clínicas, y se
-            involucra en la prevención de recaídas.
-          </p>
+            ¿Qué papel tiene la familia?
+          </summary>
+          <div class="details-content text-brand-700 dark:text-surface-200 mt-2 text-sm">
+            Participa en psicoeducación, talleres y sesiones clínicas, y se involucra en la
+            prevención de recaídas y la construcción de un nuevo acuerdo familiar.
+          </div>
         </details>
+
         <details
-          class="rounded-lg border border-zinc-200 dark:border-zinc-800 p-4 bg-white/60 dark:bg-zinc-900/60"
+          class="details-transition border-brand-200/70 bg-surface-50/95 shadow-soft dark:border-brand-800 dark:bg-brand-900/85 rounded-2xl border p-4"
         >
           <summary
-            class="font-medium cursor-pointer text-zinc-900 dark:text-zinc-100"
-            >¿Cómo es el seguimiento tras el egreso?</summary
+            class="text-brand-900 dark:text-surface-50 cursor-pointer text-sm font-medium marker:hidden"
           >
-          <p class="mt-2 text-zinc-700 dark:text-zinc-300">
-            Acompañamiento hasta por 12 meses con consultas, grupos, AA/NA y
-            monitoreo clínico.
-          </p>
+            ¿Cómo es el seguimiento tras el egreso?
+          </summary>
+          <div class="details-content text-brand-700 dark:text-surface-200 mt-2 text-sm">
+            Ofrecemos acompañamiento hasta por 12 meses con consultas, grupos terapéuticos, AA/NA y
+            monitoreo clínico para sostener los cambios logrados y detectar a tiempo señales de
+            alerta.
+          </div>
         </details>
       </div>
     </div>
 
+    <!-- CTA final -->
     <div
-      class="border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 bg-white/60 dark:bg-zinc-900/60"
+      class="border-brand-200/70 bg-surface-50/95 shadow-soft dark:border-brand-800 dark:bg-brand-900/85 flex flex-col gap-3 rounded-2xl border p-5 md:flex-row md:items-center md:justify-between"
     >
-      <p class="font-medium text-zinc-900 dark:text-zinc-100">
-        ¿Tienes dudas sobre la modalidad más adecuada? Agenda una valoración
-        clínica y construyamos tu plan de tratamiento.
+      <p class="text-brand-900 dark:text-surface-50 max-w-2xl text-sm font-medium">
+        ¿Tienes dudas sobre la modalidad más adecuada? Agenda una valoración clínica y construyamos
+        juntas y juntos tu plan de tratamiento.
       </p>
-      <a
-        href="/contacto"
-        class="inline-block mt-3 underline text-amber-700 dark:text-amber-400"
-        >Contactar al equipo</a
-      >
+      <a href="/contacto" class="btn-secondary text-sm"> Contactar al equipo clínico </a>
     </div>
   </section>
 </BaseLayout>
