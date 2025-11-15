@@ -1,46 +1,54 @@
-[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
-
 param(
   [string]$Server = "147.93.88.117",
   [int]$Port = 65002,
-  [string]$User = "u315228544",
-  [string]$RemotePath = "/home/u315228544/domains/casatsintani.com/public_html"
+  [string]$User = "u315228544"
 )
 
-Write-Host "🚀 Iniciando build de Astro..." -ForegroundColor Cyan
+$ErrorActionPreference = "Stop"
+
+# Ruta fija en el server (la misma que usaste a mano)
+$RemoteWebRoot = "/home/u315228544/domains/casatsintani.com/public_html"
+
+Write-Host "==> Iniciando build de Astro..."
 pnpm build
 if ($LASTEXITCODE -ne 0) {
-  Write-Host "❌ Error: la build falló. Revisa el log." -ForegroundColor Red
+  Write-Host "ERROR: la build de Astro falló." -ForegroundColor Red
   exit 1
 }
 
-Write-Host "📦 Empaquetando carpeta dist..." -ForegroundColor Yellow
-$tarPath = Resolve-Path ".\dist"
-$tarFile = "dist.tar.gz"
-if (Test-Path $tarFile) { Remove-Item $tarFile -Force }
-tar -C $tarPath -czf $tarFile .
-
-if (-not (Test-Path $tarFile)) {
-  Write-Host "❌ No se generó el archivo $tarFile." -ForegroundColor Red
+Write-Host "==> Empaquetando ./dist en dist.tar.gz..."
+if (-not (Test-Path "./dist")) {
+  Write-Host "ERROR: la carpeta ./dist no existe." -ForegroundColor Red
   exit 1
 }
 
-Write-Host "📤 Subiendo paquete al servidor..." -ForegroundColor Yellow
-scp -P $Port $tarFile "${User}@${Server}:${RemotePath}/"
+if (Test-Path "dist.tar.gz") {
+  Remove-Item "dist.tar.gz" -Force
+}
 
-Write-Host "🧹 Desempaquetando y actualizando servidor..." -ForegroundColor Yellow
-ssh -p $Port "${User}@${Server}" "bash -s" <<'EOF'
-set -e
-cd /home/u315228544/domains/casatsintani.com/public_html
-echo "Eliminando archivos antiguos..."
-find . -mindepth 1 -maxdepth 1 ! -name "default.php.bak" -exec rm -rf {} +
-echo "Descomprimiendo nuevo build..."
-tar -xzf dist.tar.gz
-rm dist.tar.gz
-echo "Corrigiendo permisos..."
-find . -type d -exec chmod 755 {} +
-find . -type f -exec chmod 644 {} +
-echo "✅ Deploy completado correctamente."
-EOF
+tar -czf "dist.tar.gz" -C "./dist" .
+if ($LASTEXITCODE -ne 0 -or -not (Test-Path "dist.tar.gz")) {
+  Write-Host "ERROR: no se pudo crear dist.tar.gz." -ForegroundColor Red
+  exit 1
+}
 
-Write-Host "🎉 Deploy finalizado con éxito en https://casatsintani.com" -ForegroundColor Green
+Write-Host "==> Subiendo dist.tar.gz al HOME del servidor (scp ~)..."
+# OJO: sin ruta → va directo a ~ del usuario
+scp -P $Port "dist.tar.gz" "${User}@${Server}:dist.tar.gz"
+if ($LASTEXITCODE -ne 0) {
+  Write-Host "ERROR: la subida con scp falló." -ForegroundColor Red
+  exit 1
+}
+
+Write-Host "==> Ejecutando comandos en el servidor..."
+
+# Comando remoto TODO en una sola línea para evitar problemas de \r
+$remoteCmd = "cd '$RemoteWebRoot'; echo 'Eliminando archivos antiguos...'; find . -mindepth 1 -maxdepth 1 ! -name 'default.php.bak' -exec rm -rf {} +; echo 'Moviendo paquete desde HOME...'; mv ~/dist.tar.gz ./dist.tar.gz; echo 'Descomprimiendo nuevo build...'; tar -xzf dist.tar.gz; rm dist.tar.gz; echo 'Corrigiendo permisos...'; find . -type d -exec chmod 755 {} +; find . -type f -exec chmod 644 {} +; echo 'Deploy completado correctamente.'"
+
+ssh -p $Port "${User}@${Server}" "$remoteCmd"
+if ($LASTEXITCODE -ne 0) {
+  Write-Host "ERROR: falló el comando remoto." -ForegroundColor Red
+  exit 1
+}
+
+Write-Host "==> Deploy finalizado con éxito en https://casatsintani.com" -ForegroundColor Green

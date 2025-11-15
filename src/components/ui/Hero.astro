@@ -1,6 +1,6 @@
 ---
 import AnimateOnView from '../../components/islands/AnimateOnView'
-import { MessageCircle, Check } from 'lucide-astro'
+import { MessageCircle, Check, HeartPulse, ShieldCheck } from 'lucide-astro'
 
 const {
   heading = 'La recuperación comienza con un paso.',
@@ -18,78 +18,81 @@ const years = currentYear - 2010
 ---
 
 <section
-  class="relative overflow-hidden  min-h-[80vh] rounded-3xl bg-gradient-to-b from-white to-zinc-50 dark:border-zinc-800 dark:from-zinc-950 dark:to-zinc-900"
+  class="border-surface-200/80 from-surface-50 to-surface-100/80 shadow-soft dark:border-brand-800/70 dark:from-brand-900 dark:to-brand-900/40 relative mt-6 overflow-hidden rounded-3xl border bg-gradient-to-b"
   aria-label="Casa Tsíntani - Hero"
 >
   <div
-    class="bg-brand-600/20 dark:bg-brand-400/10 pointer-events-none absolute -top-24 -left-24 h-[32rem] w-[32rem] rounded-full blur-3xl"
+    class="bg-brand-200/60 dark:bg-brand-800/50 pointer-events-none absolute -top-32 -left-32 h-[30rem] w-[30rem] rounded-full blur-3xl"
   >
   </div>
   <div
-    class="pointer-events-none absolute -right-32 -bottom-32 h-[28rem] w-[28rem] rounded-full bg-amber-900/20 blur-3xl dark:bg-amber-800/10"
+    class="bg-accent-500/20 dark:bg-accent-500/10 pointer-events-none absolute -right-24 -bottom-32 h-[26rem] w-[26rem] rounded-full blur-3xl"
   >
   </div>
   <div
-    class="absolute inset-0 opacity-[0.08] [background:radial-gradient(80rem_40rem_at_10%_-10%,theme(colors.zinc.400),transparent_60%)] dark:opacity-[0.12]"
+    class="[background:radial-gradient(80rem_40rem_at_10%_-10%,theme(colors.brand.300),transparent_60%)] pointer-events-none absolute inset-0 opacity-[0.08] dark:opacity-[0.16]"
   >
   </div>
 
   <div
-    class="relative mx-auto grid max-w-6xl items-center gap-10 px-6 py-16 md:grid-cols-2 md:py-20"
+    class="relative mx-auto grid max-w-6xl items-center gap-12 px-6 py-14 md:grid-cols-2 md:py-18 lg:py-20"
   >
-    <AnimateOnView client:visible class="space-y-6">
-      <span
-        class="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white/70 px-3 py-1 text-xs font-medium text-zinc-700 backdrop-blur-md dark:border-zinc-700 dark:bg-zinc-800/60 dark:text-zinc-200"
-      >
-        Transformando vidas
-        <span aria-hidden="true" class="mx-1">•</span>
-        {years}+ años de servicio
-      </span>
-
-      <h1
-        class="font-display text-brand-900 dark:text-surface-50 text-4xl font-bold tracking-tight md:text-5xl"
-      >
-        {heading}
-        <br />
-        <span class="text-brand-600 dark:text-brand-400">
-          {sub}
+    <AnimateOnView client:visible class="space-y-7">
+      <div class="space-y-3">
+        <span
+          class="border-brand-100 text-brand-700 dark:border-brand-700 dark:bg-brand-900/70 dark:text-brand-200 inline-flex items-center gap-2 rounded-full border bg-white/80 px-3 py-1 text-[11px] font-semibold tracking-[0.16em] uppercase shadow-sm backdrop-blur-md"
+        >
+          <HeartPulse class="h-3.5 w-3.5" />
+          Transformando vidas
+          <span aria-hidden="true" class="mx-1">•</span>
+          {years}+ años de servicio
         </span>
-      </h1>
 
-      <p class="text-lg text-zinc-700 dark:text-zinc-300">
-        {description}
-      </p>
+        <h1
+          class="font-display text-brand-900 dark:text-surface-50 text-3xl font-bold tracking-tight sm:text-4xl md:text-[2.75rem]"
+        >
+          {heading}
+          <br />
+          <span class="text-brand-600 dark:text-brand-300">
+            {sub}
+          </span>
+        </h1>
 
-      <div class="flex flex-col gap-3 pt-2 sm:flex-row">
-        <a href={ctaHref} class="btn-primary">{ctaText}</a>
+        <p class="max-w-xl text-sm leading-relaxed text-zinc-700 sm:text-base dark:text-zinc-300">
+          {description}
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-3 pt-1 sm:flex-row">
+        <a href={ctaHref} class="btn-primary w-full sm:w-auto">
+          {ctaText}
+        </a>
         <a
           href={ctaSecondaryHref}
-          class="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-[#1EB656] focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 focus-visible:outline-none"
+          class="shadow-soft inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#25D366] px-4 py-2.5 text-sm font-semibold text-white transition duration-[--dur-sm] ease-[--ease-out-smooth] hover:-translate-y-0.5 hover:bg-[#1EB656] focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 focus-visible:outline-none sm:w-auto"
         >
           <MessageCircle class="h-5 w-5 text-white" />
           {ctaSecondaryText}
         </a>
       </div>
 
-      <ul
-        class="mt-4 grid grid-cols-1 gap-3 text-sm text-zinc-700 sm:grid-cols-2 dark:text-zinc-300"
-      >
+      <div class="mt-4 grid gap-3 text-sm text-zinc-700 sm:grid-cols-2 dark:text-zinc-300">
         {
           [
             'Acompañamiento cercano y humano',
             'Equipo especializado en adicciones y salud mental',
-            'Apoyo para tu familia',
+            'Apoyo para tu familia en cada etapa',
             'Plan de seguimiento hasta por 12 meses',
           ].map((item) => (
-            <li class="inline-flex items-center gap-2" role="listitem">
-              <span class="bg-brand-100 dark:bg-brand-900/40 inline-grid h-5 w-5 place-content-center rounded-md">
+            <div class="inline-flex items-start gap-2" role="listitem">
+              <span class="bg-brand-100 dark:bg-brand-900/40 inline-grid h-5 w-5 flex-shrink-0 place-content-center rounded-md">
                 <Check class="text-brand-700 dark:text-brand-300 h-4 w-4" />
               </span>
-              {item}
-            </li>
+              <span>{item}</span>
+            </div>
           ))
         }
-      </ul>
+      </div>
 
       <div class="mt-6 flex flex-wrap items-center gap-4 text-xs text-zinc-600 dark:text-zinc-400">
         <div class="inline-flex items-center gap-2">
@@ -102,28 +105,43 @@ const years = currentYear - 2010
         </div>
         <div class="inline-flex items-center gap-2">
           <span class="h-1.5 w-1.5 rounded-full bg-amber-500"></span>
-          Modelo Minnesota y terapias de tercera y cuarta generación
+          Modelo Minnesota y terapias de nueva generación
         </div>
+      </div>
+
+      <div
+        class="bg-surface-50/90 text-brand-700 dark:bg-brand-900/80 dark:text-surface-200 mt-2 inline-flex items-center gap-2 rounded-full px-3 py-1 text-[11px] font-medium shadow-sm"
+      >
+        <ShieldCheck class="h-3.5 w-3.5" />
+        Respuesta confidencial y sin juicios
       </div>
     </AnimateOnView>
 
     <AnimateOnView client:visible class="relative pb-16 md:pb-20">
       <div class="relative">
-        <div class="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-2xl md:aspect-[5/4]">
+        <div
+          class="border-surface-200/80 shadow-soft dark:border-brand-800/70 relative aspect-[4/3] overflow-hidden rounded-2xl border bg-black/5 md:aspect-[5/4]"
+        >
           <video src={heroVideo} autoplay muted loop playsinline class="h-full w-full object-cover"
           ></video>
           <div
-            class="pointer-events-none absolute inset-0 bg-gradient-to-tr from-white/0 via-white/0 to-white/0 dark:from-zinc-950/0 dark:via-zinc-950/0 dark:to-zinc-950/10"
+            class="pointer-events-none absolute inset-0 bg-gradient-to-tr from-black/40 via-black/10 to-black/0 dark:from-black/50 dark:via-black/20 dark:to-black/0"
           >
+          </div>
+          <div
+            class="text-surface-50 absolute top-4 left-4 inline-flex items-center gap-2 rounded-full bg-black/50 px-3 py-1 text-[11px] font-medium backdrop-blur-sm"
+          >
+            <span class="h-1.5 w-1.5 rounded-full bg-brand-400"></span>
+            Compromiso, calidez y ciencia
           </div>
         </div>
 
         <div
-          class="absolute top-full left-1/2 z-10 w-auto -translate-x-1/2 -translate-y-1/2 rounded-xl border border-zinc-200 bg-white/70 p-3 text-xs shadow-lg backdrop-blur-md md:w-64 md:-translate-y-1/4 dark:border-zinc-700 dark:bg-zinc-800/70"
+          class="border-surface-200/90 bg-surface-50/95 shadow-soft dark:border-brand-800 dark:bg-brand-900/90 absolute top-full left-1/2 z-10 w-auto -translate-x-1/2 -translate-y-1/2 rounded-2xl border px-4 py-3 text-xs backdrop-blur-md md:w-72 md:-translate-y-1/3"
         >
-          <p class="font-medium text-zinc-900 dark:text-zinc-100">Acompañamiento integral</p>
-          <p class="mt-1 text-zinc-600 dark:text-zinc-300">
-            Mente, cuerpo, familia y propósito de vida.
+          <p class="text-brand-900 dark:text-surface-50 font-medium">Acompañamiento integral</p>
+          <p class="dark:text-surface-200/80 mt-1 text-[11px] leading-relaxed text-zinc-600">
+            Mente, cuerpo, familia y propósito de vida en un mismo plan de tratamiento.
           </p>
         </div>
       </div>

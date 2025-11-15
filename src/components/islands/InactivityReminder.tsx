@@ -36,7 +36,8 @@ export default function InactivityReminder() {
         "https://wa.me/521234567890?text=Hola%20Casa%20Ts%C3%ADntani%2C%20quisiera%20hablar%20con%20alguien%20sobre%20tratamiento%20y%20opciones%20de%20ingreso.";
 
     return (
-        <div className="fixed inset-0 z-50 flex items-end justify-center bg-brand-900/70 px-4 pb-6 pt-10 backdrop-blur-sm dark:bg-brand-950/80 sm:items-center">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-brand-900/70 px-4 pb-6 pt-10 backdrop-blur-sm dark:bg-brand-950/80">
+
             <div
                 role="dialog"
                 aria-modal="true"
